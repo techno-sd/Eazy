@@ -4,90 +4,110 @@ export const menus = [
     link: "/",
   },
   {
-    label: "About",
-    link: "/about/",
-  },
-  {
-    label: "Industries",
-    link: "/industries/",
-  },
-  {
-    label: "Vision 2030",
-    link: "/vision-2030/",
-  },
-  {
-    label: "Pages",
+    label: "About Us",
     link: "#",
     submenu: [
       {
-        label: "Projects",
-        link: "/projects/",
+        label: "About",
+        link: "/about/",
       },
       {
-        label: "Pricing",
-        link: "/pricing/",
+        label: "Vision 2030",
+        link: "/vision-2030/",
       },
       {
-        label: "Testimonials",
-        link: "/testimonials/",
-      },
-      {
-        label: "Team",
+        label: "Our Team",
         link: "/team/",
-      },
-      {
-        label: "Faq",
-        link: "/faq/",
-      },
-      {
-        label: "Sign In",
-        link: "/sign-in/",
-      },
-      {
-        label: "Sign Up",
-        link: "/sign-up/",
-      },
-      {
-        label: "Coming Soon",
-        link: "/coming-soon/",
-      },
-      {
-        label: "404 Error Page",
-        link: "/404/",
-      },
-      {
-        label: "Terms & Conditions",
-        link: "/terms-conditions/",
-      },
-      {
-        label: "Privacy Policy",
-        link: "/privacy-policy/",
       },
     ],
   },
   {
     label: "Services",
-    link: "/services/3/",
+    link: "#",
+    submenu: [
+      {
+        label: "All Services",
+        link: "/services/3/",
+      },
+      {
+        label: "AI Solutions",
+        link: "/services/ai/",
+      },
+      {
+        label: "Cybersecurity",
+        link: "/services/cybersecurity/",
+      },
+      {
+        label: "Big Data & Analytics",
+        link: "/services/big-data/",
+      },
+      {
+        label: "Cloud & Hosting",
+        link: "/services/cloud/",
+      },
+      {
+        label: "SME-EAZY Program",
+        link: "/services/sme/",
+      },
+    ],
+  },
+  {
+    label: "Industries",
+    link: "#",
+    submenu: [
+      {
+        label: "All Industries",
+        link: "/industries/",
+      },
+      {
+        label: "Government Sector",
+        link: "/industries/government/",
+      },
+      {
+        label: "Banking & Financial",
+        link: "/industries/banking/",
+      },
+      {
+        label: "Energy & Telecom",
+        link: "/industries/energy/",
+      },
+      {
+        label: "Healthcare",
+        link: "/industries/healthcare/",
+      },
+      {
+        label: "Education",
+        link: "/industries/education/",
+      },
+      {
+        label: "SME",
+        link: "/industries/sme/",
+      },
+    ],
+  },
+  {
+    label: "Case Studies",
+    link: "/projects/",
   },
   {
     label: "Blog",
     link: "#",
     submenu: [
       {
-        label: "Blog Grid",
+        label: "All Posts",
         link: "/blog/",
       },
       {
-        label: "Blog Left Sidebar",
-        link: "/blog/with-left-sidebar/",
+        label: "Cybersecurity",
+        link: "/blog/",
       },
       {
-        label: "Blog Right Sidebar",
-        link: "/blog/with-right-sidebar/",
+        label: "AI & Digital",
+        link: "/blog/",
       },
       {
-        label: "Blog Details",
-        link: "/blog/details/",
+        label: "Company Updates",
+        link: "/blog/",
       },
     ],
   },

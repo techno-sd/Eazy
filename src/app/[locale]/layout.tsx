@@ -23,6 +23,8 @@ import "../../../styles/industry-ux.css";
 import "../../../styles/enhanced-layout.css";
 // Premium Design System
 import "../../../styles/premium-design.css";
+// Modern Navigation Menu
+import "../../../styles/modern-navbar.css";
 
 import type { Metadata } from "next";
 import { Rubik, Barlow_Condensed } from "next/font/google";

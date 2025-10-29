@@ -1,0 +1,549 @@
+/* ============================================
+   Modern Navigation Menu - Eazy Cyber Agent
+   Cybersecurity & AI Theme
+   ============================================ */
+
+/* ========== Sticky Header with Blur Effect ========== */
+.navbar-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(14, 1, 41, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(216, 6, 80, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-area.is-sticky {
+  background: rgba(14, 1, 41, 0.95);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(216, 6, 80, 0.2);
+}
+
+/* ========== Container Layout ========== */
+.pisa-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 85px;
+  position: relative;
+}
+
+/* ========== Logo Styling ========== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: #d80650;
+}
+
+.navbar-brand img {
+  height: 45px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(216, 6, 80, 0.3));
+}
+
+.navbar-brand:hover img {
+  filter: drop-shadow(0 0 20px rgba(216, 6, 80, 0.6));
+}
+
+/* ========== Main Navigation ========== */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Menu Items with Icons ========== */
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.3px;
+}
+
+/* Icon Styling */
+.nav-link i {
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Background Glow */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(216, 6, 80, 0.2), rgba(255, 8, 102, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(216, 6, 80, 0.15);
+  box-shadow: 0 4px 15px rgba(216, 6, 80, 0.3);
+}
+
+.nav-link:hover i {
+  transform: scale(1.1) translateX(2px);
+  color: #d80650;
+}
+
+/* Active Link with Glowing Underline */
+.nav-link.active {
+  color: #ffffff;
+  background: rgba(216, 6, 80, 0.2);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, #d80650, #ff0866);
+  box-shadow: 0 0 10px rgba(216, 6, 80, 0.8);
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(216, 6, 80, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(216, 6, 80, 1), 0 0 30px rgba(216, 6, 80, 0.5);
+  }
+}
+
+/* ========== Dropdown Menus ========== */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  min-width: 280px;
+  background: rgba(14, 1, 41, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 12px;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(216, 6, 80, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Arrow */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 30px;
+  width: 16px;
+  height: 16px;
+  background: rgba(14, 1, 41, 0.98);
+  border-top: 1px solid rgba(216, 6, 80, 0.2);
+  border-left: 1px solid rgba(216, 6, 80, 0.2);
+  transform: rotate(45deg);
+}
+
+/* Dropdown Items */
+.dropdown-menu .nav-item {
+  margin: 0;
+}
+
+.dropdown-menu .nav-link {
+  padding: 14px 18px;
+  font-size: 14px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+}
+
+.dropdown-menu .nav-link:hover {
+  background: linear-gradient(135deg, rgba(216, 6, 80, 0.25), rgba(255, 8, 102, 0.15));
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(216, 6, 80, 0.4);
+}
+
+.dropdown-menu .nav-link i {
+  font-size: 16px;
+  color: #d80650;
+}
+
+/* Dropdown Separator */
+.dropdown-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 6, 80, 0.3), transparent);
+  margin: 8px 0;
+}
+
+/* ========== Chevron Icon for Dropdowns ========== */
+.nav-link .bx-chevron-down {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  margin-left: 2px;
+}
+
+.nav-item:hover > .nav-link .bx-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* ========== Request Consultation Button ========== */
+.consultation-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #d80650, #ff0866);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 8px 20px rgba(216, 6, 80, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.consultation-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.consultation-btn:hover::before {
+  left: 100%;
+}
+
+.consultation-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 30px rgba(216, 6, 80, 0.6),
+    0 0 40px rgba(216, 6, 80, 0.3);
+  background: linear-gradient(135deg, #ff0866, #d80650);
+}
+
+.consultation-btn i {
+  font-size: 18px;
+}
+
+/* ========== Mobile Menu Toggle ========== */
+.navbar-toggler {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background: rgba(216, 6, 80, 0.2);
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 5px rgba(216, 6, 80, 0.5);
+}
+
+.navbar-toggler.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.navbar-toggler.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.navbar-toggler.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 991px) {
+  .pisa-nav {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .navbar-toggler {
+    display: flex;
+  }
+
+  .navbar-nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(14, 1, 41, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navbar-nav.show {
+    transform: translateX(0);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(216, 6, 80, 0.1);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    width: 100%;
+    background: rgba(26, 10, 62, 0.6);
+    margin-top: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 12px;
+  }
+
+  .dropdown-menu::before {
+    display: none;
+  }
+
+  .nav-item.active .dropdown-menu,
+  .nav-item:hover .dropdown-menu {
+    max-height: 500px;
+    padding: 12px;
+  }
+
+  .consultation-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* RTL Mobile Menu */
+  [dir="rtl"] .navbar-nav {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"] .navbar-nav.show {
+    transform: translateX(0);
+  }
+}
+
+/* ========== RTL Support ========== */
+[dir="rtl"] .nav-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-link i {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+[dir="rtl"] .nav-link:hover i {
+  transform: scale(1.1) translateX(-2px);
+}
+
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .dropdown-menu::before {
+  left: auto;
+  right: 30px;
+}
+
+[dir="rtl"] .dropdown-menu .nav-link:hover {
+  transform: translateX(-5px);
+}
+
+/* ========== Scroll Progress Bar ========== */
+.scroll-progress {
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #d80650, #ff0866);
+  box-shadow: 0 0 10px rgba(216, 6, 80, 0.8);
+  transition: width 0.1s ease;
+  z-index: 9998;
+}
+
+/* ========== Mega Menu (Optional) ========== */
+.mega-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(14, 1, 41, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(216, 6, 80, 0.2);
+}
+
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mega-menu-column h4 {
+  color: #d80650;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========== Animations ========== */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-area {
+  animation: slideInDown 0.6s ease-out;
+}
+
+/* ========== Dark Mode Override ========== */
+@media (prefers-color-scheme: dark) {
+  .navbar-area {
+    background: rgba(10, 0, 30, 0.9);
+  }
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .navbar-area {
+    display: none;
+  }
+}
+
+/* ========== Accessibility ========== */
+.nav-link:focus-visible {
+  outline: 3px solid #d80650;
+  outline-offset: 2px;
+}
+
+/* ========== High Contrast Mode ========== */
+@media (prefers-contrast: high) {
+  .nav-link {
+    border: 2px solid currentColor;
+  }
+
+  .navbar-area {
+    border-bottom: 3px solid #d80650;
+  }
+}
