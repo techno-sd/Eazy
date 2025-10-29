@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
-import SecurityApproach from "@/components/ServicesStyleThree/SecurityApproach";
-import EffectiveProtection from "@/components/ServicesStyleThree/EffectiveProtection";
-import CyberSecurityOperation from "@/components/ServicesStyleThree/CyberSecurityOperation";
-import RecentProjects from "@/components/Common/RecentProjects";
+import AISolutions from "@/components/HomeOne/AISolutions";
+import CybersecurityServices from "@/components/HomeOne/CybersecurityServices";
+import BigDataAnalytics from "@/components/HomeOne/BigDataAnalytics";
+import CloudComputing from "@/components/HomeOne/CloudComputing";
+import SMEEazyProgram from "@/components/HomeOne/SMEEazyProgram";
 import Footer from "@/components/Layouts/Footer";
 
 export default function Page() {
@@ -13,19 +14,21 @@ export default function Page() {
       <Navbar />
 
       <PageBanner
-        pageTitle="Services Style Three"
+        pageTitle="Our Services"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="Services Style Three"
+        activePageText="Services"
       />
 
-      <SecurityApproach />
+      <AISolutions />
 
-      <EffectiveProtection />
+      <CybersecurityServices />
 
-      <CyberSecurityOperation />
+      <BigDataAnalytics />
 
-      <RecentProjects />
+      <CloudComputing />
+
+      <SMEEazyProgram />
 
       <Footer />
     </>

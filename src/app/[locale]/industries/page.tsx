@@ -1,10 +1,8 @@
-
 import React from "react";
 import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
-import VisionMission from "@/components/About/VisionMission";
-import CoreValues from "@/components/About/CoreValues";
-import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
+import IndustriesGrid from "@/components/Industries/IndustriesGrid";
+import IndustriesHighlight from "@/components/Industries/IndustriesHighlight";
 import Testimonials from "@/components/Common/Testimonials";
 import Partner from "@/components/Common/Partner";
 import Footer from "@/components/Layouts/Footer";
@@ -14,14 +12,13 @@ export default function Page() {
     <>
       <Navbar />
       <PageBanner
-        pageTitle="About Us"
+        pageTitle="Industries We Serve"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="About"
+        activePageText="Industries"
       />
-      <VisionMission />
-      <CoreValues />
-      <WhyChooseUsAbout />
+      <IndustriesGrid />
+      <IndustriesHighlight />
       <Testimonials />
       <Partner />
       <Footer />

@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
-const EffectiveProtection: React.FC = () => {
-  const t = useTranslations('home.effectiveProtection');
+const CybersecurityServices: React.FC = () => {
+  const t = useTranslations('home.services.cybersecurity');
 
   return (
     <>
@@ -22,51 +22,42 @@ const EffectiveProtection: React.FC = () => {
             </div>
             <div className="col-lg-6">
               <div className="complete-content">
-                <h2>
-                  {t('title')}
-                </h2>
+                <span className="sub-title">Professional Security</span>
+                <h2>{t('title')}</h2>
                 <p>
-                  {t('description')}
+                  Comprehensive cybersecurity services to protect your organization from evolving threats and ensure compliance with NCA and ISO 27001 standards.
                 </p>
 
                 <div className="row">
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security">
-                      <i className="flaticon-order"></i>
-                      <h3>{t('checkHazardsTitle')}</h3>
-                      <p>
-                        {t('checkHazardsDesc')}
-                      </p>
+                      <i className="flaticon-cyber-security"></i>
+                      <h3>Penetration Testing</h3>
+                      <p>{t('service1')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security">
-                      <i className="flaticon-anti-virus-software"></i>
-                      <h3>{t('installSoftwareTitle')}</h3>
-                      <p>
-                        {t('installSoftwareDesc')}
-                      </p>
+                      <i className="flaticon-security"></i>
+                      <h3>Risk Management</h3>
+                      <p>{t('service2')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security mb-0 mb-rs-need">
-                      <i className="flaticon-scientist"></i>
-                      <h3>{t('expertsTitle')}</h3>
-                      <p>
-                        {t('expertsDesc')}
-                      </p>
+                      <i className="flaticon-security-camera"></i>
+                      <h3>SOC Services</h3>
+                      <p>{t('service3')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security mb-0">
-                      <i className="flaticon-technical-support"></i>
-                      <h3>{t('supportTitle')}</h3>
-                      <p>
-                        {t('supportDesc')}
-                      </p>
+                      <i className="flaticon-profile"></i>
+                      <h3>Security Training</h3>
+                      <p>{t('service4')}</p>
                     </div>
                   </div>
                 </div>
@@ -87,4 +78,4 @@ const EffectiveProtection: React.FC = () => {
   );
 };
 
-export default EffectiveProtection;
+export default CybersecurityServices;

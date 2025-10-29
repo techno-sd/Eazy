@@ -1,10 +1,14 @@
 "use client";
-  
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations, useLocale } from 'next-intl';
 
 const ElectronicProtection: React.FC = () => {
+  const t = useTranslations('home.electronicProtection');
+  const locale = useLocale();
+
   const openTabSection = (evt: React.MouseEvent<HTMLLIElement>, tabName: string) => {
     let i: number;
     let tabcontent: HTMLCollectionOf<Element> = document.getElementsByClassName("tabs_item");
@@ -32,8 +36,7 @@ const ElectronicProtection: React.FC = () => {
             <div className="col-lg-6">
               <div className="electronic-content">
                 <h2>
-                  Innovative Electronic Protection of Your Office and Home
-                  Control Online
+                  {t('title')}
                 </h2>
 
                 <div className="electronic-tab-wrap">
@@ -44,15 +47,15 @@ const ElectronicProtection: React.FC = () => {
                         className="current"
                         onClick={(e) => openTabSection(e, "tab1")}
                       >
-                        Intercom System
+                        {t('intercomTab')}
                       </li>
-                      <li onClick={(e) => openTabSection(e, "tab2")}>CCTV</li>
-                      <li onClick={(e) => openTabSection(e, "tab3")}>GDPR</li>
+                      <li onClick={(e) => openTabSection(e, "tab2")}>{t('cctvTab')}</li>
+                      <li onClick={(e) => openTabSection(e, "tab3")}>{t('gdprTab')}</li>
                       <li onClick={(e) => openTabSection(e, "tab4")}>
-                        Encryption
+                        {t('encryptionTab')}
                       </li>
                       <li onClick={(e) => openTabSection(e, "tab5")}>
-                        Our Goal
+                        {t('goalTab')}
                       </li>
                     </ul>
 
@@ -60,114 +63,71 @@ const ElectronicProtection: React.FC = () => {
                     <div className="tab_content">
                       <div id="tab1" className="tabs_item">
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Illo ducimus vero, vero corporis voluptates
-                          beatae pariatur laudantium, fugiat illum ab deserunt
-                          nostrum aliquid quisquam esse? Voluptatibus quia velit
-                          numquam esse porro ipsum dolor, sit amet consectetur
-                          adipisicing elit. Illo ducimus vero, corporis.
+                          {t('intercomContent1')}
                         </p>
 
                         <p>
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Perspiciatis, soluta, aspernatur dolorum sequi
-                          quisquam ullam in pariatur nihil dolorem cumque
-                          excepturi totam. Qui excepturi quasi cumque placeat
-                          fuga. Ea, eius?
+                          {t('intercomContent2')}
                         </p>
 
-                        <Link href="/about" className="default-btn">
-                          Learn About
+                        <Link href={`/${locale}/about`} className="default-btn">
+                          {t('learnAbout')}
                         </Link>
                       </div>
 
                       <div id="tab2" className="tabs_item">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum
+                          {t('cctvContent1')}
                         </p>
 
                         <p>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto beatae vitae dicta sunt
-                          explicabo.
+                          {t('cctvContent2')}
                         </p>
 
-                        <Link href="/about" className="default-btn">
-                          Learn About
+                        <Link href={`/${locale}/about`} className="default-btn">
+                          {t('learnAbout')}
                         </Link>
                       </div>
 
                       <div id="tab3" className="tabs_item">
                         <p>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto beatae vitae dicta sunt
-                          explicabo.
+                          {t('gdprContent1')}
                         </p>
 
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum
+                          {t('gdprContent2')}
                         </p>
 
-                        <Link href="/about" className="default-btn">
-                          Learn About
+                        <Link href={`/${locale}/about`} className="default-btn">
+                          {t('learnAbout')}
                         </Link>
                       </div>
 
                       <div id="tab4" className="tabs_item">
                         <p>
-                          But I must explain to you how all this mistaken idea
-                          of denouncing pleasure and praising pain was born and
-                          I will give you a complete account of the system, and
-                          expound the actual teachings of the great explorer of
-                          the truth, the master-builder of human happiness.
+                          {t('encryptionContent1')}
                         </p>
 
                         <p>
-                          At vero eos et accusamus et iusto odio dignissimos
-                          ducimus qui blanditiis praesentium voluptatum deleniti
-                          atque corrupti quos dolores et quas molestias
-                          excepturi sint occaecati cupiditate non provident,
-                          similique
+                          {t('encryptionContent2')}
                         </p>
 
-                        <Link href="/about" className="default-btn">
-                          Learn About
+                        <Link href={`/${locale}/about`} className="default-btn">
+                          {t('learnAbout')}
                         </Link>
                       </div>
 
                       <div id="tab5" className="tabs_item">
                         <p>
-                          At vero eos et accusamus et iusto odio dignissimos
-                          ducimus qui blanditiis praesentium voluptatum deleniti
-                          atque corrupti quos dolores et quas molestias
-                          excepturi sint occaecati cupiditate non provident,
-                          similique
+                          {t('goalContent1')}
                         </p>
 
                         <p>
-                          But I must explain to you how all this mistaken idea
-                          of denouncing pleasure and praising pain was born and
-                          I will give you a complete account of the system, and
-                          expound the actual teachings of the great explorer of
-                          the truth, the master-builder of human happiness.
+                          {t('goalContent2')}
                         </p>
 
-                        <Link href="/about" className="default-btn">
-                          Learn About
+                        <Link href={`/${locale}/about`} className="default-btn">
+                          {t('learnAbout')}
                         </Link>
                       </div>
                     </div>
@@ -180,7 +140,7 @@ const ElectronicProtection: React.FC = () => {
               <div className="electronic-img">
                 <Image
                   src="/img/electronic-img.png"
-                  alt="Image"
+                  alt="Electronic protection system visualization"
                   width={570}
                   height={485}
                 />

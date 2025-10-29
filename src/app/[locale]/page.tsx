@@ -1,13 +1,17 @@
 import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/HomeOne/MainBanner";
 import Partner from "@/components/Common/Partner";
-import WebsiteSecurity from "@/components/HomeOne/WebsiteSecurity";
-import SecurityApproach from "@/components/HomeOne/SecurityApproach";
-import HighPerformanceSolutions from "@/components/HomeOne/HighPerformanceSolutions";
-import ElectronicProtection from "@/components/HomeOne/ElectronicProtection";
-import EffectiveProtection from "@/components/HomeOne/EffectiveProtection";
+import VisionMission from "@/components/About/VisionMission";
+import AISolutions from "@/components/HomeOne/AISolutions";
+import CybersecurityServices from "@/components/HomeOne/CybersecurityServices";
+import BigDataAnalytics from "@/components/HomeOne/BigDataAnalytics";
+import CloudComputing from "@/components/HomeOne/CloudComputing";
+import SMEEazyProgram from "@/components/HomeOne/SMEEazyProgram";
+import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
+import CoreValues from "@/components/About/CoreValues";
+import IndustriesGrid from "@/components/Industries/IndustriesGrid";
+import Vision2030Content from "@/components/Vision2030/Vision2030Content";
 import Testimonials from "@/components/Common/Testimonials";
-import CyberSecurityOperation from "@/components/HomeOne/CyberSecurityOperation";
 import LatesNews from "@/components/Common/LatesNews";
 import Footer from "@/components/Layouts/Footer";
 
@@ -20,19 +24,27 @@ export default function Home() {
 
       <Partner />
 
-      <WebsiteSecurity />
+      <VisionMission />
 
-      <SecurityApproach />
+      <AISolutions />
 
-      <HighPerformanceSolutions />
+      <CybersecurityServices />
 
-      <ElectronicProtection />
+      <BigDataAnalytics />
 
-      <EffectiveProtection />
+      <CloudComputing />
+
+      <SMEEazyProgram />
+
+      <WhyChooseUsAbout />
+
+      <CoreValues />
+
+      <IndustriesGrid />
+
+      <Vision2030Content />
 
       <Testimonials />
-
-      <CyberSecurityOperation />
 
       <LatesNews />
 

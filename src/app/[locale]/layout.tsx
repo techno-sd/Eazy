@@ -11,6 +11,18 @@ import "../../../styles/style.css";
 import "../../../styles/responsive.css";
 // Global RTL Style
 import "../../../styles/rtl.css";
+// Accessibility Enhancements
+import "../../../styles/accessibility.css";
+// UI/UX Enhancements
+import "../../../styles/enhancements.css";
+// Dark Sections Styles
+import "../../../styles/dark-sections.css";
+// Industry Best Practices
+import "../../../styles/industry-ux.css";
+// Enhanced Layout & Cards
+import "../../../styles/enhanced-layout.css";
+// Premium Design System
+import "../../../styles/premium-design.css";
 
 import type { Metadata } from "next";
 import { Rubik, Barlow_Condensed } from "next/font/google";
@@ -67,8 +79,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir}>
       <body className={`${rubik.variable} ${barlow_condensed.variable}`}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <div id="main-content">
+            {children}
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

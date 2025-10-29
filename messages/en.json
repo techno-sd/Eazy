@@ -1,21 +1,15 @@
+
 {
   "nav": {
     "home": "Home",
     "about": "About",
-    "pages": "Pages",
     "services": "Services",
     "blog": "Blog",
     "contact": "Contact",
     "getQuote": "Get A Quote",
-    "homeDemo1": "Home Demo - 1",
-    "homeDemo2": "Home Demo - 2",
-    "homeDemo3": "Home Demo - 3",
-    "homeDemo4": "Home Demo - 4",
-    "homeDemo5": "Home Demo - 5",
-    "homeDemo6": "Home Demo - 6",
-    "homeDemo7": "Home Demo - 7",
-    "homeDemo8": "Home Demo - 8",
-    "homeDemo9": "Home Demo - 9",
+    "whyChooseUs": "Why Choose Us",
+    "industries": "Industries",
+    "vision2030": "Vision 2030",
     "projects": "Projects",
     "pricing": "Pricing",
     "testimonials": "Testimonials",
@@ -27,10 +21,6 @@
     "errorPage": "404 Error Page",
     "termsConditions": "Terms & Conditions",
     "privacyPolicy": "Privacy Policy",
-    "servicesStyle1": "Services Style 1",
-    "servicesStyle2": "Services Style 2",
-    "servicesStyle3": "Services Style 3",
-    "serviceDetails": "Service Details",
     "blogGrid": "Blog Grid",
     "blogLeftSidebar": "Blog Left Sidebar",
     "blogRightSidebar": "Blog Right Sidebar",
@@ -81,10 +71,10 @@
   },
   "home": {
     "mainBanner": {
-      "badge": "All Research up to Blockchain Interoperability is completed",
-      "title": "Modern Information Protect from Hackers",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil architecto laborum eaque! Deserunt maxime, minus quas molestiae reiciendis esse natus nisi iure.",
-      "bookingNow": "Booking Now",
+      "badge": "Your Trusted Partner in Building a Secure and Smart Digital Future Aligned with Saudi Vision 2030",
+      "title": "Eazy Cyber Agent",
+      "description": "A Saudi company specialized in cybersecurity and digital solutions. We provide integrated services in artificial intelligence, big data, and cloud computing. We work with both public and private sectors to enhance digital transformation and achieve Vision 2030 goals in building a knowledge and innovation-based economy.",
+      "bookingNow": "Book Now",
       "aboutUs": "About Us"
     },
     "features": {
@@ -98,7 +88,43 @@
     "services": {
       "title": "Our Services",
       "subtitle": "What We Offer",
-      "description": "We provide professional cyber security services to protect your business from all threats"
+      "description": "We provide a comprehensive range of digital and security solutions aligned with Saudi Vision 2030",
+      "aiSolutions": {
+        "title": "AI Solutions",
+        "service1": "Chatbots for customer service",
+        "service2": "Predictive analytics for accurate decision-making",
+        "service3": "Intelligent systems for real-time cybersecurity threat detection"
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity Services",
+        "service1": "Penetration testing and vulnerability assessment",
+        "service2": "Risk management and compliance according to NCA and ISO 27001",
+        "service3": "Security Operations Centers (SOC) and incident response",
+        "service4": "Phishing and social engineering simulation training"
+      },
+      "bigData": {
+        "title": "Big Data & Analytics",
+        "service1": "Data warehouse creation and management",
+        "service2": "Smart dashboards to support decision-makers",
+        "service3": "Fraud detection through advanced analytics",
+        "service4": "Data governance management compliant with Saudi Personal Data Protection Law"
+      },
+      "cloudComputing": {
+        "title": "Cloud Computing & Hosting",
+        "service1": "Secure hosting compliant with Saudi regulations",
+        "service2": "Backup and disaster recovery solutions",
+        "service3": "Data encryption and virtual firewalls",
+        "service4": "Identity and Access Management (IAM)"
+      },
+      "smeEazy": {
+        "title": "Custom Solutions (SME-EAZY Program)",
+        "description": "The SME-EAZY program is specifically designed to support small and medium enterprises, offering:",
+        "service1": "Multi-layered protection (technical – operational – human)",
+        "service2": "Low cost suitable for SME budgets",
+        "service3": "Practical training to build cybersecurity culture",
+        "service4": "Analytical tools for effective risk management",
+        "note": "This program aligns with entrepreneurship and startup empowerment initiatives under Vision 2030"
+      }
     },
     "aboutUs": {
       "title": "About Us",
@@ -106,6 +132,115 @@
       "description": "We are committed to providing top-notch cyber security solutions",
       "mission": "Our Mission",
       "vision": "Our Vision"
+    },
+    "websiteSecurity": {
+      "title": "Website Security Services",
+      "description": "Protect your website from cyber threats with our comprehensive security solutions",
+      "malwareTitle": "Malware Protection",
+      "malwareDesc": "Advanced malware detection and removal to keep your site safe from malicious software and attacks.",
+      "cdnTitle": "CDN Integration",
+      "cdnDesc": "Fast and secure content delivery network integration for improved performance and security.",
+      "supportTitle": "24/7 Support",
+      "supportDesc": "Round-the-clock technical support and monitoring to ensure your website stays protected.",
+      "managedTitle": "Managed Security",
+      "managedDesc": "Fully managed security services with regular updates, patches, and vulnerability assessments."
+    },
+    "securityApproach": {
+      "title": "Our Approach To Security",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsumv",
+      "secureByDesignTitle": "Secure by Design",
+      "secureByDesignDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut suspendisse ultrices",
+      "compliantTitle": "Compliant by Design",
+      "compliantDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut suspendisse ultrices",
+      "monitoringTitle": "Continuous Monitoring",
+      "monitoringDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut suspendisse ultrices"
+    },
+    "highPerformanceSolutions": {
+      "title": "High-Performance Solutions",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quam neque quibusdam corrupti aspernatur corporis alias nisi dolorum expedita veritatis voluptates minima.",
+      "managedITTitle": "Secure Managed IT",
+      "managedITDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer",
+      "complianceTitle": "Compliance",
+      "complianceDesc": "Lorem ipsum dolor sit amet sed, consectetur adipiscing elit do",
+      "cyberSecurityTitle": "Cyber Security",
+      "cyberSecurityDesc": "Lorem ipsum dolor sit amet sed, consectetur adipiscing elit do",
+      "disasterPlanningTitle": "Disaster Planning",
+      "disasterPlanningDesc": "Lorem ipsum dolor sit amet sed, consectetur adipiscing elit do",
+      "secureByDesignTitle": "Secure By Design",
+      "secureByDesignDesc": "Lorem ipsum dolor sit amet sed, consectetur adipiscing elit do",
+      "awarenessTrainingTitle": "Secure Awareness Training",
+      "awarenessTrainingDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer"
+    },
+    "electronicProtection": {
+      "title": "Innovative Electronic Protection of Your Office and Home Control Online",
+      "intercomTab": "Intercom System",
+      "cctvTab": "CCTV",
+      "gdprTab": "GDPR",
+      "encryptionTab": "Encryption",
+      "goalTab": "Our Goal",
+      "intercomContent1": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo ducimus vero, vero corporis voluptates beatae pariatur laudantium, fugiat illum ab deserunt nostrum aliquid quisquam esse? Voluptatibus quia velit numquam esse porro ipsum dolor, sit amet consectetur adipisicing elit. Illo ducimus vero, corporis.",
+      "intercomContent2": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, soluta, aspernatur dolorum sequi quisquam ullam in pariatur nihil dolorem cumque excepturi totam. Qui excepturi quasi cumque placeat fuga. Ea, eius?",
+      "cctvContent1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+      "cctvContent2": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "gdprContent1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "gdprContent2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum",
+      "encryptionContent1": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+      "encryptionContent2": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique",
+      "goalContent1": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique",
+      "goalContent2": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.",
+      "learnAbout": "Learn About"
+    },
+    "effectiveProtection": {
+      "title": "The most Complete and Effective Protection for Your Home and Office",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor elit incididunt ut labore et dolore magna aliqua. Quis ipsum",
+      "checkHazardsTitle": "Check and Search Hazards",
+      "checkHazardsDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "installSoftwareTitle": "Install and Configure Software",
+      "installSoftwareDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "expertsTitle": "Departure of the Our Experts",
+      "expertsDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+      "supportTitle": "24/7 Support & Remote Admit",
+      "supportDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+    },
+    "cyberSecurityOperation": {
+      "title": "24/7 Cybersecurity Operation Center",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.",
+      "feature1": "Managed Web Application",
+      "feature2": "SIEM Threat Detection",
+      "feature3": "Content Delivery Network",
+      "feature4": "Website Hack Repair",
+      "feature5": "Instant Malware Removal",
+      "feature6": "DDoS Protection",
+      "feature7": "Firewall Management",
+      "feature8": "Security Auditing",
+      "feature9": "Incident Response",
+      "feature10": "Vulnerability Assessment"
+    },
+    "testimonials": {
+      "title": "What Client's Say About Us",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quam neque quibusdam corrupti aspernatur corporis alias nisi dolorum expedita veritatis voluptates minima.",
+      "client1Name": "Alen Meair",
+      "client1Position": "Developer",
+      "client1Review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,do eiusmod tempor incididunt ut labore et dolore.",
+      "client2Name": "Axon Detos",
+      "client2Position": "CEO",
+      "client2Review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,do eiusmod tempor incididunt ut labore et dolore.",
+      "client3Name": "John Dona",
+      "client3Position": "Designer",
+      "client3Review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,do eiusmod tempor incididunt ut labore et dolore.",
+      "client4Name": "Jon Smith",
+      "client4Position": "Developer",
+      "client4Review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,do eiusmod tempor incididunt ut labore et dolore."
+    },
+    "latestNews": {
+      "title": "Latest News From Blog",
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quam neque quibusdam corrupti aspernatur corporis alias nisi dolorum expedita veritatis voluptates minima.",
+      "post1Title": "Secure Managed IT",
+      "post1Excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer",
+      "post2Title": "Cloud Security",
+      "post2Excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer",
+      "post3Title": "Secure Managed Web",
+      "post3Excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer"
     }
   },
   "contact": {
@@ -135,5 +270,224 @@
     "alreadyHaveAccount": "Already have an account?",
     "createAccount": "Create Account",
     "loginNow": "Login Now"
+  },
+  "about": {
+    "subtitle": "Who We Are",
+    "title": "About Eazy Cyber Agent",
+    "description": "Your trusted partner in building a secure and smart digital future aligned with Saudi Vision 2030",
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the first choice in the Kingdom and the region for providing innovative digital and security solutions that enable organizations to keep pace with changes and achieve digital sustainability."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Empowering organizations to build a secure and smart infrastructure using the latest artificial intelligence, big data, and cybersecurity technologies, in line with the digital transformation strategy and Saudi Vision 2030."
+    },
+    "coreValues": {
+      "subtitle": "",
+      "title": "Core Values",
+      "description": "The principles that guide our work and define our relationships with clients and partners",
+      "integrity": {
+        "title": "Integrity & Transparency",
+        "description": "Trust is the foundation of our relationship with our clients."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "New solutions to face future challenges."
+      },
+      "securityFirst": {
+        "title": "Security First",
+        "description": "Protecting digital assets from threats."
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Solutions designed according to the needs of each organization."
+      }
+    },
+    "whyChooseUs": {
+      "subtitle": "Our Advantages",
+      "title": "Why Choose Us?",
+      "description": "What sets us apart in cybersecurity and digital transformation",
+      "reason1": {
+        "title": "Global Expertise & Certifications",
+        "description": "International expertise and certifications (CISA, ISO 27001, CDPSE)."
+      },
+      "reason2": {
+        "title": "Full NCA Compliance",
+        "description": "Complete commitment to National Cybersecurity Authority (NCA) standards."
+      },
+      "reason3": {
+        "title": "Local Arabic Solutions",
+        "description": "Arabic local solutions supporting national digital transformation."
+      },
+      "reason4": {
+        "title": "Flexible Pricing",
+        "description": "Flexible pricing suitable for all sectors."
+      },
+      "reason5": {
+        "title": "24/7 Technical Support",
+        "description": "Continuous technical support available 24/7."
+      }
+    }
+  },
+  "whyChooseUs": {
+    "subtitle": "Our Advantages",
+    "title": "Why Choose Us?",
+    "description": "Discover what makes Eazy Cyber Agent your trusted partner in cybersecurity and digital transformation",
+    "reason1": {
+      "title": "Global Expertise & Certifications",
+      "description": "International expertise and certifications (CISA, ISO 27001, CDPSE)."
+    },
+    "reason2": {
+      "title": "NCA Compliance",
+      "description": "Full commitment to National Cybersecurity Authority (NCA) standards."
+    },
+    "reason3": {
+      "title": "Local Arabic Solutions",
+      "description": "Arabic local solutions supporting national digital transformation."
+    },
+    "reason4": {
+      "title": "Flexible Pricing",
+      "description": "Flexible prices suitable for all sectors."
+    },
+    "reason5": {
+      "title": "24/7 Technical Support",
+      "description": "Continuous technical support 24/7."
+    },
+    "industries": {
+      "subtitle": "Who We Serve",
+      "title": "Industries We Serve",
+      "description": "We provide specialized solutions across diverse sectors to meet unique industry requirements",
+      "government": {
+        "title": "Government Sector",
+        "description": "Government digital transformation solutions and services."
+      },
+      "banking": {
+        "title": "Banking & Financial Services",
+        "description": "Secure solutions for banks and financial institutions."
+      },
+      "energy": {
+        "title": "Energy & Telecommunications",
+        "description": "Critical infrastructure protection for energy and telecom sectors."
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "HIPAA-compliant security solutions for healthcare providers."
+      },
+      "education": {
+        "title": "Education & Universities",
+        "description": "Secure learning environments for educational institutions."
+      },
+      "sme": {
+        "title": "Small & Medium Enterprises (SMEs)",
+        "description": "Affordable and comprehensive solutions tailored for SMEs."
+      }
+    },
+    "vision2030": {
+      "subtitle": "Saudi Vision 2030",
+      "title": "Our Vision 2030 Alignment",
+      "description": "We believe that cybersecurity and digital innovation are two fundamental pillars of Saudi Vision 2030, so our solutions focus on:",
+      "focus1": {
+        "title": "Digital Transformation",
+        "description": "Enabling digital transformation in government and private entities."
+      },
+      "focus2": {
+        "title": "Critical Infrastructure Protection",
+        "description": "Protecting national critical infrastructure."
+      },
+      "focus3": {
+        "title": "Tech Entrepreneurship Support",
+        "description": "Supporting tech entrepreneurship and startups."
+      },
+      "focus4": {
+        "title": "National Capacity Building",
+        "description": "Contributing to developing national competencies through training and capacity building."
+      }
+    }
+  },
+  "industries": {
+    "subtitle": "Our Expertise",
+    "title": "Industries We Serve",
+    "description": "We provide specialized cybersecurity solutions tailored to the unique needs of various sectors in the Kingdom of Saudi Arabia.",
+    "government": {
+      "title": "Government Sector",
+      "description": "Supporting digital government transformation with advanced security solutions.",
+      "service1": "Digital Government Transformation",
+      "service2": "Critical Infrastructure Protection",
+      "service3": "NCA Compliance Solutions"
+    },
+    "banking": {
+      "title": "Banking & Financial Services",
+      "description": "Protecting financial data and ensuring compliance with banking security standards.",
+      "service1": "Financial Data Protection",
+      "service2": "Transaction Security",
+      "service3": "SAMA Compliance"
+    },
+    "energy": {
+      "title": "Energy & Telecommunications",
+      "description": "Securing critical infrastructure and communications networks.",
+      "service1": "OT Security",
+      "service2": "Network Infrastructure Protection",
+      "service3": "SCADA Systems Security"
+    },
+    "healthcare": {
+      "title": "Healthcare Sector",
+      "description": "Protecting patient data and ensuring medical system security.",
+      "service1": "Patient Data Protection",
+      "service2": "Medical Systems Security",
+      "service3": "Healthcare Compliance"
+    },
+    "education": {
+      "title": "Education & Universities",
+      "description": "Securing educational platforms and protecting academic data.",
+      "service1": "E-Learning Platform Security",
+      "service2": "Student Data Protection",
+      "service3": "Research Data Security"
+    },
+    "sme": {
+      "title": "Small & Medium Enterprises",
+      "description": "Affordable and comprehensive security solutions for growing businesses.",
+      "service1": "Cost-Effective Security",
+      "service2": "Business Continuity",
+      "service3": "Compliance Support"
+    },
+    "highlight": {
+      "subtitle": "Industry Expertise",
+      "title": "Deep Understanding of Sector-Specific Challenges",
+      "description": "Our team has extensive experience working with various industries, understanding their unique security challenges and regulatory requirements.",
+      "feature1": {
+        "title": "Regulatory Compliance",
+        "description": "Expert knowledge of industry-specific regulations including NCA, SAMA, and international standards."
+      },
+      "feature2": {
+        "title": "Sector-Specific Solutions",
+        "description": "Tailored security solutions designed for the unique operational requirements of each industry."
+      },
+      "feature3": {
+        "title": "24/7 Sector Support",
+        "description": "Dedicated support teams with industry expertise available around the clock."
+      }
+    }
+  },
+  "vision2030": {
+    "subtitle": "Our Vision",
+    "title": "Alignment with Vision 2030",
+    "description": "We believe that cybersecurity and digital innovation are two fundamental pillars of the Kingdom's Vision 2030. Therefore, our solutions focus on:",
+    "focus1": {
+      "title": "Enabling Digital Transformation",
+      "description": "Empowering digital transformation in government and private entities."
+    },
+    "focus2": {
+      "title": "Protecting National Infrastructure",
+      "description": "Protecting national critical infrastructure."
+    },
+    "focus3": {
+      "title": "Tech Entrepreneurship Support",
+      "description": "Supporting tech entrepreneurship and startups."
+    },
+    "focus4": {
+      "title": "National Capacity Building",
+      "description": "Contributing to developing national competencies through training and capacity building."
+    }
   }
 }

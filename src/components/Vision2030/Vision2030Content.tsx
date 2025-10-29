@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
-const EffectiveProtection: React.FC = () => {
-  const t = useTranslations('home.effectiveProtection');
+const Vision2030Content: React.FC = () => {
+  const t = useTranslations('vision2030');
 
   return (
     <>
@@ -22,51 +22,40 @@ const EffectiveProtection: React.FC = () => {
             </div>
             <div className="col-lg-6">
               <div className="complete-content">
-                <h2>
-                  {t('title')}
-                </h2>
-                <p>
-                  {t('description')}
-                </p>
+                <span className="sub-title">{t('subtitle')}</span>
+                <h2>{t('title')}</h2>
+                <p>{t('description')}</p>
 
                 <div className="row">
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security">
-                      <i className="flaticon-order"></i>
-                      <h3>{t('checkHazardsTitle')}</h3>
-                      <p>
-                        {t('checkHazardsDesc')}
-                      </p>
+                      <i className="flaticon-cyber-security"></i>
+                      <h3>{t('focus1.title')}</h3>
+                      <p>{t('focus1.description')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security">
-                      <i className="flaticon-anti-virus-software"></i>
-                      <h3>{t('installSoftwareTitle')}</h3>
-                      <p>
-                        {t('installSoftwareDesc')}
-                      </p>
+                      <i className="flaticon-security"></i>
+                      <h3>{t('focus2.title')}</h3>
+                      <p>{t('focus2.description')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security mb-0 mb-rs-need">
-                      <i className="flaticon-scientist"></i>
-                      <h3>{t('expertsTitle')}</h3>
-                      <p>
-                        {t('expertsDesc')}
-                      </p>
+                      <i className="flaticon-rocket"></i>
+                      <h3>{t('focus3.title')}</h3>
+                      <p>{t('focus3.description')}</p>
                     </div>
                   </div>
 
                   <div className="col-lg-6 col-sm-6">
                     <div className="single-security mb-0">
-                      <i className="flaticon-technical-support"></i>
-                      <h3>{t('supportTitle')}</h3>
-                      <p>
-                        {t('supportDesc')}
-                      </p>
+                      <i className="flaticon-training"></i>
+                      <h3>{t('focus4.title')}</h3>
+                      <p>{t('focus4.description')}</p>
                     </div>
                   </div>
                 </div>
@@ -87,4 +76,4 @@ const EffectiveProtection: React.FC = () => {
   );
 };
 
-export default EffectiveProtection;
+export default Vision2030Content;

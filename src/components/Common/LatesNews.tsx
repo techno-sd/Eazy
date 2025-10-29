@@ -1,20 +1,23 @@
 "use client";
-  
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations, useLocale } from 'next-intl';
 
 const LatesNews: React.FC = () => {
+  const t = useTranslations('home.latestNews');
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
+
   return (
     <>
       <section className="blog-area pb-70">
         <div className="container">
           <div className="section-title">
-            <h2>Latest News From Blog</h2>
+            <h2>{t('title')}</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus quam neque quibusdam corrupti aspernatur corporis alias
-              nisi dolorum expedita veritatis voluptates minima.
+              {t('description')}
             </p>
           </div>
 
@@ -23,22 +26,21 @@ const LatesNews: React.FC = () => {
               <div className="single-blog">
                 <Image
                   src="/img/blog/blog1.jpg"
-                  alt="Image"
+                  alt={t('post1Title')}
                   width={570}
                   height={600}
                 />
 
                 <div className="blog-content">
                   <h3>
-                    <Link href="/blog/details">Secure Managed IT</Link>
+                    <Link href={`/${locale}/blog/details`}>{t('post1Title')}</Link>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolorer
+                    {t('post1Excerpt')}
                   </p>
 
-                  <Link href="/blog/details" className="read-more">
-                    Read More
+                  <Link href={`/${locale}/blog/details`} className="read-more">
+                    {tCommon('readMore')}
                   </Link>
                 </div>
               </div>
@@ -48,22 +50,21 @@ const LatesNews: React.FC = () => {
               <div className="single-blog">
                 <Image
                   src="/img/blog/blog2.jpg"
-                  alt="Image"
+                  alt={t('post2Title')}
                   width={570}
                   height={600}
                 />
 
                 <div className="blog-content">
                   <h3>
-                    <Link href="/blog/details">Cloud Security</Link>
+                    <Link href={`/${locale}/blog/details`}>{t('post2Title')}</Link>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolorer
+                    {t('post2Excerpt')}
                   </p>
 
-                  <Link href="/blog/details" className="read-more">
-                    Read More
+                  <Link href={`/${locale}/blog/details`} className="read-more">
+                    {tCommon('readMore')}
                   </Link>
                 </div>
               </div>
@@ -73,22 +74,21 @@ const LatesNews: React.FC = () => {
               <div className="single-blog">
                 <Image
                   src="/img/blog/blog3.jpg"
-                  alt="Image"
+                  alt={t('post3Title')}
                   width={570}
                   height={600}
                 />
 
                 <div className="blog-content">
                   <h3>
-                    <Link href="/blog/details">Secure Managed Web</Link>
+                    <Link href={`/${locale}/blog/details`}>{t('post3Title')}</Link>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolorer
+                    {t('post3Excerpt')}
                   </p>
 
-                  <Link href="/blog/details" className="read-more">
-                    Read More
+                  <Link href={`/${locale}/blog/details`} className="read-more">
+                    {tCommon('readMore')}
                   </Link>
                 </div>
               </div>

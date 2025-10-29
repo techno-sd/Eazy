@@ -5,7 +5,9 @@
       "Bash(npm install:*)",
       "Bash(dir:*)",
       "Bash(node fix-imports.js:*)",
-      "Bash(npm run dev)"
+      "Bash(npm run dev)",
+      "Bash(pnpm dev)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []

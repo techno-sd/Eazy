@@ -1,19 +1,22 @@
 "use client";
-  
+
 import React from "react";
 import Link from "next/link";
+import { useTranslations, useLocale } from 'next-intl';
 
 const HighPerformanceSolutions: React.FC = () => {
+  const t = useTranslations('home.highPerformanceSolutions');
+  const tCommon = useTranslations('common');
+  const locale = useLocale();
+
   return (
     <>
       <section className="solutions-area pb-70">
         <div className="container">
           <div className="section-title">
-            <h2>High-Performance Solutions</h2>
+            <h2>{t('title')}</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus quam neque quibusdam corrupti aspernatur corporis alias
-              nisi dolorum expedita veritatis voluptates minima.
+              {t('description')}
             </p>
           </div>
 
@@ -26,13 +29,12 @@ const HighPerformanceSolutions: React.FC = () => {
                 }}
               >
                 <div className="solutions-content">
-                  <h3>Secure Managed IT</h3>
+                  <h3>{t('managedITTitle')}</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolorer
+                    {t('managedITDesc')}
                   </p>
-                  <Link href="/services/details" className="read-more">
-                    Read More
+                  <Link href={`/${locale}/services/details`} className="read-more">
+                    {tCommon('readMore')}
                   </Link>
                 </div>
               </div>
@@ -48,13 +50,12 @@ const HighPerformanceSolutions: React.FC = () => {
                     }}
                   >
                     <div className="solutions-content">
-                      <h3>Compliance</h3>
+                      <h3>{t('complianceTitle')}</h3>
                       <p>
-                        Lorem ipsum dolor sit amet sed, consectetur adipiscing
-                        elit do
+                        {t('complianceDesc')}
                       </p>
-                      <Link href="/services/details" className="read-more">
-                        Read More
+                      <Link href={`/${locale}/services/details`} className="read-more">
+                        {tCommon('readMore')}
                       </Link>
                     </div>
                   </div>
@@ -68,13 +69,12 @@ const HighPerformanceSolutions: React.FC = () => {
                     }}
                   >
                     <div className="solutions-content">
-                      <h3>Cyber Security</h3>
+                      <h3>{t('cyberSecurityTitle')}</h3>
                       <p>
-                        Lorem ipsum dolor sit amet sed, consectetur adipiscing
-                        elit do
+                        {t('cyberSecurityDesc')}
                       </p>
-                      <Link href="/services/details" className="read-more">
-                        Read More
+                      <Link href={`/${locale}/services/details`} className="read-more">
+                        {tCommon('readMore')}
                       </Link>
                     </div>
                   </div>
@@ -92,13 +92,12 @@ const HighPerformanceSolutions: React.FC = () => {
                     }}
                   >
                     <div className="solutions-content">
-                      <h3>Disaster Planning</h3>
+                      <h3>{t('disasterPlanningTitle')}</h3>
                       <p>
-                        Lorem ipsum dolor sit amet sed, consectetur adipiscing
-                        elit do
+                        {t('disasterPlanningDesc')}
                       </p>
-                      <Link href="/services/details" className="read-more">
-                        Read More
+                      <Link href={`/${locale}/services/details`} className="read-more">
+                        {tCommon('readMore')}
                       </Link>
                     </div>
                   </div>
@@ -112,13 +111,12 @@ const HighPerformanceSolutions: React.FC = () => {
                     }}
                   >
                     <div className="solutions-content">
-                      <h3>Secure By Design</h3>
+                      <h3>{t('secureByDesignTitle')}</h3>
                       <p>
-                        Lorem ipsum dolor sit amet sed, consectetur adipiscing
-                        elit do
+                        {t('secureByDesignDesc')}
                       </p>
-                      <Link href="/services/details" className="read-more">
-                        Read More
+                      <Link href={`/${locale}/services/details`} className="read-more">
+                        {tCommon('readMore')}
                       </Link>
                     </div>
                   </div>
@@ -134,13 +132,12 @@ const HighPerformanceSolutions: React.FC = () => {
                 }}
               >
                 <div className="solutions-content">
-                  <h3>Secure Awareness Training</h3>
+                  <h3>{t('awarenessTrainingTitle')}</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolorer
+                    {t('awarenessTrainingDesc')}
                   </p>
-                  <Link href="/services/details" className="read-more">
-                    Read More
+                  <Link href={`/${locale}/services/details`} className="read-more">
+                    {tCommon('readMore')}
                   </Link>
                 </div>
               </div>

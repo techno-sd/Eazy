@@ -1,21 +1,22 @@
 "use client";
-  
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const Testimonials: React.FC = () => {
+  const t = useTranslations('home.testimonials');
+
   return (
     <>
       <section className="client-area ptb-100">
         <div className="container">
           <div className="section-title white-title">
-            <h2>What Client’s Say About Us</h2>
+            <h2>{t('title')}</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus quam neque quibusdam corrupti aspernatur corporis alias
-              nisi dolorum expedita veritatis voluptates minima.
+              {t('description')}
             </p>
           </div>
 
@@ -47,8 +48,7 @@ const Testimonials: React.FC = () => {
               <div className="single-client">
                 <i className="quotes bx bxs-quote-alt-left"></i>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,do
-                  eiusmod tempor incididunt ut labore et dolore.
+                  {t('client1Review')}
                 </p>
 
                 <ul>
@@ -72,12 +72,12 @@ const Testimonials: React.FC = () => {
                 <div className="client-img">
                   <Image
                     src="/img/client-img/client1.jpg"
-                    alt="Image"
+                    alt={`${t('client1Name')} - ${t('client1Position')}`}
                     width={70}
                     height={70}
                   />
-                  <h3>Alen Meair</h3>
-                  <span>Developer</span>
+                  <h3>{t('client1Name')}</h3>
+                  <span>{t('client1Position')}</span>
                 </div>
               </div>
             </SwiperSlide>
@@ -86,8 +86,7 @@ const Testimonials: React.FC = () => {
               <div className="single-client">
                 <i className="quotes bx bxs-quote-alt-left"></i>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,do
-                  eiusmod tempor incididunt ut labore et dolore.
+                  {t('client2Review')}
                 </p>
 
                 <ul>
@@ -111,12 +110,12 @@ const Testimonials: React.FC = () => {
                 <div className="client-img">
                   <Image
                     src="/img/client-img/client2.jpg"
-                    alt="Image"
+                    alt={`${t('client2Name')} - ${t('client2Position')}`}
                     width={70}
                     height={70}
                   />
-                  <h3>Axon Detos</h3>
-                  <span>CEO</span>
+                  <h3>{t('client2Name')}</h3>
+                  <span>{t('client2Position')}</span>
                 </div>
               </div>
             </SwiperSlide>
@@ -125,8 +124,7 @@ const Testimonials: React.FC = () => {
               <div className="single-client">
                 <i className="quotes bx bxs-quote-alt-left"></i>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,do
-                  eiusmod tempor incididunt ut labore et dolore.
+                  {t('client3Review')}
                 </p>
 
                 <ul>
@@ -150,12 +148,12 @@ const Testimonials: React.FC = () => {
                 <div className="client-img">
                   <Image
                     src="/img/client-img/client3.jpg"
-                    alt="Image"
+                    alt={`${t('client3Name')} - ${t('client3Position')}`}
                     width={70}
                     height={70}
                   />
-                  <h3>John Dona</h3>
-                  <span>Designer</span>
+                  <h3>{t('client3Name')}</h3>
+                  <span>{t('client3Position')}</span>
                 </div>
               </div>
             </SwiperSlide>
@@ -164,8 +162,7 @@ const Testimonials: React.FC = () => {
               <div className="single-client">
                 <i className="quotes bx bxs-quote-alt-left"></i>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,do
-                  eiusmod tempor incididunt ut labore et dolore.
+                  {t('client4Review')}
                 </p>
 
                 <ul>
@@ -189,12 +186,12 @@ const Testimonials: React.FC = () => {
                 <div className="client-img">
                   <Image
                     src="/img/client-img/client4.jpg"
-                    alt="Image"
+                    alt={`${t('client4Name')} - ${t('client4Position')}`}
                     width={70}
                     height={70}
                   />
-                  <h3>Jon Smith</h3>
-                  <span>Developer</span>
+                  <h3>{t('client4Name')}</h3>
+                  <span>{t('client4Position')}</span>
                 </div>
               </div>
             </SwiperSlide>

@@ -1,63 +1,50 @@
 "use client";
   
+
 import React from "react";
+import { useTranslations } from 'next-intl';
 
 const WebsiteSecurity: React.FC = () => {
+  const t = useTranslations('home.websiteSecurity');
   return (
     <>
       <section className="security-area pb-70">
         <div className="container">
           <div className="section-title">
-            <h2>Complete Website Security</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Doloribus quam neque quibusdam corrupti aspernatur corporis alias
-              nisi dolorum expedita veritatis voluptates minima sapiente.
-            </p>
+            <h2>{t('title')}</h2>
+            <p>{t('description')}</p>
           </div>
 
           <div className="row">
             <div className="col-lg-3 col-sm-6">
               <div className="single-security">
                 <i className="flaticon-bug"></i>
-                <h3>Malware Detection Removal</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor
-                </p>
+                <h3>{t('malwareTitle')}</h3>
+                <p>{t('malwareDesc')}</p>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6">
               <div className="single-security">
                 <i className="flaticon-content"></i>
-                <h3>Content Delivery Network</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor
-                </p>
+                <h3>{t('cdnTitle')}</h3>
+                <p>{t('cdnDesc')}</p>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6">
               <div className="single-security">
                 <i className="flaticon-support"></i>
-                <h3>24/7 Cyber Security Support</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor
-                </p>
+                <h3>{t('supportTitle')}</h3>
+                <p>{t('supportDesc')}</p>
               </div>
             </div>
 
             <div className="col-lg-3 col-sm-6">
               <div className="single-security">
                 <i className="flaticon-profile"></i>
-                <h3>Managed Web Application</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor
-                </p>
+                <h3>{t('managedTitle')}</h3>
+                <p>{t('managedDesc')}</p>
               </div>
             </div>
           </div>
