@@ -18,7 +18,7 @@ import TrustBadges from "@/components/Common/TrustBadges";
 export default function Home() {
   return (
     <>
-      {/* Premium Preloader */}
+      {/* High-Performance Preloader */}
       <Preloader />
 
       {/* Animated Particle Background */}
@@ -41,14 +41,14 @@ export default function Home() {
       {/* About Section */}
       <AboutSectionClean />
 
+      {/* Vision 2030 Section */}
+      <Vision2030Content />
+
       {/* Services Section */}
       <ServicesSection />
 
       {/* Industries Section */}
       <IndustriesGrid />
-
-      {/* Vision 2030 Section */}
-      <Vision2030Content />
 
       {/* Why Choose Us Section */}
       <WhyChooseUsAbout />

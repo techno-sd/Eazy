@@ -74,7 +74,7 @@ const AboutSectionClean: React.FC = () => {
                       <p>{t('vision.description') || 'أن نكون الخيار الأول في المملكة والمنطقة لتقديم حلول رقمية وأمنية مبتكرة تُمكّن المؤسسات من مواكبة التغيرات وتحقيق الاستدامة الرقمية.'}</p>
                     </div>
                   </div>
-                  
+
                   <div className="vm-card mission-card">
                     <div className="vm-icon">
                       <i className="bx bx-target-lock"></i>
