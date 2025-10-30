@@ -249,14 +249,14 @@ const ContactSection: React.FC = () => {
 
         .contact-info-item:hover {
           transform: translateX(10px);
-          box-shadow: 0 10px 40px rgba(216, 6, 80, 0.1);
-          border-color: #d80650;
+          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.1);
+          border-color: #0C4BA2;
         }
 
         .info-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 15px;
           display: flex;
           align-items: center;
@@ -307,18 +307,18 @@ const ContactSection: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #d80650;
+          color: #0C4BA2;
           font-size: 22px;
           transition: all 0.3s ease;
           border: 2px solid #e0e0e0;
         }
 
         .social-links a:hover {
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           color: white;
           transform: translateY(-5px);
           border-color: transparent;
-          box-shadow: 0 10px 25px rgba(216, 6, 80, 0.3);
+          box-shadow: 0 10px 25px rgba(12, 75, 162, 0.3);
         }
 
         .modern-contact-form {
@@ -337,7 +337,7 @@ const ContactSection: React.FC = () => {
           left: 0;
           width: 100%;
           height: 5px;
-          background: linear-gradient(90deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%);
         }
 
         .form-floating {
@@ -360,8 +360,8 @@ const ContactSection: React.FC = () => {
         }
 
         .form-floating .form-control:focus {
-          border-color: #d80650;
-          box-shadow: 0 0 0 4px rgba(216, 6, 80, 0.1);
+          border-color: #0C4BA2;
+          box-shadow: 0 0 0 4px rgba(12, 75, 162, 0.1);
           background: white;
         }
 
@@ -395,7 +395,7 @@ const ContactSection: React.FC = () => {
           top: -10px;
           left: 15px;
           font-size: 12px;
-          color: #d80650;
+          color: #0C4BA2;
           background: white;
           padding: 0 8px;
         }
@@ -408,7 +408,7 @@ const ContactSection: React.FC = () => {
         .submit-btn {
           width: 100%;
           padding: 18px 40px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           color: white;
           border: none;
           border-radius: 12px;
@@ -420,7 +420,7 @@ const ContactSection: React.FC = () => {
           gap: 12px;
           cursor: pointer;
           transition: all 0.4s ease;
-          box-shadow: 0 10px 30px rgba(216, 6, 80, 0.3);
+          box-shadow: 0 10px 30px rgba(12, 75, 162, 0.3);
           position: relative;
           overflow: hidden;
         }
@@ -438,7 +438,7 @@ const ContactSection: React.FC = () => {
 
         .submit-btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 15px 40px rgba(216, 6, 80, 0.4);
+          box-shadow: 0 15px 40px rgba(12, 75, 162, 0.4);
         }
 
         .submit-btn:hover::before {
@@ -467,7 +467,7 @@ const ContactSection: React.FC = () => {
         .decoration-circle {
           position: absolute;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(216, 6, 80, 0.05) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.05) 0%, transparent 70%);
         }
 
         .decoration-1 {

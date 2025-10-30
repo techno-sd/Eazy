@@ -20,7 +20,7 @@ const VisionMission: React.FC = () => {
               padding: '10px 24px',
               background: 'linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%)',
               borderRadius: '30px',
-              color: '#d80650',
+              color: '#0C4BA2',
               fontWeight: 600,
               fontSize: '14px',
               marginBottom: '20px',
@@ -37,12 +37,12 @@ const VisionMission: React.FC = () => {
               lineHeight: 1.2
             }}>
               {t('title') || 'Vision & Mission'}
-              <span className="title-highlight" style={{ color: '#d80650', fontSize: '52px' }}>.</span>
+              <span className="title-highlight" style={{ color: '#0C4BA2', fontSize: '52px' }}>.</span>
             </h2>
             <div className="title-underline" style={{
               width: '80px',
               height: '4px',
-              background: 'linear-gradient(90deg, #d80650 0%, #ff0866 100%)',
+              background: 'linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%)',
               borderRadius: '2px',
               margin: '0 auto 20px'
             }}></div>
@@ -69,17 +69,6 @@ const VisionMission: React.FC = () => {
                     height={700}
                     className="rounded-4"
                   />
-                </div>
-
-                {/* Floating Badge */}
-                <div className="floating-badge">
-                  <div className="badge-icon">
-                    <i className="bx bx-trophy"></i>
-                  </div>
-                  <div className="badge-content">
-                    <h4>15+</h4>
-                    <p>{t('badge.yearsExperience') || 'Years of Excellence'}</p>
-                  </div>
                 </div>
 
                 {/* Decorative Shape */}
@@ -181,7 +170,7 @@ const VisionMission: React.FC = () => {
           padding: 10px 24px;
           background: linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%);
           border-radius: 30px;
-          color: #d80650;
+          color: #0C4BA2;
           font-weight: 600;
           font-size: 14px;
           margin-bottom: 20px;
@@ -201,14 +190,14 @@ const VisionMission: React.FC = () => {
         }
 
         .vision-mission-area .title-highlight {
-          color: #d80650;
+          color: #0C4BA2;
           font-size: 52px;
         }
 
         .vision-mission-area .title-underline {
           width: 80px;
           height: 4px;
-          background: linear-gradient(90deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 2px;
           margin: 0 auto 20px;
         }
@@ -234,30 +223,27 @@ const VisionMission: React.FC = () => {
           box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
-        .vision-mission-area .floating-badge {
+        .image-shape {
           position: absolute;
-          bottom: 30px;
-          right: 30px;
-          background: white;
-          padding: 25px 30px;
-          border-radius: 20px;
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          z-index: 3;
-          animation: floatBadge 3s ease-in-out infinite;
+          top: -20px;
+          left: -20px;
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%);
+          border-radius: 50%;
+          z-index: 1;
+          animation: rotate 20s linear infinite;
         }
 
-        @keyframes floatBadge {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+        @keyframes rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
 
-        .badge-icon {
+        .vision-mission-content {        .badge-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 15px;
           display: flex;
           align-items: center;
@@ -334,7 +320,7 @@ const VisionMission: React.FC = () => {
         .vm-card:hover {
           transform: translateY(-10px);
           box-shadow: 0 20px 50px rgba(216, 6, 80, 0.15);
-          border-color: #d80650;
+          border-color: #0C4BA2;
         }
 
         .vm-card-header {
@@ -358,12 +344,12 @@ const VisionMission: React.FC = () => {
 
         .vm-icon i {
           font-size: 32px;
-          color: #d80650;
+          color: #0C4BA2;
           transition: all 0.3s ease;
         }
 
         .vm-card:hover .vm-icon {
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           transform: scale(1.1) rotate(-5deg);
         }
 
@@ -374,7 +360,7 @@ const VisionMission: React.FC = () => {
         .vm-badge {
           width: 45px;
           height: 45px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 12px;
           display: flex;
           align-items: center;
@@ -421,7 +407,7 @@ const VisionMission: React.FC = () => {
 
         .vm-arrow i {
           font-size: 22px;
-          color: #d80650;
+          color: #0C4BA2;
         }
 
         .vm-card:hover .vm-arrow {
@@ -450,7 +436,7 @@ const VisionMission: React.FC = () => {
 
         .highlight-item i {
           font-size: 24px;
-          color: #d80650;
+          color: #0C4BA2;
         }
 
         .bg-shape-decoration {
@@ -504,19 +490,6 @@ const VisionMission: React.FC = () => {
             padding: 20px 25px;
           }
 
-          .badge-icon {
-            width: 50px;
-            height: 50px;
-          }
-
-          .badge-icon i {
-            font-size: 26px;
-          }
-
-          .badge-content h4 {
-            font-size: 26px;
-          }
-
           .vm-card {
             padding: 30px 25px;
           }
@@ -529,12 +502,6 @@ const VisionMission: React.FC = () => {
 
           .title-highlight {
             font-size: 38px;
-          }
-
-          .floating-badge {
-            position: static;
-            margin-top: 20px;
-            justify-content: center;
           }
 
           .vm-content h3 {

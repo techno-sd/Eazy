@@ -24,7 +24,7 @@
 }
 
 .section-dark .section-title span.sub-title {
-  color: #d80650;
+  color: #0C4BA2;
   background: rgba(216, 6, 80, 0.1);
   padding: 5px 15px;
   border-radius: 30px;
@@ -47,7 +47,7 @@
 
 .section-dark .single-security:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: #d80650;
+  border-color: #0C4BA2;
   box-shadow: 0 20px 60px rgba(216, 6, 80, 0.3);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .section-dark .single-security i {
-  color: #d80650;
+  color: #0C4BA2;
   filter: drop-shadow(0 0 20px rgba(216, 6, 80, 0.5));
 }
 
@@ -79,7 +79,7 @@
   bottom: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(135deg, #d80650, transparent);
+  background: linear-gradient(135deg, #0C4BA2, transparent);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -151,13 +151,13 @@
 }
 
 .section-dark ul li i {
-  color: #d80650;
+  color: #0C4BA2;
 }
 
 /* Button Styles for Dark Sections */
 .section-dark .btn-primary {
-  background: #d80650;
-  border-color: #d80650;
+  background: #0C4BA2;
+  border-color: #0C4BA2;
   color: #ffffff;
 }
 
@@ -170,7 +170,7 @@
 
 /* Link Styles for Dark Sections */
 .section-dark a {
-  color: #d80650;
+  color: #0C4BA2;
 }
 
 .section-dark a:hover {
@@ -195,7 +195,7 @@
 .section-dark textarea:focus,
 .section-dark select:focus {
   background: rgba(255, 255, 255, 0.15);
-  border-color: #d80650;
+  border-color: #0C4BA2;
   box-shadow: 0 0 0 3px rgba(216, 6, 80, 0.3);
 }
 
@@ -210,7 +210,7 @@
 .section-dark .complete-img:hover,
 .section-dark .approach-img:hover,
 .section-dark .cybersecurity-img:hover {
-  border-color: #d80650;
+  border-color: #0C4BA2;
   box-shadow: 0 25px 70px rgba(216, 6, 80, 0.4);
 }
 
@@ -241,14 +241,14 @@
 
 .section-dark .stats-item:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: #d80650;
+  border-color: #0C4BA2;
   transform: translateY(-10px);
 }
 
 .section-dark .stats-number {
   font-size: 48px;
   font-weight: 700;
-  color: #d80650;
+  color: #0C4BA2;
   text-shadow: 0 0 30px rgba(216, 6, 80, 0.5);
 }
 

@@ -116,7 +116,7 @@
 }
 
 .accordion-button:not(.collapsed) {
-  background: linear-gradient(135deg, #d80650 0%, #a00540 100%);
+  background: linear-gradient(135deg, #0C4BA2 0%, #0a3d82 100%);
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(216, 6, 80, 0.3);
 }
@@ -285,7 +285,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: #d80650;
+  border-color: #0C4BA2;
   box-shadow: 0 0 0 4px rgba(216, 6, 80, 0.1);
   outline: none;
   transform: translateY(-2px);
@@ -325,7 +325,7 @@ select:focus {
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #d80650, #ff0866);
+  background: linear-gradient(90deg, #0C4BA2, #1FB6E8);
   border-radius: 8px;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -482,7 +482,7 @@ img {
 
 /* ========== Call-to-Action Sections ========== */
 .cta-section {
-  background: linear-gradient(135deg, #d80650 0%, #a00540 100%);
+  background: linear-gradient(135deg, #0C4BA2 0%, #0a3d82 100%);
   color: #ffffff;
   padding: 80px 0;
   position: relative;
@@ -565,7 +565,7 @@ img {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #d80650;
+  background: #0C4BA2;
   color: white;
   padding: 8px 16px;
   text-decoration: none;

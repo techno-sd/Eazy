@@ -788,15 +788,15 @@
   .blog-details-area .comments-area {
     padding: 20px;
   }
-  .blog-details-area .comments-area .comment-author {
-    font-size: 15px;
-    margin-bottom: 0.3em;
-  }
   .blog-details-area .comments-area .comment-author .avatar {
     left: 0;
     position: relative;
     display: block;
     margin-bottom: 10px;
+  }
+  .blog-details-area .comments-area .comment-author {
+    font-size: 15px;
+    margin-bottom: 0.3em;
   }
   .blog-details-area .comments-area .comment-body {
     padding-left: 0;
@@ -931,6 +931,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li .dropdown-menu {
@@ -944,6 +946,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li li .dropdown-menu {
@@ -957,6 +961,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .nav-area .others-option {
@@ -990,18 +996,24 @@
     padding-top: 10px;
     padding-right: 15px;
     /* width */
-    /* Track */
-    /* Handle */
-    /* Handle on hover */
   }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav::-webkit-scrollbar {
     width: 7px;
   }
+  .nav-area-six .navbar-area .main-nav nav .navbar-nav {
+    /* Track */
+  }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
+  .nav-area-six .navbar-area .main-nav nav .navbar-nav {
+    /* Handle */
+  }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav::-webkit-scrollbar-thumb {
     background: #888;
+  }
+  .nav-area-six .navbar-area .main-nav nav .navbar-nav {
+    /* Handle on hover */
   }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav::-webkit-scrollbar-thumb:hover {
     background: #555;
@@ -1044,6 +1056,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li .dropdown-menu {
@@ -1057,6 +1071,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .nav-area-six .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li li .dropdown-menu {
@@ -1070,6 +1086,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .single-solutions {
@@ -1208,7 +1226,7 @@
     margin-bottom: 10px;
   }
   .single-counters {
-    border: 1px solid #d80650;
+    border: 1px solid #0C4BA2;
   }
   .single-counters::before {
     display: none;
@@ -1634,6 +1652,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .seku-new-nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li .dropdown-menu {
@@ -1647,6 +1667,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .seku-new-nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu li li li .dropdown-menu {
@@ -1660,6 +1682,8 @@
     visibility: visible;
     padding: 0;
     margin: 0;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
     transform: scaleX(1);
   }
   .cyber-defenses-content p {
@@ -2361,7 +2385,7 @@
     margin-bottom: 10px;
   }
   .single-counters {
-    border: 1px solid #d80650;
+    border: 1px solid #0C4BA2;
   }
   .single-counters::before {
     display: none;
@@ -3039,4 +3063,4 @@
     padding-left: 100px;
     padding-right: 100px;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}

@@ -11,31 +11,31 @@ const Vision2030Content: React.FC = () => {
 
   const focusAreas = [
     {
-      icon: "flaticon-cyber-security",
+      icon: "bx bx-shield-alt-2",
       title: t('focus1.title'),
       description: t('focus1.description'),
-      color: "#d80650",
+      color: "#0C4BA2",
       delay: "100"
     },
     {
-      icon: "flaticon-security",
+      icon: "bx bxs-buildings",
       title: t('focus2.title'),
       description: t('focus2.description'),
-      color: "#ff0866",
+      color: "#1FB6E8",
       delay: "200"
     },
     {
-      icon: "flaticon-rocket",
+      icon: "bx bx-trending-up",
       title: t('focus3.title'),
       description: t('focus3.description'),
-      color: "#d80650",
+      color: "#0C4BA2",
       delay: "300"
     },
     {
-      icon: "flaticon-training",
+      icon: "bx bx-brain",
       title: t('focus4.title'),
       description: t('focus4.description'),
-      color: "#ff0866",
+      color: "#1FB6E8",
       delay: "400"
     }
   ];
@@ -51,13 +51,13 @@ const Vision2030Content: React.FC = () => {
               alignItems: 'center',
               gap: '8px',
               padding: '10px 24px',
-              background: 'linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%)',
+              background: 'linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%)',
               borderRadius: '30px',
-              color: '#d80650',
+              color: '#0C4BA2',
               fontWeight: 600,
               fontSize: '14px',
               marginBottom: '20px',
-              border: '2px solid rgba(216, 6, 80, 0.2)'
+              border: '2px solid rgba(12, 75, 162, 0.2)'
             }}>
               <i className="bx bx-flag" style={{ fontSize: '20px' }}></i>
               <span>{t('subtitle') || 'رؤيتنا 2030'}</span>
@@ -70,12 +70,12 @@ const Vision2030Content: React.FC = () => {
               lineHeight: 1.2
             }}>
               {t('title') || 'رؤيتنا 2030 (Alignment with Vision 2030)'}
-              <span style={{ color: '#d80650', fontSize: '52px' }}>.</span>
+              <span style={{ color: '#0C4BA2', fontSize: '52px' }}>.</span>
             </h2>
             <div className="title-underline" style={{
               width: '80px',
               height: '4px',
-              background: 'linear-gradient(90deg, #d80650 0%, #ff0866 100%)',
+              background: 'linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%)',
               borderRadius: '2px',
               margin: '0 auto 20px'
             }}></div>
@@ -124,38 +124,6 @@ const Vision2030Content: React.FC = () => {
             {/* Content Column */}
             <div className="col-lg-6">
               <div className="vision2030-content">
-                {/* Progress Stats */}
-                <div className="vision-stats mb-5" data-aos="fade-up" data-aos-delay="100">
-                  <div className="row g-3">
-                    <div className="col-6">
-                      <div className="stat-item">
-                        <div className="stat-icon">
-                          <i className="bx bx-rocket"></i>
-                        </div>
-                        <div className="stat-content">
-                          <div className="stat-value">
-                            <span className="counter">95</span>%
-                          </div>
-                          <p>{t('stat1') || 'Digital Transformation'}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="stat-item">
-                        <div className="stat-icon">
-                          <i className="bx bx-shield-alt-2"></i>
-                        </div>
-                        <div className="stat-content">
-                          <div className="stat-value">
-                            <span className="counter">98</span>%
-                          </div>
-                          <p>{t('stat2') || 'Security Enhancement'}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Focus Areas Grid */}
                 <div className="row g-4">
                   {focusAreas.map((area, index) => (
@@ -174,9 +142,6 @@ const Vision2030Content: React.FC = () => {
                         </div>
                         <div className="focus-arrow" style={{ color: area.color }}>
                           <i className="bx bx-right-arrow-alt"></i>
-                        </div>
-                        <div className="focus-number" style={{ color: `${area.color}20` }}>
-                          0{index + 1}
                         </div>
                       </div>
                     </div>
@@ -233,13 +198,13 @@ const Vision2030Content: React.FC = () => {
         .main-image {
           position: relative;
           z-index: 2;
-          box-shadow: 0 25px 70px rgba(216, 6, 80, 0.15);
+          box-shadow: 0 25px 70px rgba(12, 75, 162, 0.15);
           transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .vision-image-wrapper:hover .main-image {
           transform: translateY(-10px);
-          box-shadow: 0 35px 90px rgba(216, 6, 80, 0.25);
+          box-shadow: 0 35px 90px rgba(12, 75, 162, 0.25);
         }
 
         .vision-badge {
@@ -251,12 +216,12 @@ const Vision2030Content: React.FC = () => {
           -webkit-backdrop-filter: blur(20px);
           padding: 25px 30px;
           border-radius: 20px;
-          box-shadow: 0 20px 60px rgba(216, 6, 80, 0.2);
+          box-shadow: 0 20px 60px rgba(12, 75, 162, 0.2);
           display: flex;
           align-items: center;
           gap: 20px;
           z-index: 3;
-          border: 1px solid rgba(216, 6, 80, 0.1);
+          border: 1px solid rgba(12, 75, 162, 0.1);
           animation: floatBadge 3s ease-in-out infinite;
         }
 
@@ -268,7 +233,7 @@ const Vision2030Content: React.FC = () => {
         .badge-icon {
           width: 60px;
           height: 60px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 15px;
           display: flex;
           align-items: center;
@@ -303,7 +268,7 @@ const Vision2030Content: React.FC = () => {
         .badge-content h4 {
           font-size: 36px;
           font-weight: 800;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -324,7 +289,7 @@ const Vision2030Content: React.FC = () => {
           right: -30px;
           width: 250px;
           height: 250px;
-          background: linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%);
+          background: linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%);
           border-radius: 50%;
           z-index: 1;
           animation: rotate 25s linear infinite;
@@ -341,8 +306,8 @@ const Vision2030Content: React.FC = () => {
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border-radius: 20px;
-          border: 2px solid rgba(216, 6, 80, 0.1);
-          box-shadow: 0 10px 40px rgba(216, 6, 80, 0.1);
+          border: 2px solid rgba(12, 75, 162, 0.1);
+          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.1);
           position: relative;
         }
 
@@ -359,13 +324,13 @@ const Vision2030Content: React.FC = () => {
 
         .stat-item:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 30px rgba(216, 6, 80, 0.15);
+          box-shadow: 0 10px 30px rgba(12, 75, 162, 0.15);
         }
 
         .stat-icon {
           width: 55px;
           height: 55px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 12px;
           display: flex;
           align-items: center;
@@ -385,7 +350,7 @@ const Vision2030Content: React.FC = () => {
         .stat-value {
           font-size: 32px;
           font-weight: 800;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -402,17 +367,18 @@ const Vision2030Content: React.FC = () => {
 
         .focus-card {
           position: relative;
-          padding: 30px 25px;
-          background: rgba(255, 255, 255, 0.9);
+          padding: 35px 28px;
+          background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border-radius: 20px;
-          border: 2px solid rgba(216, 6, 80, 0.1);
+          border-radius: 25px;
+          border: 2px solid rgba(12, 75, 162, 0.08);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           overflow: hidden;
           height: 100%;
           display: flex;
           flex-direction: column;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
         }
 
         .card-shine {
@@ -421,7 +387,7 @@ const Vision2030Content: React.FC = () => {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(216, 6, 80, 0.1), transparent);
+          background: linear-gradient(90deg, transparent, rgba(12, 75, 162, 0.15), transparent);
           transition: left 0.6s ease;
         }
 
@@ -430,33 +396,39 @@ const Vision2030Content: React.FC = () => {
         }
 
         .focus-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 60px rgba(216, 6, 80, 0.2);
-          border-color: #d80650;
+          transform: translateY(-12px);
+          box-shadow: 0 25px 65px rgba(12, 75, 162, 0.25);
+          border-color: rgba(12, 75, 162, 0.3);
           background: rgba(255, 255, 255, 1);
         }
 
         .focus-icon {
-          width: 70px;
-          height: 70px;
-          border-radius: 18px;
-          border: 2px solid;
+          width: 80px;
+          height: 80px;
+          border-radius: 22px;
+          border: none;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 20px;
-          transition: all 0.4s ease;
+          margin-bottom: 22px;
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           z-index: 1;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .focus-icon i {
-          font-size: 32px;
-          transition: all 0.3s ease;
+          font-size: 38px;
+          transition: all 0.4s ease;
         }
 
         .focus-card:hover .focus-icon {
-          transform: scale(1.1) rotate(-5deg);
+          transform: scale(1.15) rotate(-8deg);
+          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.3);
+        }
+
+        .focus-card:hover .focus-icon i {
+          transform: scale(1.1);
         }
 
         .focus-content {
@@ -474,7 +446,7 @@ const Vision2030Content: React.FC = () => {
         }
 
         .focus-card:hover .focus-content h4 {
-          color: #d80650;
+          color: #0C4BA2;
         }
 
         .focus-content p {
@@ -490,7 +462,7 @@ const Vision2030Content: React.FC = () => {
           right: 25px;
           width: 45px;
           height: 45px;
-          background: rgba(216, 6, 80, 0.1);
+          background: rgba(12, 75, 162, 0.1);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -509,23 +481,12 @@ const Vision2030Content: React.FC = () => {
           transform: translateX(0);
         }
 
-        .focus-number {
-          position: absolute;
-          bottom: 15px;
-          right: 20px;
-          font-size: 72px;
-          font-weight: 800;
-          line-height: 1;
-          transition: all 0.3s ease;
-          pointer-events: none;
-        }
-
         .premium-btn {
           display: inline-flex;
           align-items: center;
           gap: 12px;
           padding: 18px 40px;
-          background: linear-gradient(135deg, #d80650 0%, #ff0866 100%);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           color: white;
           font-size: 16px;
           font-weight: 700;
@@ -534,7 +495,7 @@ const Vision2030Content: React.FC = () => {
           position: relative;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 10px 30px rgba(216, 6, 80, 0.3);
+          box-shadow: 0 10px 30px rgba(12, 75, 162, 0.3);
           border: 2px solid transparent;
         }
 
@@ -545,7 +506,7 @@ const Vision2030Content: React.FC = () => {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(135deg, #ff0866 0%, #d80650 100%);
+          background: linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%);
           opacity: 0;
           transition: opacity 0.3s ease;
         }
@@ -556,7 +517,7 @@ const Vision2030Content: React.FC = () => {
 
         .premium-btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 15px 40px rgba(216, 6, 80, 0.4);
+          box-shadow: 0 15px 40px rgba(12, 75, 162, 0.4);
         }
 
         .btn-text, .btn-icon {
@@ -589,7 +550,7 @@ const Vision2030Content: React.FC = () => {
         .shape-circle {
           position: absolute;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(216, 6, 80, 0.05) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.05) 0%, transparent 70%);
         }
 
         .shape-1 {

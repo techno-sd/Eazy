@@ -1,7 +1,6 @@
 import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/HomeOne/MainBanner";
-import Partner from "@/components/Common/Partner";
-import AboutSection from "@/components/HomeOne/AboutSection";
+import AboutSectionClean from "@/components/HomeOne/AboutSectionClean";
 import ServicesSection from "@/components/HomeOne/ServicesSection";
 import IndustriesGrid from "@/components/Industries/IndustriesGrid";
 import Vision2030Content from "@/components/Vision2030/Vision2030Content";
@@ -19,11 +18,8 @@ export default function Home() {
       {/* Hero Section */}
       <MainBanner />
 
-      {/* Partners */}
-      <Partner />
-
       {/* About Section */}
-      <AboutSection />
+      <AboutSectionClean />
 
       {/* Services Section */}
       <ServicesSection />

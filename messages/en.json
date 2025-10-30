@@ -147,10 +147,28 @@
     },
     "about": {
       "subtitle": "Who We Are",
-      "title": "About Us",
-      "description": "Your trusted partner in building a secure and smart digital future aligned with Saudi Vision 2030",
-      "imageAlt": "About Us",
+      "title": "Leading Cybersecurity Solutions Provider",
+      "description": "We provide comprehensive cybersecurity solutions to protect your digital assets and ensure business continuity in an ever-evolving threat landscape.",
+      "imageAlt": "Cybersecurity Solutions",
       "learnMoreButton": "Learn More About Us",
+      "features": {
+        "feature1": {
+          "title": "Advanced Protection",
+          "desc": "Cutting-edge security technologies"
+        },
+        "feature2": {
+          "title": "Expert Team",
+          "desc": "Certified cybersecurity professionals"
+        },
+        "feature3": {
+          "title": "24/7 Support",
+          "desc": "Round-the-clock monitoring"
+        },
+        "feature4": {
+          "title": "Proven Results",
+          "desc": "Trusted by leading organizations"
+        }
+      },
       "stats": {
         "yearsExperience": "Years Experience",
         "clients": "Happy Clients"
@@ -182,14 +200,6 @@
           "description": "Solutions designed according to the needs of each organization."
         }
       }
-    },
-    "partners": {
-      "badge": "Trusted Partners",
-      "title": "Trusted by Leading Organizations",
-      "subtitle": "We proudly collaborate with industry leaders to deliver exceptional cybersecurity solutions",
-      "stat1": "Projects Secured",
-      "stat2": "Years Experience",
-      "stat3": "Happy Clients"
     },
     "aboutUs": {
       "title": "About Us",
@@ -392,7 +402,10 @@
       "reason5": {
         "title": "24/7 Technical Support",
         "description": "Continuous technical support available 24/7."
-      }
+      },
+      "ctaTitle": "Ready to Get Started?",
+      "ctaDescription": "Let's discuss how we can secure your digital infrastructure and drive your business forward",
+      "contactUs": "Contact Us Now"
     }
   },
   "whyChooseUs": {
@@ -532,7 +545,12 @@
         "title": "24/7 Sector Support",
         "description": "Dedicated support teams with industry expertise available around the clock."
       }
-    }
+    },
+    "viewAll": "Explore All Industries",
+    "ctaTitle": "Ready to Transform Your Industry?",
+    "ctaDescription": "Get in touch with our experts to discuss your specific industry needs",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More"
   },
   "vision2030": {
     "subtitle": "Our Vision",

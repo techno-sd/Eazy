@@ -93,7 +93,7 @@ section {
 .single-security:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border-color: #d80650;
+  border-color: #0C4BA2;
 }
 
 .single-security i {
@@ -102,7 +102,7 @@ section {
 
 .single-security:hover i {
   transform: scale(1.2) rotate(5deg);
-  color: #d80650;
+  color: #0C4BA2;
 }
 
 .single-security h3 {
@@ -110,7 +110,7 @@ section {
 }
 
 .single-security:hover h3 {
-  color: #d80650;
+  color: #0C4BA2;
 }
 
 /* Enhanced Section Titles */
@@ -133,7 +133,7 @@ section {
   transform: translateY(-50%);
   width: 4px;
   height: 20px;
-  background: #d80650;
+  background: #0C4BA2;
   border-radius: 2px;
 }
 
@@ -330,7 +330,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus {
-  outline: 3px solid #d80650;
+  outline: 3px solid #0C4BA2;
   outline-offset: 2px;
 }
 
@@ -381,7 +381,7 @@ a {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: #d80650;
+  background: #0C4BA2;
   transition: width 0.3s ease;
 }
 
@@ -397,7 +397,7 @@ a {
 }
 
 .footer-area a:hover {
-  color: #d80650;
+  color: #0C4BA2;
   padding-left: 5px;
 }
 
@@ -427,7 +427,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #d80650;
+  border-color: #0C4BA2;
   box-shadow: 0 0 0 3px rgba(216, 6, 80, 0.1);
 }
 
@@ -447,7 +447,7 @@ select:focus {
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #d80650;
+  border-top: 4px solid #0C4BA2;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

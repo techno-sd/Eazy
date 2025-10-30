@@ -3,7 +3,6 @@ import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
 import Footer from "@/components/Layouts/Footer";
 import Testimonials from "@/components/Common/Testimonials";
-import Partner from "@/components/Common/Partner";
 
 export default function BankingPage() {
   return (
@@ -54,7 +53,6 @@ export default function BankingPage() {
       </section>
 
       <Testimonials />
-      <Partner />
       <Footer />
     </>
   );

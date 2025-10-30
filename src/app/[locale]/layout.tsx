@@ -25,6 +25,8 @@ import "../../../styles/enhanced-layout.css";
 import "../../../styles/premium-design.css";
 // Modern Navigation Menu
 import "../../../styles/modern-navbar.css";
+// Logo Enhancement
+import "../../../styles/logo-enhancement.css";
 
 import type { Metadata } from "next";
 import { Rubik, Barlow_Condensed } from "next/font/google";

@@ -4,7 +4,6 @@ import PageBanner from "@/components/Common/PageBanner";
 import Footer from "@/components/Layouts/Footer";
 import Vision2030Content from "@/components/Vision2030/Vision2030Content";
 import Testimonials from "@/components/Common/Testimonials";
-import Partner from "@/components/Common/Partner";
 
 export default function Vision2030Page() {
   return (
@@ -21,8 +20,6 @@ export default function Vision2030Page() {
       <Vision2030Content />
 
       <Testimonials />
-
-      <Partner />
 
       <Footer />
     </>

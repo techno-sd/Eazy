@@ -6,7 +6,6 @@ import VisionMission from "@/components/About/VisionMission";
 import CoreValues from "@/components/About/CoreValues";
 import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
 import Testimonials from "@/components/Common/Testimonials";
-import Partner from "@/components/Common/Partner";
 import Footer from "@/components/Layouts/Footer";
 import ScrollProgress from "@/components/Common/ScrollProgress";
 
@@ -27,7 +26,6 @@ export default function Page() {
       <CoreValues />
       <WhyChooseUsAbout />
       <Testimonials />
-      <Partner />
       <Footer />
     </>
   );

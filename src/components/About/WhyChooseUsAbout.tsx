@@ -10,228 +10,240 @@ const WhyChooseUsAbout: React.FC = () => {
 
   const reasons = [
     {
-      icon: "flaticon-password",
+      icon: "bx bx-shield-alt-2",
       title: t('reason1.title'),
       description: t('reason1.description'),
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      iconBg: "#667eea",
+      gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
+      iconBg: "#0C4BA2",
+      number: "01",
       delay: "100"
     },
     {
-      icon: "flaticon-cyber-security",
+      icon: "bx bx-trending-up",
       title: t('reason2.title'),
       description: t('reason2.description'),
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      iconBg: "#f093fb",
+      gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
+      iconBg: "#1FB6E8",
+      number: "02",
       delay: "200"
     },
     {
-      icon: "flaticon-security",
+      icon: "bx bx-diamond",
       title: t('reason3.title'),
       description: t('reason3.description'),
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-      iconBg: "#4facfe",
+      gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
+      iconBg: "#0C4BA2",
+      number: "03",
       delay: "300"
     },
     {
-      icon: "flaticon-price-tag",
+      icon: "bx bx-dollar-circle",
       title: t('reason4.title'),
       description: t('reason4.description'),
-      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-      iconBg: "#43e97b",
+      gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
+      iconBg: "#1FB6E8",
+      number: "04",
       delay: "400"
     },
     {
-      icon: "flaticon-support",
+      icon: "bx bx-support",
       title: t('reason5.title'),
       description: t('reason5.description'),
-      gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-      iconBg: "#fa709a",
+      gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
+      iconBg: "#0C4BA2",
+      number: "05",
       delay: "500"
     }
   ];
 
   return (
     <>
-      <section className="why-choose-us-area ptb-100 bg-gradient">
+      <section className="why-choose-us-area ptb-100">
         <div className="container">
           {/* Section Header */}
-          <div className="section-title white-title" data-aos="fade-up">
-            <span className="sub-title">
-              <i className="bx bx-bulb"></i>
-              {t('subtitle')}
-            </span>
-            <h2 className="text-white">{t('title')}</h2>
-            <p className="text-white-70 mx-auto" style={{ maxWidth: '700px' }}>
-              {t('description')}
+          <div className="section-header" data-aos="fade-up">
+            <div className="section-badge" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '10px 24px',
+              background: 'linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%)',
+              borderRadius: '30px',
+              color: '#0C4BA2',
+              fontWeight: 600,
+              fontSize: '14px',
+              marginBottom: '20px',
+              border: '2px solid rgba(12, 75, 162, 0.2)'
+            }}>
+              <i className="bx bx-bulb" style={{ fontSize: '20px' }}></i>
+              <span>{t('subtitle') || 'Why Choose Us'}</span>
+            </div>
+            <h2 className="section-main-title" style={{
+              fontSize: '42px',
+              fontWeight: 800,
+              color: '#1a1a1a',
+              marginBottom: '15px',
+              lineHeight: 1.2
+            }}>
+              {t('title') || 'Why Choose Us'}
+              <span style={{ color: '#0C4BA2', fontSize: '52px' }}>?</span>
+            </h2>
+            <div className="title-underline" style={{
+              width: '80px',
+              height: '4px',
+              background: 'linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%)',
+              borderRadius: '2px',
+              margin: '0 auto 20px'
+            }}></div>
+            <p className="section-description" style={{
+              fontSize: '16px',
+              color: '#666',
+              maxWidth: '800px',
+              margin: '0 auto',
+              lineHeight: 1.7
+            }}>
+              {t('description') || 'We provide world-class cybersecurity solutions with cutting-edge technology'}
             </p>
           </div>
 
           {/* Reasons Grid */}
-          <div className="row g-4 justify-content-center">
+          <div className="row g-4 mt-4">
             {reasons.map((reason, index) => (
-              <div key={index} className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay={reason.delay}>
+              <div key={index} className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={reason.delay}>
                 <div className="why-choose-card">
-                  {/* Icon Circle */}
-                  <div className="choose-icon-wrapper">
-                    <div className="choose-icon" style={{ background: reason.gradient }}>
+                  {/* Background Number */}
+                  <div className="card-number" style={{ color: `${reason.iconBg}10` }}>
+                    {reason.number}
+                  </div>
+
+                  {/* Icon Wrapper */}
+                  <div className="icon-wrapper">
+                    <div className="icon-circle" style={{ background: reason.gradient }}>
                       <i className={reason.icon}></i>
+                      <div className="icon-ring-1"></div>
+                      <div className="icon-ring-2"></div>
                     </div>
-                    <div className="icon-ring" style={{ borderColor: reason.iconBg }}></div>
-                    <div className="icon-pulse" style={{ background: reason.iconBg }}></div>
+                    <div className="icon-glow" style={{
+                      background: `radial-gradient(circle, ${reason.iconBg}40 0%, transparent 70%)`
+                    }}></div>
                   </div>
 
                   {/* Content */}
-                  <div className="choose-content">
+                  <div className="card-content">
                     <h3>{reason.title}</h3>
                     <p>{reason.description}</p>
                   </div>
 
-                  {/* Number Badge */}
-                  <div className="number-badge" style={{ background: reason.gradient }}>
-                    {String(index + 1).padStart(2, '0')}
+                  {/* Hover Arrow */}
+                  <div className="card-arrow" style={{ color: reason.iconBg }}>
+                    <i className="bx bx-right-arrow-alt"></i>
                   </div>
 
-                  {/* Hover Gradient */}
-                  <div className="card-gradient" style={{ background: reason.gradient }}></div>
+                  {/* Gradient Overlay */}
+                  <div className="card-overlay" style={{ background: reason.gradient }}></div>
+
+                  {/* Shine Effect */}
+                  <div className="card-shine"></div>
                 </div>
               </div>
             ))}
 
-            {/* Featured CTA Card */}
-            <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
-              <div className="why-choose-cta-card">
-                <div className="cta-icon">
-                  <i className="bx bx-message-square-dots"></i>
+            {/* CTA Card */}
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div className="cta-card">
+                <div className="cta-content">
+                  <div className="cta-icon-box">
+                    <i className="bx bx-conversation"></i>
+                  </div>
+                  <h3>{t('ctaTitle') || 'Ready to Get Started?'}</h3>
+                  <p>{t('ctaDescription') || "Let's discuss how we can secure your digital infrastructure"}</p>
+                  <Link href={`/${locale}/contact`} className="cta-button">
+                    <span>{t('contactUs') || 'Contact Us Now'}</span>
+                    <div className="button-icon">
+                      <i className="bx bx-right-arrow-alt"></i>
+                    </div>
+                  </Link>
                 </div>
-                <h3>{t('ctaTitle') || 'Have Questions?'}</h3>
-                <p>{t('ctaDescription') || "We're here to help you make the right choice for your business"}</p>
-                <Link href={`/${locale}/contact`} className="cta-btn">
-                  {t('contactUs') || 'Contact Us'}
-                  <i className="bx bx-right-arrow-alt"></i>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Stats */}
-          <div className="row mt-5" data-aos="fade-up" data-aos-delay="700">
-            <div className="col-12">
-              <div className="stats-wrapper">
-                <div className="row g-4 justify-content-center">
-                  <div className="col-lg-3 col-md-6 col-6">
-                    <div className="stat-item">
-                      <div className="stat-icon">
-                        <i className="bx bx-trophy"></i>
-                      </div>
-                      <h3><span className="counter">150</span>+</h3>
-                      <p>{t('stat1') || 'Awards Won'}</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-6">
-                    <div className="stat-item">
-                      <div className="stat-icon">
-                        <i className="bx bx-shield-alt-2"></i>
-                      </div>
-                      <h3><span className="counter">500</span>+</h3>
-                      <p>{t('stat2') || 'Projects Secured'}</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-6">
-                    <div className="stat-item">
-                      <div className="stat-icon">
-                        <i className="bx bx-user-check"></i>
-                      </div>
-                      <h3><span className="counter">300</span>+</h3>
-                      <p>{t('stat3') || 'Happy Clients'}</p>
-                    </div>
-                  </div>
-                  <div className="col-lg-3 col-md-6 col-6">
-                    <div className="stat-item">
-                      <div className="stat-icon">
-                        <i className="bx bx-support"></i>
-                      </div>
-                      <h3>24/7</h3>
-                      <p>{t('stat4') || 'Support Available'}</p>
-                    </div>
-                  </div>
-                </div>
+                <div className="cta-pattern"></div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Animated Background */}
-        <div className="animated-bg">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
+        {/* Background Decorations */}
+        <div className="section-decoration">
+          <div className="deco-shape deco-1"></div>
+          <div className="deco-shape deco-2"></div>
+          <div className="deco-shape deco-3"></div>
         </div>
       </section>
 
       <style jsx>{`
         .why-choose-us-area {
           position: relative;
-          background-color: #010c16;
+          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
           overflow: hidden;
         }
 
-        .bg-gradient {
-          background-color: #010c16;
+        .section-header {
+          text-align: center;
+          margin-bottom: 60px;
         }
 
-        .text-white-70 {
-          color: rgba(255, 255, 255, 0.85);
+        .section-badge {
+          animation: badgeFloat 3s ease-in-out infinite;
         }
 
-        .white-title .sub-title {
-          color: white;
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(10px);
-          padding: 8px 20px;
-          border-radius: 30px;
+        @keyframes badgeFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
         }
 
         .why-choose-card {
           position: relative;
           background: white;
-          padding: 40px 30px;
+          padding: 45px 35px;
           border-radius: 25px;
-          text-align: center;
+          height: 100%;
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+          border: 2px solid #f0f0f0;
           overflow: hidden;
-          height: 100%;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .why-choose-card::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-          transition: left 0.6s ease;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
         }
 
         .why-choose-card:hover {
-          transform: translateY(-15px);
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+          transform: translateY(-15px) scale(1.02);
+          border-color: #0C4BA2;
+          box-shadow: 0 25px 70px rgba(12, 75, 162, 0.2);
         }
 
-        .why-choose-card:hover::before {
-          left: 100%;
+        .card-number {
+          position: absolute;
+          top: 20px;
+          right: 25px;
+          font-size: 120px;
+          font-weight: 900;
+          line-height: 1;
+          z-index: 0;
+          transition: all 0.5s ease;
         }
 
-        .choose-icon-wrapper {
+        .why-choose-card:hover .card-number {
+          transform: scale(1.2) rotate(10deg);
+          opacity: 0.15;
+        }
+
+        .icon-wrapper {
           position: relative;
           width: 100px;
           height: 100px;
           margin: 0 auto 30px;
+          z-index: 1;
         }
 
-        .choose-icon {
+        .icon-circle {
           position: relative;
           width: 100px;
           height: 100px;
@@ -239,374 +251,424 @@ const WhyChooseUsAbout: React.FC = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          z-index: 3;
-          transition: transform 0.5s ease;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+          z-index: 2;
+          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 15px 40px rgba(12, 75, 162, 0.3);
         }
 
-        .why-choose-card:hover .choose-icon {
-          transform: scale(1.1) rotate(360deg);
+        .why-choose-card:hover .icon-circle {
+          transform: scale(1.15) rotate(360deg);
+          box-shadow: 0 20px 50px rgba(12, 75, 162, 0.4);
         }
 
-        .choose-icon i {
-          font-size: 45px;
+        .icon-circle i {
+          font-size: 48px;
           color: white;
-        }
-
-        .icon-ring {
-          position: absolute;
-          top: -10px;
-          left: -10px;
-          right: -10px;
-          bottom: -10px;
-          border: 2px dashed;
-          border-radius: 50%;
-          opacity: 0.3;
-          animation: rotate 20s linear infinite;
+          position: relative;
           z-index: 1;
         }
 
-        .icon-pulse {
+        .icon-ring-1,
+        .icon-ring-2 {
+          position: absolute;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          animation: pulse-ring 3s ease-out infinite;
+        }
+
+        .icon-ring-1 {
+          top: -15px;
+          left: -15px;
+          right: -15px;
+          bottom: -15px;
+        }
+
+        .icon-ring-2 {
+          top: -25px;
+          left: -25px;
+          right: -25px;
+          bottom: -25px;
+          animation-delay: 1.5s;
+        }
+
+        @keyframes pulse-ring {
+          0% {
+            transform: scale(1);
+            opacity: 1;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.5;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+
+        .icon-glow {
           position: absolute;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: 150px;
           border-radius: 50%;
-          opacity: 0.2;
-          animation: pulse 2s ease-out infinite;
           z-index: 0;
+          animation: glow 3s ease-in-out infinite;
         }
 
-        @keyframes rotate {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes glow {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+          50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
         }
 
-        @keyframes pulse {
-          0% {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 0.3;
-          }
-          50% {
-            transform: translate(-50%, -50%) scale(1.3);
-            opacity: 0.1;
-          }
-          100% {
-            transform: translate(-50%, -50%) scale(1.6);
-            opacity: 0;
-          }
+        .card-content {
+          position: relative;
+          z-index: 1;
+          flex: 1;
         }
 
-        .choose-content h3 {
-          font-size: 22px;
+        .card-content h3 {
+          font-size: 24px;
           font-weight: 700;
-          margin-bottom: 15px;
           color: #1a1a1a;
+          margin-bottom: 15px;
           transition: color 0.3s ease;
         }
 
-        .why-choose-card:hover .choose-content h3 {
-          color: #667eea;
+        .why-choose-card:hover .card-content h3 {
+          color: #0C4BA2;
         }
 
-        .choose-content p {
+        .card-content p {
           font-size: 15px;
           color: #666;
-          line-height: 1.7;
+          line-height: 1.8;
           margin: 0;
         }
 
-        .number-badge {
+        .card-arrow {
           position: absolute;
-          top: 20px;
-          right: 20px;
-          width: 45px;
-          height: 45px;
-          border-radius: 12px;
+          bottom: 30px;
+          right: 30px;
+          width: 50px;
+          height: 50px;
+          background: rgba(12, 75, 162, 0.1);
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: white;
-          font-size: 18px;
-          font-weight: 700;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-          transition: transform 0.3s ease;
+          opacity: 0;
+          transform: translateX(-20px);
+          transition: all 0.4s ease;
+          z-index: 1;
         }
 
-        .why-choose-card:hover .number-badge {
-          transform: scale(1.15) rotate(5deg);
+        .card-arrow i {
+          font-size: 28px;
         }
 
-        .card-gradient {
+        .why-choose-card:hover .card-arrow {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        .card-overlay {
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
           height: 0;
           opacity: 0.05;
-          transition: height 0.4s ease;
-          z-index: 0;
+          transition: height 0.5s ease;
           border-radius: 0 0 25px 25px;
         }
 
-        .why-choose-card:hover .card-gradient {
-          height: 100%;
+        .why-choose-card:hover .card-overlay {
+          height: 50%;
         }
 
-        .why-choose-cta-card {
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(20px);
-          border: 2px solid rgba(255, 255, 255, 0.3);
-          padding: 40px 30px;
+        .card-shine {
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+          transition: left 0.7s ease;
+        }
+
+        .why-choose-card:hover .card-shine {
+          left: 100%;
+        }
+
+        .cta-card {
+          position: relative;
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
+          padding: 50px 40px;
           border-radius: 25px;
-          text-align: center;
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          transition: all 0.4s ease;
+          text-align: center;
+          overflow: hidden;
+          transition: all 0.5s ease;
+          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.3);
         }
 
-        .why-choose-cta-card:hover {
-          background: rgba(255, 255, 255, 0.25);
-          transform: translateY(-15px);
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        .cta-card:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 25px 70px rgba(12, 75, 162, 0.4);
         }
 
-        .cta-icon {
-          width: 80px;
-          height: 80px;
-          background: white;
+        .cta-content {
+          position: relative;
+          z-index: 1;
+        }
+
+        .cta-icon-box {
+          width: 90px;
+          height: 90px;
+          background: rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(10px);
+          border: 3px solid rgba(255, 255, 255, 0.3);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 25px;
-          transition: transform 0.3s ease;
+          transition: all 0.4s ease;
         }
 
-        .why-choose-cta-card:hover .cta-icon {
-          transform: scale(1.1) rotate(10deg);
+        .cta-card:hover .cta-icon-box {
+          transform: scale(1.1) rotate(15deg);
+          background: rgba(255, 255, 255, 0.3);
         }
 
-        .cta-icon i {
-          font-size: 40px;
-          color: #667eea;
+        .cta-icon-box i {
+          font-size: 45px;
+          color: white;
         }
 
-        .why-choose-cta-card h3 {
-          font-size: 24px;
+        .cta-content h3 {
+          font-size: 26px;
           font-weight: 700;
           color: white;
           margin-bottom: 15px;
         }
 
-        .why-choose-cta-card p {
+        .cta-content p {
           font-size: 15px;
-          color: rgba(255, 255, 255, 0.9);
-          margin-bottom: 25px;
+          color: rgba(255, 255, 255, 0.95);
           line-height: 1.7;
+          margin-bottom: 30px;
         }
 
-        .cta-btn {
+        .cta-button {
           display: inline-flex;
           align-items: center;
-          gap: 10px;
-          padding: 15px 35px;
+          gap: 12px;
+          padding: 16px 40px;
           background: white;
-          color: #667eea;
+          color: #0C4BA2;
           border-radius: 50px;
           font-weight: 600;
+          font-size: 16px;
           text-decoration: none;
-          transition: all 0.3s ease;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+          transition: all 0.4s ease;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          position: relative;
+          overflow: hidden;
         }
 
-        .cta-btn:hover {
+        .cta-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(12, 75, 162, 0.1), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+          left: 100%;
+        }
+
+        .cta-button:hover {
           transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-          gap: 15px;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+          gap: 18px;
         }
 
-        .cta-btn i {
-          font-size: 22px;
-          transition: transform 0.3s ease;
-        }
-
-        .cta-btn:hover i {
-          transform: translateX(5px);
-        }
-
-        .stats-wrapper {
-          background: rgba(255, 255, 255, 0.08);
-          backdrop-filter: blur(20px);
-          border: 2px solid rgba(255, 255, 255, 0.15);
-          border-radius: 25px;
-          padding: 40px 20px;
-          position: relative;
-          z-index: 1;
-        }
-
-        .why-choose-us-area > .container {
-          position: relative;
-          z-index: 1;
-        }
-
-        .stat-item {
-          text-align: center;
-          position: relative;
-        }
-
-        .stat-icon {
-          width: 70px;
-          height: 70px;
-          background: rgba(255, 255, 255, 0.2);
+        .button-icon {
+          width: 28px;
+          height: 28px;
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: 0 auto 20px;
-          transition: all 0.3s ease;
+          transition: transform 0.3s ease;
         }
 
-        .stat-item:hover .stat-icon {
-          background: white;
-          transform: scale(1.1);
-        }
-
-        .stat-icon i {
-          font-size: 35px;
+        .button-icon i {
+          font-size: 20px;
           color: white;
-          transition: color 0.3s ease;
         }
 
-        .stat-item:hover .stat-icon i {
-          color: #667eea;
+        .cta-button:hover .button-icon {
+          transform: translateX(5px);
         }
 
-        .stat-item h3 {
-          font-size: 42px;
-          font-weight: 700;
-          color: white;
-          margin-bottom: 10px;
-          line-height: 1;
-        }
-
-        .stat-item p {
-          font-size: 15px;
-          color: rgba(255, 255, 255, 0.9);
-          margin: 0;
-          font-weight: 500;
-        }
-
-        .animated-bg {
+        .cta-pattern {
           position: absolute;
-          top: 0;
-          left: 0;
           width: 100%;
           height: 100%;
-          overflow: hidden;
+          top: 0;
+          left: 0;
+          opacity: 0.1;
+          background-image:
+            radial-gradient(circle at 20% 30%, white 2px, transparent 2px),
+            radial-gradient(circle at 60% 70%, white 2px, transparent 2px),
+            radial-gradient(circle at 80% 20%, white 1px, transparent 1px);
+          background-size: 50px 50px;
+          animation: patternMove 20s linear infinite;
+        }
+
+        @keyframes patternMove {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(50px, 50px); }
+        }
+
+        .section-decoration {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
           z-index: 0;
           pointer-events: none;
+          overflow: hidden;
         }
 
-        .shape {
+        .deco-shape {
           position: absolute;
-          background: rgba(255, 255, 255, 0.05);
           border-radius: 50%;
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.08) 0%, transparent 70%);
         }
 
-        .shape-1 {
+        .deco-1 {
+          width: 500px;
+          height: 500px;
+          top: -200px;
+          right: -150px;
+          animation: float1 25s ease-in-out infinite;
+        }
+
+        .deco-2 {
           width: 400px;
           height: 400px;
-          top: -200px;
-          left: -100px;
-          animation: float1 20s ease-in-out infinite;
+          bottom: -150px;
+          left: -150px;
+          animation: float2 20s ease-in-out infinite;
         }
 
-        .shape-2 {
+        .deco-3 {
           width: 300px;
           height: 300px;
-          bottom: -150px;
-          right: -50px;
-          animation: float2 15s ease-in-out infinite;
-        }
-
-        .shape-3 {
-          width: 200px;
-          height: 200px;
           top: 50%;
-          right: 10%;
-          animation: float3 25s ease-in-out infinite;
+          left: 30%;
+          animation: float3 30s ease-in-out infinite;
         }
 
         @keyframes float1 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          33% { transform: translate(30px, -30px) rotate(120deg); }
-          66% { transform: translate(-20px, 20px) rotate(240deg); }
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(40px, -40px); }
         }
 
         @keyframes float2 {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          50% { transform: translate(-50px, -50px) rotate(180deg); }
+          0%, 100% { transform: translate(0, 0); }
+          50% { transform: translate(-30px, 30px); }
         }
 
         @keyframes float3 {
           0%, 100% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(40px, 40px) scale(1.2); }
+          50% { transform: translate(50px, -50px) scale(1.1); }
         }
 
         @media (max-width: 991px) {
+          .section-main-title {
+            font-size: 32px !important;
+          }
+
+          .section-main-title span {
+            font-size: 42px !important;
+          }
+
           .why-choose-card {
-            padding: 35px 25px;
+            padding: 35px 30px;
           }
 
-          .choose-icon-wrapper {
+          .icon-wrapper {
             width: 80px;
             height: 80px;
           }
 
-          .choose-icon {
+          .icon-circle {
             width: 80px;
             height: 80px;
           }
 
-          .choose-icon i {
-            font-size: 35px;
+          .icon-circle i {
+            font-size: 38px;
           }
 
-          .stat-item h3 {
-            font-size: 32px;
+          .card-content h3 {
+            font-size: 20px;
           }
 
-          .stats-wrapper {
-            padding: 30px 15px;
+          .cta-card {
+            padding: 40px 30px;
           }
         }
 
         @media (max-width: 767px) {
-          .choose-content h3 {
-            font-size: 20px;
+          .section-main-title {
+            font-size: 28px !important;
           }
 
-          .stat-icon {
-            width: 55px;
-            height: 55px;
+          .section-main-title span {
+            font-size: 38px !important;
           }
 
-          .stat-icon i {
-            font-size: 28px;
+          .why-choose-card {
+            padding: 30px 25px;
           }
 
-          .stat-item h3 {
-            font-size: 28px;
+          .card-number {
+            font-size: 80px;
           }
 
-          .stat-item p {
-            font-size: 13px;
+          .card-content h3 {
+            font-size: 18px;
+          }
+
+          .card-content p {
+            font-size: 14px;
+          }
+
+          .cta-content h3 {
+            font-size: 22px;
+          }
+
+          .cta-button {
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

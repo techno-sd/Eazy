@@ -39,16 +39,21 @@ This files table contents are outlined below>>>>>
 /*
 Default Style
 ============================*/
-  
-$main-color: #d80650;
-$body-color: #212121;
-$heading-color: #0e0129;
+
+// === Eazy Cyber Agent Brand Colors (matching logo) ===
+$main-color: #0C4BA2;           // Primary Blue (from logo)
+$accent-color: #1FB6E8;         // Accent Cyan (from logo)
+$body-color: #4a5568;           // Modern gray for body text
+$heading-color: #1a202c;        // Strong dark for headings
 $white-color: #ffffff;
 $black-color: #000000;
-$box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.05);
+$light-bg: #f7fafc;             // Light background
+$dark-bg: #0a1833;              // Dark navy background
+$border-color: #e2e8f0;         // Subtle borders
+$box-shadow: 0 0 20px 3px rgba(12, 75, 162, 0.08);
 $transition: all 0.5s;
-$border-radius: 4px;
-$main-gradient-color: linear-gradient(136.1deg, #D80650 1.84%, #FE5D68 100%);
+$border-radius: 10px;
+$main-gradient-color: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
 
 body {
 	padding: 0;
@@ -65,7 +70,7 @@ a {
 	color: $main-color;
 	&:hover {
         text-decoration: none;
-        color: $heading-color;
+        color: $accent-color;
 	}
 	&:focus {
 		text-decoration: none;
@@ -206,7 +211,9 @@ textarea {
 	text-align: center;
 	overflow: hidden;
 	z-index: 1;
-	background-color: $main-color;
+	background: $main-gradient-color;  // Use gradient instead of solid
+	border: 2px solid transparent;
+	box-shadow: 0 4px 15px rgba(12, 75, 162, 0.3);
 	display: inline-block;
 	&::before {
 		content: "";
@@ -215,7 +222,7 @@ textarea {
 		left: 0;
 		width: 0;
 		height: 100%;
-		background-color: $heading-color;
+		background: linear-gradient(135deg, $accent-color 0%, $main-color 100%);
 		z-index: -1;
 		transition: $transition;
 	}
@@ -226,17 +233,20 @@ textarea {
 		right: 0;
 		width: 0;
 		height: 100%;
-		background-color: $heading-color;
+		background: linear-gradient(135deg, $accent-color 0%, $main-color 100%);
 		z-index: -1;
 		transition: $transition;
 	}
 	&.active {
 		margin-left: 20px;
-		color: $heading-color;
-		background-color: $white-color;
+		color: $white-color;
+		background: $main-gradient-color;
+		box-shadow: 0 6px 20px rgba(31, 182, 232, 0.4);
 	}
 	&:hover {
 		color: $white-color;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(12, 75, 162, 0.4);
 		&::before  {
 			left: auto;
 			right: 0;

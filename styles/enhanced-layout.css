@@ -41,7 +41,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #d80650, #ff0866);
+  background: linear-gradient(90deg, #0C4BA2, #1FB6E8);
   border-radius: 20px 20px 0 0;
   transform: scaleX(0);
   transition: transform 0.4s ease;
@@ -60,7 +60,7 @@
 /* Icon Styling */
 .single-security i {
   font-size: 56px;
-  color: #d80650;
+  color: #0C4BA2;
   margin-bottom: 24px;
   display: inline-block;
   transition: all 0.4s ease;
@@ -75,7 +75,7 @@
 
 .single-security:hover i {
   transform: scale(1.1) rotate(-5deg);
-  background: linear-gradient(135deg, #d80650, #ff0866);
+  background: linear-gradient(135deg, #0C4BA2, #1FB6E8);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(216, 6, 80, 0.3);
 }
@@ -94,7 +94,7 @@
 }
 
 .single-security:hover h3 {
-  color: #d80650;
+  color: #0C4BA2;
 }
 
 /* Description Styling */
@@ -124,7 +124,7 @@
 
 .single-security ul li i {
   font-size: 20px;
-  color: #d80650;
+  color: #0C4BA2;
   margin: 0;
   width: auto;
   height: auto;
@@ -199,7 +199,7 @@ section.bg-color::after {
 .section-title span.sub-title {
   font-size: 14px;
   font-weight: 600;
-  color: #d80650;
+  color: #0C4BA2;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
@@ -215,7 +215,7 @@ section.bg-color::after {
   top: 50%;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #d80650, transparent);
+  background: linear-gradient(90deg, #0C4BA2, transparent);
 }
 
 .section-title span.sub-title::before {
@@ -224,7 +224,7 @@ section.bg-color::after {
 
 .section-title span.sub-title::after {
   right: -45px;
-  background: linear-gradient(90deg, transparent, #d80650);
+  background: linear-gradient(90deg, transparent, #0C4BA2);
 }
 
 .section-title h2 {
@@ -372,12 +372,12 @@ section.bg-color::after {
   justify-content: center;
   font-size: 20px;
   font-weight: 700;
-  color: #d80650;
+  color: #0C4BA2;
   transition: all 0.4s ease;
 }
 
 .single-security[data-number]:hover::after {
-  background: #d80650;
+  background: #0C4BA2;
   color: #ffffff;
   transform: rotate(360deg);
 }
