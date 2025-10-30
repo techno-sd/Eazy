@@ -8,10 +8,14 @@ import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
 import Testimonials from "@/components/Common/Testimonials";
 import Partner from "@/components/Common/Partner";
 import Footer from "@/components/Layouts/Footer";
+import ScrollProgress from "@/components/Common/ScrollProgress";
 
 export default function Page() {
   return (
     <>
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+
       <Navbar />
       <PageBanner
         pageTitle="About Us"

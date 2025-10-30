@@ -145,6 +145,52 @@
         "note": "This program aligns with entrepreneurship and startup empowerment initiatives under Vision 2030"
       }
     },
+    "about": {
+      "subtitle": "Who We Are",
+      "title": "About Us",
+      "description": "Your trusted partner in building a secure and smart digital future aligned with Saudi Vision 2030",
+      "imageAlt": "About Us",
+      "learnMoreButton": "Learn More About Us",
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "clients": "Happy Clients"
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the first choice in the Kingdom and the region for providing innovative digital and security solutions that enable organizations to keep pace with changes and achieve digital sustainability."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "Empowering organizations to build a secure and smart infrastructure using the latest artificial intelligence, big data, and cybersecurity technologies, in line with the digital transformation strategy and Saudi Vision 2030."
+      },
+      "coreValues": {
+        "title": "Our Core Values",
+        "integrity": {
+          "title": "Integrity & Transparency",
+          "description": "Trust is the foundation of our relationship with our clients."
+        },
+        "innovation": {
+          "title": "Continuous Innovation",
+          "description": "New solutions to face future challenges."
+        },
+        "security": {
+          "title": "Security First",
+          "description": "Protecting digital assets from threats."
+        },
+        "customer": {
+          "title": "Customer Focus",
+          "description": "Solutions designed according to the needs of each organization."
+        }
+      }
+    },
+    "partners": {
+      "badge": "Trusted Partners",
+      "title": "Trusted by Leading Organizations",
+      "subtitle": "We proudly collaborate with industry leaders to deliver exceptional cybersecurity solutions",
+      "stat1": "Projects Secured",
+      "stat2": "Years Experience",
+      "stat3": "Happy Clients"
+    },
     "aboutUs": {
       "title": "About Us",
       "subtitle": "We Are Trusted Cyber Security Company",
@@ -492,21 +538,25 @@
     "subtitle": "Our Vision",
     "title": "Alignment with Vision 2030",
     "description": "We believe that cybersecurity and digital innovation are two fundamental pillars of the Kingdom's Vision 2030. Therefore, our solutions focus on:",
+    "badgeText": "Vision 2030",
+    "stat1": "Digital Transformation",
+    "stat2": "Security Enhancement",
+    "learnMore": "Explore Vision 2030",
     "focus1": {
-      "title": "Enabling Digital Transformation",
-      "description": "Empowering digital transformation in government and private entities."
+      "title": "Digital Transformation",
+      "description": "Empowering organizations to build secure and smart infrastructure using cutting-edge technologies."
     },
     "focus2": {
-      "title": "Protecting National Infrastructure",
-      "description": "Protecting national critical infrastructure."
+      "title": "National Infrastructure",
+      "description": "Protecting critical national infrastructure with advanced cybersecurity solutions."
     },
     "focus3": {
-      "title": "Tech Entrepreneurship Support",
-      "description": "Supporting tech entrepreneurship and startups."
+      "title": "Innovation & Growth",
+      "description": "Driving innovation and supporting tech entrepreneurship aligned with Vision 2030 goals."
     },
     "focus4": {
-      "title": "National Capacity Building",
-      "description": "Contributing to developing national competencies through training and capacity building."
+      "title": "Capacity Building",
+      "description": "Developing national competencies through comprehensive training and knowledge transfer."
     }
   }
 }

@@ -21,7 +21,7 @@ const MainBanner: React.FC = () => {
       <div
         className="banner-area"
         style={{
-          backgroundImage: `url(/img/home-one/home1-banner.jpg)`
+          backgroundImage: `url(/img/home-one/cover.png)`
         }}
       >
         <div className="container">

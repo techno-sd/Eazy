@@ -1,16 +1,12 @@
 import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/HomeOne/MainBanner";
 import Partner from "@/components/Common/Partner";
-import VisionMission from "@/components/About/VisionMission";
-import AISolutions from "@/components/HomeOne/AISolutions";
-import CybersecurityServices from "@/components/HomeOne/CybersecurityServices";
-import BigDataAnalytics from "@/components/HomeOne/BigDataAnalytics";
-import CloudComputing from "@/components/HomeOne/CloudComputing";
-import SMEEazyProgram from "@/components/HomeOne/SMEEazyProgram";
-import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
-import CoreValues from "@/components/About/CoreValues";
+import AboutSection from "@/components/HomeOne/AboutSection";
+import ServicesSection from "@/components/HomeOne/ServicesSection";
 import IndustriesGrid from "@/components/Industries/IndustriesGrid";
 import Vision2030Content from "@/components/Vision2030/Vision2030Content";
+import WhyChooseUsAbout from "@/components/About/WhyChooseUsAbout";
+import ContactSection from "@/components/HomeOne/ContactSection";
 import Testimonials from "@/components/Common/Testimonials";
 import LatesNews from "@/components/Common/LatesNews";
 import Footer from "@/components/Layouts/Footer";
@@ -20,32 +16,34 @@ export default function Home() {
     <>
       <Navbar />
 
+      {/* Hero Section */}
       <MainBanner />
 
+      {/* Partners */}
       <Partner />
 
-      <VisionMission />
+      {/* About Section */}
+      <AboutSection />
 
-      <AISolutions />
+      {/* Services Section */}
+      <ServicesSection />
 
-      <CybersecurityServices />
-
-      <BigDataAnalytics />
-
-      <CloudComputing />
-
-      <SMEEazyProgram />
-
-      <WhyChooseUsAbout />
-
-      <CoreValues />
-
+      {/* Industries Section */}
       <IndustriesGrid />
 
+      {/* Vision 2030 Section */}
       <Vision2030Content />
 
+      {/* Why Choose Us Section */}
+      <WhyChooseUsAbout />
+
+      {/* Contact Section */}
+      <ContactSection />
+
+      {/* Testimonials - What Our Clients Say (ماذا يقول عملاؤنا عنا) */}
       <Testimonials />
 
+      {/* Latest News from Blog (آخر الأخبار من المدونة) */}
       <LatesNews />
 
       <Footer />
