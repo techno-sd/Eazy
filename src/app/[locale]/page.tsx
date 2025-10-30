@@ -9,14 +9,34 @@ import ContactSection from "@/components/HomeOne/ContactSection";
 import Testimonials from "@/components/Common/Testimonials";
 import LatesNews from "@/components/Common/LatesNews";
 import Footer from "@/components/Layouts/Footer";
+import AnimatedBackground from "@/components/Common/AnimatedBackground";
+import FloatingCTA from "@/components/Common/FloatingCTA";
+import Preloader from "@/components/Common/Preloader";
+import ScrollToTop from "@/components/Common/ScrollToTop";
+import TrustBadges from "@/components/Common/TrustBadges";
 
 export default function Home() {
   return (
     <>
+      {/* Premium Preloader */}
+      <Preloader />
+
+      {/* Animated Particle Background */}
+      <AnimatedBackground />
+
+      {/* Floating Engagement Elements */}
+      <FloatingCTA />
+
+      {/* Smooth Scroll to Top */}
+      <ScrollToTop />
+
       <Navbar />
 
       {/* Hero Section */}
       <MainBanner />
+
+      {/* Trust Signals */}
+      <TrustBadges />
 
       {/* About Section */}
       <AboutSectionClean />

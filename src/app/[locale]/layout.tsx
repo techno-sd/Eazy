@@ -25,6 +25,8 @@ import "../../../styles/enhanced-layout.css";
 import "../../../styles/premium-design.css";
 // Modern Navigation Menu
 import "../../../styles/modern-navbar.css";
+// Cybersecurity Theme
+import "../../../styles/cybersecurity-theme.css";
 // Logo Enhancement
 import "../../../styles/logo-enhancement.css";
 

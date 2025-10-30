@@ -1,0 +1,410 @@
+/* ==========================================================================
+   CYBERSECURITY HOMEPAGE THEME
+   Modern, Dark, Tech-Inspired Design
+   ========================================================================== */
+
+:root {
+  --cyber-dark-bg: #010c16;
+  --cyber-dark-secondary: #010e19;
+  --cyber-dark-card: #0a1929;
+  --cyber-blue-primary: #0C4BA2;
+  --cyber-blue-secondary: #1FB6E8;
+  --cyber-cyan-glow: #00f2fe;
+  --cyber-purple-accent: #a855f7;
+  --cyber-text-primary: #ffffff;
+  --cyber-text-secondary: rgba(255, 255, 255, 0.7);
+  --cyber-text-muted: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   DARK THEME BASE
+   ========================================================================== */
+
+body.cyber-theme {
+  background: var(--cyber-dark-bg);
+  color: var(--cyber-text-primary);
+}
+
+/* ==========================================================================
+   GLASSMORPHISM EFFECTS
+   ========================================================================== */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(31, 182, 232, 0.3);
+  box-shadow: 0 12px 48px rgba(12, 75, 162, 0.4);
+  transform: translateY(-8px);
+}
+
+/* ==========================================================================
+   NEON GLOW EFFECTS
+   ========================================================================== */
+
+.neon-glow-blue {
+  box-shadow:
+    0 0 10px rgba(31, 182, 232, 0.5),
+    0 0 20px rgba(31, 182, 232, 0.3),
+    0 0 30px rgba(31, 182, 232, 0.2);
+}
+
+.neon-glow-cyan {
+  box-shadow:
+    0 0 10px rgba(0, 242, 254, 0.5),
+    0 0 20px rgba(0, 242, 254, 0.3),
+    0 0 30px rgba(0, 242, 254, 0.2);
+}
+
+.neon-border-blue {
+  border: 2px solid rgba(31, 182, 232, 0.5);
+  box-shadow: 0 0 15px rgba(31, 182, 232, 0.3);
+}
+
+/* ==========================================================================
+   ANIMATED GRID BACKGROUND
+   ========================================================================== */
+
+.cyber-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(31, 182, 232, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 182, 232, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* ==========================================================================
+   PARTICLE DOTS PATTERN
+   ========================================================================== */
+
+.particle-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(31, 182, 232, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: particleFloat 30s ease-in-out infinite;
+  opacity: 0.3;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ==========================================================================
+   GLOWING ACCENTS
+   ========================================================================== */
+
+.glow-line-top {
+  position: relative;
+}
+
+.glow-line-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(31, 182, 232, 0.5) 50%,
+    transparent 100%
+  );
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   CYBER BUTTONS
+   ========================================================================== */
+
+.cyber-btn {
+  position: relative;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(12, 75, 162, 0.4);
+}
+
+.cyber-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.cyber-btn:hover::before {
+  left: 100%;
+}
+
+.cyber-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 32px rgba(12, 75, 162, 0.5),
+    0 0 20px rgba(31, 182, 232, 0.3);
+}
+
+.cyber-btn-outline {
+  background: transparent;
+  border: 2px solid rgba(31, 182, 232, 0.5);
+  color: #1FB6E8;
+  box-shadow: none;
+}
+
+.cyber-btn-outline:hover {
+  background: rgba(31, 182, 232, 0.1);
+  border-color: #1FB6E8;
+}
+
+/* ==========================================================================
+   SECTION DIVIDERS
+   ========================================================================== */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(31, 182, 232, 0.3) 50%,
+    transparent 100%
+  );
+  margin: 80px 0;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==========================================================================
+   FLOATING ELEMENTS
+   ========================================================================== */
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.rotate-slow {
+  animation: rotateSlow 30s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+   TRUST BADGES
+   ========================================================================== */
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(31, 182, 232, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #1FB6E8;
+  box-shadow: 0 4px 16px rgba(31, 182, 232, 0.2);
+}
+
+.trust-badge i {
+  font-size: 20px;
+  color: #1FB6E8;
+}
+
+/* ==========================================================================
+   CARD HOVER EFFECTS
+   ========================================================================== */
+
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hover-glow:hover {
+  box-shadow:
+    0 0 20px rgba(31, 182, 232, 0.3),
+    0 8px 32px rgba(12, 75, 162, 0.4);
+}
+
+/* ==========================================================================
+   TEXT GRADIENTS
+   ========================================================================== */
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #1FB6E8 0%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================================================================
+   PULSE EFFECTS
+   ========================================================================== */
+
+.pulse-ring {
+  position: relative;
+}
+
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #1FB6E8;
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE UTILITIES
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  .cyber-btn {
+    padding: 14px 32px;
+    font-size: 15px;
+  }
+
+  .section-divider {
+    margin: 60px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cyber-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .section-divider {
+    margin: 40px 0;
+  }
+
+  .trust-badge {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
