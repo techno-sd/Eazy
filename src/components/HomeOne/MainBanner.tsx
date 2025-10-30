@@ -26,7 +26,7 @@ const MainBanner: React.FC = () => {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-9">
+            <div className="col-lg-12">
               <div className="banner-text">
                 <span>
                   {t('badge')}
@@ -44,14 +44,6 @@ const MainBanner: React.FC = () => {
                   <Link href={`/${locale}/about`} className="default-btn active">
                     {t('aboutUs')}
                   </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3">
-              <div className="video-btn-animat one">
-                <div onClick={() => setToggler(!toggler)} className="video-btn">
-                  <i className="bx bx-play"></i>
                 </div>
               </div>
             </div>
