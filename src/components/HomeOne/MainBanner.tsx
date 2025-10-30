@@ -5,11 +5,60 @@ import FsLightbox from "fslightbox-react";
 import Link from "next/link";
 import Features from "./Features";
 import { useTranslations, useLocale } from 'next-intl';
+import { motion } from 'framer-motion';
 
 const MainBanner: React.FC = () => {
   const [toggler, setToggler] = useState(false);
   const t = useTranslations('home.mainBanner');
   const locale = useLocale();
+
+  // Animation variants for directional animations
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
 
   return (
     <>
@@ -27,16 +76,32 @@ const MainBanner: React.FC = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-12">
-              <div className="banner-text">
-                <span>
+              <motion.div
+                className="banner-text"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.span
+                  variants={fadeInUp}
+                >
                   {t('badge')}
-                </span>
-                <h1>{t('title')}</h1>
-                <p>
+                </motion.span>
+                <motion.h1
+                  variants={fadeInLeft}
+                >
+                  {t('title')}
+                </motion.h1>
+                <motion.p
+                  variants={fadeInRight}
+                >
                   {t('description')}
-                </p>
+                </motion.p>
 
-                <div className="banner-btn">
+                <motion.div
+                  className="banner-btn"
+                  variants={fadeInUp}
+                >
                   <Link href={`/${locale}/contact`} className="default-btn">
                     {t('bookingNow')}
                   </Link>
@@ -44,8 +109,8 @@ const MainBanner: React.FC = () => {
                   <Link href={`/${locale}/about`} className="default-btn active">
                     {t('aboutUs')}
                   </Link>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </div>
