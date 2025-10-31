@@ -2,8 +2,7 @@
 import React from "react";
 import Navbar from "@/components/Layouts/Navbar";
 import PageBanner from "@/components/Common/PageBanner";
-import VisionMission from "@/components/About/VisionMission";
-import Testimonials from "@/components/Common/Testimonials";
+import CoreValues from "@/components/About/CoreValues";
 import Footer from "@/components/Layouts/Footer";
 import ScrollProgress from "@/components/Common/ScrollProgress";
 
@@ -15,13 +14,12 @@ export default function Page() {
 
       <Navbar />
       <PageBanner
-        pageTitle="About Us"
+        pageTitle="Core Values"
         homePageUrl="/"
         homePageText="Home"
-        activePageText="About"
+        activePageText="Core Values"
       />
-      <VisionMission />
-      <Testimonials />
+      <CoreValues />
       <Footer />
     </>
   );

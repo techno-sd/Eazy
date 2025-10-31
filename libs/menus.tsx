@@ -4,16 +4,24 @@ export const menus = [
     link: "/",
   },
   {
-    label: "About Us",
+    label: "About",
     link: "#",
     submenu: [
       {
-        label: "About",
+        label: "About Us",
         link: "/about/",
       },
       {
-        label: "Vision 2030",
+        label: "Our Vision",
         link: "/vision-2030/",
+      },
+      {
+        label: "Core Values",
+        link: "/core-values/",
+      },
+      {
+        label: "Why Choose Us",
+        link: "/why-choose-us/",
       },
       {
         label: "Our Team",
@@ -25,10 +33,6 @@ export const menus = [
     label: "Services",
     link: "#",
     submenu: [
-      {
-        label: "All Services",
-        link: "/services/3/",
-      },
       {
         label: "AI Solutions",
         link: "/services/ai/",

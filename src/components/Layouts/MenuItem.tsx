@@ -33,6 +33,8 @@ const MenuItem: React.FC<MenuItemProps> = ({ label, link, icon, submenu }) => {
       "Education": "education",
       "SME": "sme",
       "Vision 2030": "vision2030",
+      "Our Vision": "ourVision",
+      "Core Values": "coreValues",
       "Projects": "projects",
       "Pricing": "pricing",
       "Testimonials": "testimonials",
