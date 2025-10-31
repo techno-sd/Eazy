@@ -1,9 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from 'next-intl';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 const ServicesSection: React.FC = () => {
   const t = useTranslations('home.services');
@@ -20,7 +21,7 @@ const ServicesSection: React.FC = () => {
       ],
       image: "/img/home-six/services/chatbot.png",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
-      delay: "100"
+      delay: 0.1
     },
     {
       icon: "flaticon-cyber-security",
@@ -33,7 +34,7 @@ const ServicesSection: React.FC = () => {
       ],
       image: "/img/home-six/services/services-2.png",
       gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
-      delay: "200"
+      delay: 0.2
     },
     {
       icon: "flaticon-big-data",
@@ -46,7 +47,7 @@ const ServicesSection: React.FC = () => {
       ],
       image: "/img/home-six/services/big-data.jpg",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
-      delay: "300"
+      delay: 0.3
     },
     {
       icon: "flaticon-cloud-computing",
@@ -59,7 +60,7 @@ const ServicesSection: React.FC = () => {
       ],
       image: "/img/home-six/services/cloud-computing.jpg",
       gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
-      delay: "400"
+      delay: 0.4
     },
     {
       icon: "flaticon-rocket",
@@ -72,10 +73,151 @@ const ServicesSection: React.FC = () => {
       ],
       image: "/img/home-six/services/software.png",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
-      delay: "500",
+      delay: 0.5,
       badge: t('smeEazy.badge') || 'Premium Program'
     }
   ];
+
+  // 3D Tilt Component
+  const ServiceCard3D: React.FC<{ service: typeof services[0]; index: number }> = ({ service, index }) => {
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const mouseXSpring = useSpring(x, { stiffness: 300, damping: 30 });
+    const mouseYSpring = useSpring(y, { stiffness: 300, damping: 30 });
+
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["7deg", "-7deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-7deg", "7deg"]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+      if (!cardRef.current) return;
+
+      const rect = cardRef.current.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      const xPct = mouseX / width - 0.5;
+      const yPct = mouseY / height - 0.5;
+
+      x.set(xPct);
+      y.set(yPct);
+    };
+
+    const handleMouseLeave = () => {
+      x.set(0);
+      y.set(0);
+      setIsHovered(false);
+    };
+
+    return (
+      <motion.div
+        ref={cardRef}
+        className="col-lg-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, delay: service.delay }}
+      >
+        <motion.div
+          className="service-card-enhanced-row service-card-3d"
+          style={{
+            rotateX,
+            rotateY,
+            transformStyle: "preserve-3d",
+          }}
+          onMouseMove={handleMouseMove}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={handleMouseLeave}
+          whileHover={{ scale: 1.02 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
+          <div className="row g-0 align-items-center">
+            {/* Service Image Column */}
+            <div className="col-lg-4 col-md-5">
+              <motion.div
+                className="service-image-wrapper"
+                style={{ transform: isHovered ? "translateZ(30px)" : "translateZ(0px)" }}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={500}
+                  height={400}
+                  className="service-image"
+                  loading="lazy"
+                />
+                <motion.div
+                  className="image-overlay"
+                  style={{
+                    background: service.gradient,
+                    opacity: isHovered ? 0.15 : 0,
+                  }}
+                />
+                <motion.div
+                  className="service-icon-badge"
+                  style={{
+                    background: service.gradient,
+                    transform: isHovered ? "translateZ(50px) scale(1.1)" : "translateZ(20px) scale(1)",
+                  }}
+                >
+                  <i className={service.icon}></i>
+                </motion.div>
+                {service.badge && (
+                  <motion.div
+                    className="service-badge"
+                    style={{
+                      transform: isHovered ? "translateZ(40px)" : "translateZ(15px)",
+                    }}
+                  >
+                    <i className="bx bx-star"></i>
+                    <span>{service.badge}</span>
+                  </motion.div>
+                )}
+              </motion.div>
+            </div>
+
+            {/* Service Content Column */}
+            <div className="col-lg-8 col-md-7">
+              <motion.div
+                className="service-body"
+                style={{ transform: isHovered ? "translateZ(25px)" : "translateZ(0px)" }}
+              >
+                <h3 className="service-title">{service.title}</h3>
+                <ul className="service-features-list">
+                  {service.items.map((item, idx) => (
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: service.delay + (idx * 0.1) }}
+                    >
+                      <i className="bx bx-check-circle"></i>
+                      <span>{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Spotlight Effect */}
+          <motion.div
+            className="spotlight-effect"
+            style={{
+              background: `radial-gradient(circle at ${(x.get() + 0.5) * 100}% ${(y.get() + 0.5) * 100}%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)`,
+              opacity: isHovered ? 1 : 0,
+            }}
+          />
+        </motion.div>
+      </motion.div>
+    );
+  };
 
   return (
     <>
@@ -96,49 +238,7 @@ const ServicesSection: React.FC = () => {
           {/* Services Grid */}
           <div className="row g-4">
             {services.map((service, index) => (
-              <div key={index} className="col-lg-12" data-aos="fade-up" data-aos-delay={service.delay}>
-                <div className="service-card-enhanced-row">
-                  <div className="row g-0 align-items-center">
-                    {/* Service Image Column */}
-                    <div className="col-lg-4 col-md-5">
-                      <div className="service-image-wrapper">
-                        <Image
-                          src={service.image}
-                          alt={service.title}
-                          width={500}
-                          height={400}
-                          className="service-image"
-                        />
-                        <div className="image-overlay" style={{ background: service.gradient }}></div>
-                        <div className="service-icon-badge" style={{ background: service.gradient }}>
-                          <i className={service.icon}></i>
-                        </div>
-                        {service.badge && (
-                          <div className="service-badge">
-                            <i className="bx bx-star"></i>
-                            <span>{service.badge}</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Service Content Column */}
-                    <div className="col-lg-8 col-md-7">
-                      <div className="service-body">
-                        <h3 className="service-title">{service.title}</h3>
-                        <ul className="service-features-list">
-                          {service.items.map((item, idx) => (
-                            <li key={idx}>
-                              <i className="bx bx-check-circle"></i>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <ServiceCard3D key={index} service={service} index={index} />
             ))}
           </div>
         </div>
@@ -157,19 +257,70 @@ const ServicesSection: React.FC = () => {
         /* Enhanced Service Card with Row Layout */
         .service-card-enhanced-row {
           position: relative;
-          background: white;
-          border-radius: 24px;
+          background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+          border-radius: 28px;
           overflow: hidden;
-          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.08);
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow:
+            0 20px 60px rgba(12, 75, 162, 0.12),
+            0 0 0 1px rgba(12, 75, 162, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
           border: 2px solid transparent;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
+        }
+
+        /* 3D Card Enhancements */
+        .service-card-3d {
+          perspective: 1200px;
+          transform-style: preserve-3d;
         }
 
         .service-card-enhanced-row:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 20px 60px rgba(12, 75, 162, 0.15);
-          border-color: #0C4BA2;
+          box-shadow:
+            0 30px 90px rgba(12, 75, 162, 0.25),
+            0 0 0 2px rgba(12, 75, 162, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 1);
+          border-color: rgba(12, 75, 162, 0.3);
+          transform: translateY(-5px);
+        }
+
+        .service-card-enhanced-row::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 50%, #0C4BA2 100%);
+          background-size: 200% 100%;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          animation: shimmer 3s linear infinite;
+        }
+
+        .service-card-enhanced-row:hover::after {
+          opacity: 1;
+        }
+
+        @keyframes shimmer {
+          0% {
+            background-position: 200% 0;
+          }
+          100% {
+            background-position: -200% 0;
+          }
+        }
+
+        /* Spotlight Effect */
+        .spotlight-effect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 5;
+          transition: opacity 0.3s ease;
         }
 
         /* Service Image Section */
@@ -212,24 +363,48 @@ const ServicesSection: React.FC = () => {
           position: absolute;
           bottom: 20px;
           left: 20px;
-          width: 70px;
-          height: 70px;
-          border-radius: 18px;
+          width: 80px;
+          height: 80px;
+          border-radius: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 10px 30px rgba(12, 75, 162, 0.3);
-          transition: all 0.4s ease;
+          box-shadow:
+            0 15px 40px rgba(12, 75, 162, 0.4),
+            0 0 0 3px rgba(255, 255, 255, 0.3),
+            inset 0 2px 0 rgba(255, 255, 255, 0.3);
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
           z-index: 10;
+          animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(3deg);
+          }
         }
 
         .service-card-enhanced-row:hover .service-icon-badge {
-          transform: scale(1.15) rotate(10deg);
+          transform: scale(1.2) rotate(15deg) translateY(-5px);
+          box-shadow:
+            0 20px 50px rgba(12, 75, 162, 0.5),
+            0 0 0 4px rgba(255, 255, 255, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 0.5);
+          animation: none;
         }
 
         .service-icon-badge i {
-          font-size: 36px;
+          font-size: 40px;
           color: white;
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+          transition: all 0.3s ease;
+        }
+
+        .service-card-enhanced-row:hover .service-icon-badge i {
+          transform: scale(1.1);
         }
 
         /* Service Badge (Premium) */
@@ -240,20 +415,54 @@ const ServicesSection: React.FC = () => {
           display: flex;
           align-items: center;
           gap: 8px;
-          padding: 10px 20px;
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(10px);
-          border-radius: 25px;
-          color: #0C4BA2;
-          font-weight: 600;
-          font-size: 14px;
-          box-shadow: 0 8px 20px rgba(12, 75, 162, 0.15);
+          padding: 12px 24px;
+          background: linear-gradient(135deg, rgba(255, 193, 7, 0.95) 0%, rgba(255, 152, 0, 0.95) 100%);
+          backdrop-filter: blur(15px);
+          border-radius: 30px;
+          color: #fff;
+          font-weight: 700;
+          font-size: 13px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          box-shadow:
+            0 10px 30px rgba(255, 193, 7, 0.4),
+            0 0 0 2px rgba(255, 255, 255, 0.3);
           z-index: 10;
+          transition: all 0.4s ease;
+          animation: pulse-badge 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+          0%, 100% {
+            box-shadow:
+              0 10px 30px rgba(255, 193, 7, 0.4),
+              0 0 0 2px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            box-shadow:
+              0 15px 40px rgba(255, 193, 7, 0.6),
+              0 0 0 3px rgba(255, 255, 255, 0.5);
+          }
+        }
+
+        .service-card-enhanced-row:hover .service-badge {
+          transform: scale(1.1) rotate(-3deg);
+          animation: none;
         }
 
         .service-badge i {
-          font-size: 18px;
-          color: #ffc107;
+          font-size: 20px;
+          color: #fff;
+          animation: star-spin 4s linear infinite;
+        }
+
+        @keyframes star-spin {
+          0%, 100% {
+            transform: rotate(0deg) scale(1);
+          }
+          50% {
+            transform: rotate(180deg) scale(1.2);
+          }
         }
 
         /* Service Body */
@@ -262,15 +471,33 @@ const ServicesSection: React.FC = () => {
         }
 
         .service-title {
-          font-size: 28px;
-          font-weight: 700;
+          font-size: 32px;
+          font-weight: 800;
           color: #1a1a1a;
-          margin-bottom: 25px;
-          transition: color 0.3s ease;
+          margin-bottom: 30px;
+          transition: all 0.4s ease;
+          position: relative;
+          padding-bottom: 15px;
+        }
+
+        .service-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 3px;
+          background: linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%);
+          transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .service-card-enhanced-row:hover .service-title {
           color: #0C4BA2;
+          transform: translateX(5px);
+        }
+
+        .service-card-enhanced-row:hover .service-title::after {
+          width: 80px;
         }
 
         /* Service Features List */
@@ -295,16 +522,44 @@ const ServicesSection: React.FC = () => {
 
         .service-features-list li i {
           color: #0C4BA2;
-          font-size: 22px;
-          margin-right: 12px;
+          font-size: 24px;
+          margin-right: 15px;
           flex-shrink: 0;
           margin-top: 2px;
+          transition: all 0.3s ease;
+          position: relative;
+        }
+
+        .service-card-enhanced-row:hover .service-features-list li i {
+          transform: scale(1.2) rotate(360deg);
+          color: #1FB6E8;
+        }
+
+        .service-features-list li i::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.2) 0%, transparent 70%);
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .service-card-enhanced-row:hover .service-features-list li i::before {
+          opacity: 1;
         }
 
         .service-features-list li span {
           color: #64748b;
-          font-size: 15px;
-          line-height: 1.7;
+          font-size: 16px;
+          line-height: 1.8;
+          font-weight: 500;
+          transition: all 0.3s ease;
+        }
+
+        .service-card-enhanced-row:hover .service-features-list li span {
+          color: #1a1a1a;
         }
 
         /* Background Shape */
