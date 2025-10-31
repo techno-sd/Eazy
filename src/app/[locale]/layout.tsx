@@ -56,8 +56,8 @@ const barlow_condensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Pisa - Cyber Security Services Company React Next Template",
-  description: "Cyber Security Services Company React Next Template",
+  title: "Eazy Cyber Agent - Cyber Security Services Company",
+  description: "Eazy Cyber Agent - Leading Cyber Security and Digital Solutions Provider",
 };
 
 export function generateStaticParams() {

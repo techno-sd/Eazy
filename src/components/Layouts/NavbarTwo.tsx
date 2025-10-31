@@ -72,7 +72,7 @@ const NavbarTwo: React.FC = () => {
 
                   <div className="others-option">
                     <div className="call-us">
-                      <a href="tel:+966506345773">
+                      <a href="tel:+966506345773" style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>
                         <i className="bx bxs-phone-call"></i>
                         +966 50 634 5773
                       </a>

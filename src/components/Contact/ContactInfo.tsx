@@ -30,7 +30,7 @@ const ContactInfo: React.FC = () => {
                 <h3>California</h3>
                 <p>658 Lane Drive st Riverside. California</p>
                 <a href="mailto:info@eazycyber.sa">Email: info@eazycyber.sa</a>
-                <a href="tel:+966506345773">+966 50 634 5773</a>
+                <a href="tel:+966506345773" style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>+966506345773</a>
               </div>
             </div>
 
