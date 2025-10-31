@@ -50,9 +50,9 @@
   "footer": {
     "contactUs": "Contact Us",
     "hotline": "Hotline:",
-    "phone": "Phone: +892-569-756",
+  "phone": "Mobile: +966 50 634 5773",
     "email": "Email:",
-    "emailAddress": "hello@pisa.com",
+  "emailAddress": "info@eazycyber.sa",
     "address": "Address:",
     "addressText": "658 Lane Drive st Riverside. California",
     "servicesLink": "Services Link",
@@ -99,12 +99,10 @@
       "aboutUs": "About Us"
     },
     "features": {
-      "securityTitle": "Security",
-      "securityDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-      "privacyTitle": "Privacy",
-      "privacyDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-      "industryCertifiedTitle": "Industry Certified",
-      "industryCertifiedDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."
+      "securityTitle": "Vision",
+      "securityDesc": "To be the first choice in the Kingdom and the region for providing innovative digital and security solutions that enable organizations to keep pace with changes and achieve digital sustainability.",
+      "privacyTitle": "Mission",
+      "privacyDesc": "Empowering organizations to build a secure and smart infrastructure using the latest artificial intelligence, big data, and cybersecurity technologies, in line with the digital transformation strategy and Saudi Vision 2030"
     },
     "services": {
       "title": "Our Services",

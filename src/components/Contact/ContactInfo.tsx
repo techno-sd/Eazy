@@ -13,7 +13,7 @@ const ContactInfo: React.FC = () => {
                 <i className="bx bx-location-plus"></i>
                 <h3>New York</h3>
                 <p>88 Flower Avenue. Kingdom St. New York</p>
-                <a href="mailto:hello@pisa.com">Email: info@pisa.com</a>
+                <a href="mailto:info@eazycyber.sa">Email: info@eazycyber.sa</a>
                 <a href="tel:+822456974">+822456974</a>
               </div>
             </div>
@@ -29,8 +29,8 @@ const ContactInfo: React.FC = () => {
                 <i className="bx bx-location-plus"></i>
                 <h3>California</h3>
                 <p>658 Lane Drive st Riverside. California</p>
-                <a href="mailto:hello@pisa.com">Email: hello@pisa.com</a>
-                <a href="tel:+892-569-756">+892-569-756</a>
+                <a href="mailto:info@eazycyber.sa">Email: info@eazycyber.sa</a>
+                <a href="tel:+966506345773">+966 50 634 5773</a>
               </div>
             </div>
 

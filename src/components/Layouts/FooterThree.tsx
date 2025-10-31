@@ -87,7 +87,7 @@ const FooterThree: React.FC = () => {
                   </li>
                   <li>
                     <span>Email:</span>{" "}
-                    <a href="mailto:hello@pisa.com">hello@pisa.com</a>
+                    <a href="mailto:info@eazycyber.sa">info@eazycyber.sa</a>
                   </li>
                   <li>
                     <span>Phone:</span>{" "}

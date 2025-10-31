@@ -138,7 +138,7 @@ const NavbarThree: React.FC = () => {
               </li>
               <li>
                 <i className="bx bx-envelope"></i>
-                <a href="mailto:hello@pisa.com">hello@pisa.com</a>
+                <a href="mailto:info@eazycyber.sa">info@eazycyber.sa</a>
                 <a href="mailto:info@pisa.com">info@pisa.com</a>
               </li>
               <li>

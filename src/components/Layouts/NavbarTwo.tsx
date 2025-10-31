@@ -72,9 +72,9 @@ const NavbarTwo: React.FC = () => {
 
                   <div className="others-option">
                     <div className="call-us">
-                      <a href="tel:+892-569-756">
+                      <a href="tel:+966506345773">
                         <i className="bx bxs-phone-call"></i>
-                        +892-569-756
+                        +966 50 634 5773
                       </a>
                     </div>
                   </div>
