@@ -60,10 +60,6 @@ export const menus = [
     link: "#",
     submenu: [
       {
-        label: "All Industries",
-        link: "/industries/",
-      },
-      {
         label: "Government Sector",
         link: "/industries/government/",
       },
@@ -88,10 +84,6 @@ export const menus = [
         link: "/industries/sme/",
       },
     ],
-  },
-  {
-    label: "Case Studies",
-    link: "/projects/",
   },
   {
     label: "Blog",
