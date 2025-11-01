@@ -5,7 +5,7 @@ import Link from "next/link";
 import TopHeaderTwo from "./TopHeaderTwo";
 import Image from "next/image";
 import MenuItem from "./MenuItem";
-import { menus } from "../../../libs/menus";
+import { menus } from "@/lib/menus";
 
 const NavbarThree: React.FC = () => {
   const [menu, setMenu] = useState(true);

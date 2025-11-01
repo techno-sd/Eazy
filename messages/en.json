@@ -331,7 +331,11 @@
     "contactInfo": "Contact Information",
     "officeAddress": "Office Address",
     "emailUs": "Email Us",
-    "callUs": "Call Us"
+    "callUs": "Call Us",
+    "location": {
+      "city": "Riyadh",
+      "address": "Kingdom of Saudi Arabia"
+    }
   },
   "auth": {
     "signIn": "Sign In",
@@ -575,6 +579,21 @@
     "focus4": {
       "title": "Capacity Building",
       "description": "Developing national competencies through comprehensive training and knowledge transfer."
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu",
+    "loading": "Loading...",
+    "pageScrollProgress": "Page scroll progress"
+  },
+  "team": {
+    "title": "Our Leadership Team",
+    "description": "Meet our leadership team dedicated to providing exceptional cybersecurity solutions and driving digital transformation.",
+    "ceo": {
+      "name": "Eng. Mazin Al Motairy",
+      "position": "CEO of Eazy Cyber Agent"
     }
   }
 }

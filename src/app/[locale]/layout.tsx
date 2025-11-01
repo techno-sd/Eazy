@@ -27,6 +27,8 @@ import "../../../styles/modern-navbar.css";
 import "../../../styles/cybersecurity-theme.css";
 // Logo Enhancement
 import "../../../styles/logo-enhancement.css";
+// Comprehensive UX Enhancements (Focus, Interactions, Accessibility)
+import "../../../styles/ux-enhancements.css";
 // Global RTL Style - MUST load LAST to override all other styles
 import "../../../styles/rtl.css";
 

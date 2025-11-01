@@ -4,6 +4,8 @@ import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/home/MainBanner";
 import Preloader from "@/components/Common/Preloader";
 import ScrollToTop from "@/components/Common/ScrollToTop";
+import ScrollProgress from "@/components/Common/ScrollProgress";
+import SkipToMain from "@/components/Common/SkipToMain";
 import SkeletonLoader from "@/components/Common/SkeletonLoader";
 
 // Lazy load components below the fold
@@ -26,6 +28,12 @@ export default function Home() {
       {/* High-Performance Preloader */}
       <Preloader />
 
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+
+      {/* Skip to Main Content (Accessibility) */}
+      <SkipToMain />
+
       {/* Animated Particle Background */}
       <AnimatedBackground />
 
@@ -37,16 +45,18 @@ export default function Home() {
 
       <Navbar />
 
-      {/* Hero Section */}
-      <MainBanner />
+      {/* Main Content Area */}
+      <main id="main-content" tabIndex={-1}>
+        {/* Hero Section */}
+        <MainBanner />
 
-      {/* Trust Signals */}
-      <Suspense fallback={<div style={{ padding: '40px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
-        <TrustBadges />
-      </Suspense>
+        {/* Trust Signals */}
+        <Suspense fallback={<div style={{ padding: '40px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
+          <TrustBadges />
+        </Suspense>
 
-      {/* About Section */}
-      <div id="about">
+        {/* About Section */}
+        <div id="about">
         <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
           <AboutSectionClean />
         </Suspense>
@@ -86,10 +96,11 @@ export default function Home() {
       </div>
 
 
-      {/* Latest News from Blog (آخر الأخبار من المدونة) */}
-      <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={3} /></div>}>
-        <LatesNews />
-      </Suspense>
+        {/* Latest News from Blog (آخر الأخبار من المدونة) */}
+        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={3} /></div>}>
+          <LatesNews />
+        </Suspense>
+      </main>
 
       <Suspense fallback={<div style={{ padding: '40px 0', background: '#1a1a1a', minHeight: '300px' }}></div>}>
         <Footer />

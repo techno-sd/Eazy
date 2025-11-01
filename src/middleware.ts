@@ -10,7 +10,9 @@ const intlMiddleware = createMiddleware({
   localeDetection: true
 });
 
-export default function middleware(request) {
+import type { NextRequest } from 'next/server';
+
+export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   // Redirect /ar or /en (no trailing slash) to /ar/ or /en/
   if (/^\/(ar|en)$/.test(pathname)) {

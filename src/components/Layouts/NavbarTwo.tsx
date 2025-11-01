@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MenuItem from "./MenuItem";
-import { menus } from "../../../libs/menus";
+import { menus } from "@/lib/menus";
 
 const NavbarTwo: React.FC = () => {
   const [menu, setMenu] = useState(true);
