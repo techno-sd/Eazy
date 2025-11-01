@@ -33,12 +33,6 @@ const FloatingCTA: React.FC = () => {
             <i className="bx bx-right-arrow-alt"></i>
           </div>
         </Link>
-
-        {/* Chat Button */}
-        <button className="chat-button" aria-label="Open Chat">
-          <i className="bx bx-conversation"></i>
-          <span className="chat-pulse"></span>
-        </button>
       </div>
 
       <style jsx>{`
@@ -148,50 +142,6 @@ const FloatingCTA: React.FC = () => {
           font-size: 18px;
         }
 
-        .chat-button {
-          width: 60px;
-          height: 60px;
-          background: linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%);
-          border: none;
-          border-radius: 50%;
-          color: white;
-          font-size: 28px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.4);
-          transition: all 0.3s ease;
-          position: relative;
-        }
-
-        .chat-button:hover {
-          transform: scale(1.1);
-          box-shadow: 0 15px 50px rgba(12, 75, 162, 0.5);
-        }
-
-        .chat-pulse {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border-radius: 50%;
-          border: 2px solid #1FB6E8;
-          animation: pulse 2s ease-out infinite;
-        }
-
-        @keyframes pulse {
-          0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1.5);
-            opacity: 0;
-          }
-        }
-
         @media (max-width: 767px) {
           .floating-cta {
             bottom: 20px;
@@ -208,12 +158,6 @@ const FloatingCTA: React.FC = () => {
 
           .cta-arrow {
             display: none;
-          }
-
-          .chat-button {
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
           }
         }
       `}</style>

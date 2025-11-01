@@ -316,6 +316,26 @@
       "post2Excerpt": "دليل شامل لحماية بياناتك وتطبيقاتك المستضافة على السحابة من جميع أنواع التهديدات الأمنية.",
       "post3Title": "إدارة الويب الآمن",
       "post3Excerpt": "نصائح وإرشادات متقدمة لحماية مواقعك الإلكترونية وتطبيقات الويب من الهجمات والثغرات الأمنية."
+    },
+    "contact": {
+      "subtitle": "تواصل معنا",
+      "title": "اتصل بنا اليوم",
+      "description": "هل أنت مستعد لتأمين بنيتك التحتية الرقمية؟ دعنا نناقش كيف يمكننا مساعدتك في حماية عملك",
+      "infoTitle": "لنبدأ المحادثة",
+      "infoDescription": "تواصل مع فريقنا للاستفسارات أو الدعم أو فرص التعاون",
+      "addressTitle": "زُرنا",
+      "address": "الرياض، المملكة العربية السعودية",
+      "phoneTitle": "اتصل بنا",
+      "phone": "+966 50 634 5773",
+      "emailTitle": "راسلنا",
+      "email": "info@eazycyber.sa",
+      "followUs": "تابعنا",
+      "namePlaceholder": "اسمك",
+      "emailPlaceholder": "بريدك الإلكتروني",
+      "phonePlaceholder": "رقم الهاتف",
+      "subjectPlaceholder": "الموضوع",
+      "messagePlaceholder": "رسالتك",
+      "submitButton": "إرسال الرسالة"
     }
   },
   "contact": {
@@ -384,7 +404,7 @@
       }
     },
     "whyChooseUs": {
-      "subtitle": "مميزاتنا",
+      "subtitle": "",
       "title": "لماذا نحن؟",
       "description": "ما يميزنا في الأمن السيبراني والتحول الرقمي",
       "reason1": {
@@ -413,7 +433,7 @@
     }
   },
   "whyChooseUs": {
-    "subtitle": "مميزاتنا",
+    "subtitle": "",
     "title": "لماذا نحن؟",
     "description": "اكتشف ما يجعل Eazy Cyber Agent شريكك الموثوق في الأمن السيبراني والتحول الرقمي",
     "reason1": {

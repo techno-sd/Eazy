@@ -172,49 +172,6 @@ export default async function RootLayout({
               font-family: var(--font-rubik), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
               overflow-x: hidden;
             }
-
-            /* Critical CSS Preloader - Instant Display */
-            #critical-preloader {
-              position: fixed;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: #010c16;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              z-index: 99999;
-              opacity: 1;
-              transition: opacity 0.3s ease-out;
-            }
-
-            body.react-loaded #critical-preloader {
-              display: none;
-            }
-
-            .critical-spinner {
-              width: 50px;
-              height: 50px;
-              border: 3px solid rgba(31, 182, 232, 0.2);
-              border-top-color: #1FB6E8;
-              border-radius: 50%;
-              animation: spin 0.8s linear infinite;
-            }
-
-            @keyframes spin {
-              to { transform: rotate(360deg); }
-            }
-
-            /* Hide content until loaded */
-            #main-content {
-              opacity: 0;
-              transition: opacity 0.2s ease-in;
-            }
-
-            body.page-loaded #main-content {
-              opacity: 1;
-            }
           `
         }} />
       </head>
@@ -222,18 +179,11 @@ export default async function RootLayout({
         {/* Performance Monitoring */}
         <PerformanceMonitor />
 
-        {/* Critical CSS Preloader - Shows instantly before React loads */}
-        <div id="critical-preloader">
-          <div className="critical-spinner"></div>
-        </div>
-
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
         <NextIntlClientProvider messages={messages}>
-          <div id="main-content">
-            {children}
-          </div>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

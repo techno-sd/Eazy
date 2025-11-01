@@ -97,7 +97,7 @@ const WhyChooseUsAbout: React.FC = () => {
             }}></div>
             <p className="section-description" style={{
               fontSize: '16px',
-              color: '#666',
+              color: '#64748b',
               maxWidth: '800px',
               margin: '0 auto',
               lineHeight: 1.7
@@ -181,7 +181,7 @@ const WhyChooseUsAbout: React.FC = () => {
       <style jsx>{`
         .why-choose-us-area {
           position: relative;
-          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+          background: #f9fafb;
           overflow: hidden;
         }
 
@@ -202,21 +202,37 @@ const WhyChooseUsAbout: React.FC = () => {
         .why-choose-card {
           position: relative;
           background: white;
-          padding: 45px 35px;
+          padding: 40px 35px;
           border-radius: 25px;
           height: 100%;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-          border: 2px solid #f0f0f0;
+          border: 2px solid transparent;
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .why-choose-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(90deg, transparent 0%, #0C4BA2 50%, transparent 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+        }
+
+        .why-choose-card:hover::before {
+          transform: translateX(100%);
         }
 
         .why-choose-card:hover {
-          transform: translateY(-15px) scale(1.02);
-          border-color: #0C4BA2;
-          box-shadow: 0 25px 70px rgba(12, 75, 162, 0.2);
+          transform: translateY(-12px);
+          box-shadow: 0 25px 60px rgba(12, 75, 162, 0.15);
+          border-color: rgba(12, 75, 162, 0.2);
         }
 
         .card-number {
@@ -245,20 +261,20 @@ const WhyChooseUsAbout: React.FC = () => {
 
         .icon-circle {
           position: relative;
-          width: 100px;
-          height: 100px;
-          border-radius: 50%;
+          width: 90px;
+          height: 90px;
+          border-radius: 22px;
           display: flex;
           align-items: center;
           justify-content: center;
           z-index: 2;
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 15px 40px rgba(12, 75, 162, 0.3);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .why-choose-card:hover .icon-circle {
-          transform: scale(1.15) rotate(360deg);
-          box-shadow: 0 20px 50px rgba(12, 75, 162, 0.4);
+          transform: scale(1.15) rotate(-5deg);
+          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.25);
         }
 
         .icon-circle i {
@@ -266,6 +282,11 @@ const WhyChooseUsAbout: React.FC = () => {
           color: white;
           position: relative;
           z-index: 1;
+          transition: all 0.4s ease;
+        }
+
+        .why-choose-card:hover .icon-circle i {
+          transform: scale(1.1) rotate(5deg);
         }
 
         .icon-ring-1,
@@ -330,19 +351,21 @@ const WhyChooseUsAbout: React.FC = () => {
         }
 
         .card-content h3 {
-          font-size: 24px;
-          font-weight: 700;
+          font-size: 26px;
+          font-weight: 800;
           color: #1a1a1a;
-          margin-bottom: 15px;
-          transition: color 0.3s ease;
+          margin-bottom: 18px;
+          line-height: 1.3;
+          transition: all 0.3s ease;
         }
 
         .why-choose-card:hover .card-content h3 {
           color: #0C4BA2;
+          transform: translateX(5px);
         }
 
         .card-content p {
-          font-size: 15px;
+          font-size: 15.5px;
           color: #666;
           line-height: 1.8;
           margin: 0;
@@ -352,8 +375,8 @@ const WhyChooseUsAbout: React.FC = () => {
           position: absolute;
           bottom: 30px;
           right: 30px;
-          width: 50px;
-          height: 50px;
+          width: 45px;
+          height: 45px;
           background: rgba(12, 75, 162, 0.1);
           border-radius: 50%;
           display: flex;
@@ -366,7 +389,8 @@ const WhyChooseUsAbout: React.FC = () => {
         }
 
         .card-arrow i {
-          font-size: 28px;
+          font-size: 24px;
+          color: #0C4BA2;
         }
 
         .why-choose-card:hover .card-arrow {
@@ -559,7 +583,7 @@ const WhyChooseUsAbout: React.FC = () => {
         .deco-shape {
           position: absolute;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(12, 75, 162, 0.08) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.05) 0%, transparent 70%);
         }
 
         .deco-1 {

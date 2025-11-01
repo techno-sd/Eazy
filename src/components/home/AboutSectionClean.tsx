@@ -261,11 +261,12 @@ const AboutSectionClean: React.FC = () => {
         .vm-card {
           display: flex;
           gap: 20px;
-          padding: 25px;
-          background: #fff;
-          border-radius: 20px;
-          border: 2px solid #e2e8f0;
-          transition: all 0.4s ease;
+          padding: 30px 25px;
+          background: white;
+          border-radius: 25px;
+          border: 2px solid transparent;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           overflow: hidden;
         }
@@ -275,40 +276,46 @@ const AboutSectionClean: React.FC = () => {
           position: absolute;
           top: 0;
           left: 0;
-          width: 4px;
-          height: 100%;
-          background: linear-gradient(180deg, #0C4BA2 0%, #1FB6E8 100%);
-          transition: width 0.4s ease;
-        }
-
-        .vm-card:hover {
-          border-color: #0C4BA2;
-          box-shadow: 0 12px 40px rgba(12, 75, 162, 0.15);
-          transform: translateX(8px);
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(90deg, transparent 0%, #0C4BA2 50%, transparent 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
         }
 
         .vm-card:hover::before {
-          width: 100%;
-          opacity: 0.05;
+          transform: translateX(100%);
+        }
+
+        .vm-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 25px 60px rgba(12, 75, 162, 0.15);
+          border-color: rgba(12, 75, 162, 0.2);
         }
 
         .vm-icon {
           flex-shrink: 0;
-          width: 60px;
-          height: 60px;
+          width: 70px;
+          height: 70px;
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 16px;
+          border-radius: 18px;
           background: linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%);
           color: #0C4BA2;
-          font-size: 30px;
-          transition: all 0.3s ease;
+          font-size: 36px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .vm-card:hover .vm-icon {
           background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           color: #fff;
+          transform: scale(1.15) rotate(-5deg);
+          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.25);
+        }
+
+        .vm-card:hover .vm-icon i {
           transform: scale(1.1) rotate(5deg);
         }
 
@@ -317,16 +324,23 @@ const AboutSectionClean: React.FC = () => {
         }
 
         .vm-content h4 {
-          font-size: 20px;
-          font-weight: 700;
+          font-size: 22px;
+          font-weight: 800;
           color: #1a1a1a;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
+          line-height: 1.3;
+          transition: all 0.3s ease;
+        }
+
+        .vm-card:hover .vm-content h4 {
+          color: #0C4BA2;
+          transform: translateX(5px);
         }
 
         .vm-content p {
           font-size: 15px;
-          line-height: 1.7;
-          color: #64748b;
+          line-height: 1.8;
+          color: #666;
           margin: 0;
         }
 

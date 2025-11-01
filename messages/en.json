@@ -336,6 +336,26 @@
       "post2Excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer",
       "post3Title": "Secure Managed Web",
       "post3Excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorer"
+    },
+    "contact": {
+      "subtitle": "Get In Touch",
+      "title": "Contact Us Today",
+      "description": "Ready to secure your digital infrastructure? Let's discuss how we can help protect your business",
+      "infoTitle": "Let's Start a Conversation",
+      "infoDescription": "Get in touch with our team for inquiries, support, or collaboration opportunities",
+      "addressTitle": "Visit Us",
+      "address": "Riyadh, Saudi Arabia",
+      "phoneTitle": "Call Us",
+      "phone": "+966 50 634 5773",
+      "emailTitle": "Email Us",
+      "email": "info@eazycyber.sa",
+      "followUs": "Follow Us",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "phonePlaceholder": "Phone Number",
+      "subjectPlaceholder": "Subject",
+      "messagePlaceholder": "Your Message",
+      "submitButton": "Send Message"
     }
   },
   "contact": {
@@ -404,7 +424,7 @@
       }
     },
     "whyChooseUs": {
-      "subtitle": "Our Advantages",
+      "subtitle": "",
       "title": "Why Choose Us?",
       "description": "What sets us apart in cybersecurity and digital transformation",
       "reason1": {
@@ -433,7 +453,7 @@
     }
   },
   "whyChooseUs": {
-    "subtitle": "Our Advantages",
+    "subtitle": "",
     "title": "Why Choose Us?",
     "description": "Discover what makes Eazy Cyber Agent your trusted partner in cybersecurity and digital transformation",
     "reason1": {

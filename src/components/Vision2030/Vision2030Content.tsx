@@ -367,18 +367,32 @@ const Vision2030Content: React.FC = () => {
 
         .focus-card {
           position: relative;
-          padding: 35px 28px;
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
+          padding: 40px 35px;
+          background: white;
           border-radius: 25px;
-          border: 2px solid rgba(12, 75, 162, 0.08);
+          border: 2px solid transparent;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           overflow: hidden;
           height: 100%;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .focus-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background: linear-gradient(90deg, transparent 0%, currentColor 50%, transparent 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
+        }
+
+        .focus-card:hover::before {
+          transform: translateX(100%);
         }
 
         .card-shine {
@@ -387,7 +401,7 @@ const Vision2030Content: React.FC = () => {
           left: -100%;
           width: 100%;
           height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(12, 75, 162, 0.15), transparent);
+          background: linear-gradient(90deg, transparent, rgba(12, 75, 162, 0.05), transparent);
           transition: left 0.6s ease;
         }
 
@@ -397,38 +411,37 @@ const Vision2030Content: React.FC = () => {
 
         .focus-card:hover {
           transform: translateY(-12px);
-          box-shadow: 0 25px 65px rgba(12, 75, 162, 0.25);
-          border-color: rgba(12, 75, 162, 0.3);
-          background: rgba(255, 255, 255, 1);
+          box-shadow: 0 25px 60px rgba(12, 75, 162, 0.15);
+          border-color: rgba(12, 75, 162, 0.2);
         }
 
         .focus-icon {
-          width: 80px;
-          height: 80px;
+          width: 90px;
+          height: 90px;
           border-radius: 22px;
           border: none;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 22px;
+          margin-bottom: 25px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           z-index: 1;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .focus-icon i {
-          font-size: 38px;
+          font-size: 48px;
           transition: all 0.4s ease;
         }
 
         .focus-card:hover .focus-icon {
-          transform: scale(1.15) rotate(-8deg);
-          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.3);
+          transform: scale(1.15) rotate(-5deg);
+          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.25);
         }
 
         .focus-card:hover .focus-icon i {
-          transform: scale(1.1);
+          transform: scale(1.1) rotate(5deg);
         }
 
         .focus-content {
@@ -438,21 +451,23 @@ const Vision2030Content: React.FC = () => {
         }
 
         .focus-content h4 {
-          font-size: 19px;
-          font-weight: 700;
-          margin-bottom: 12px;
+          font-size: 22px;
+          font-weight: 800;
+          margin-bottom: 15px;
           color: #1a1a1a;
-          transition: color 0.3s ease;
+          line-height: 1.3;
+          transition: all 0.3s ease;
         }
 
         .focus-card:hover .focus-content h4 {
           color: #0C4BA2;
+          transform: translateX(5px);
         }
 
         .focus-content p {
-          font-size: 14px;
+          font-size: 15px;
           color: #666;
-          line-height: 1.7;
+          line-height: 1.8;
           margin: 0;
         }
 

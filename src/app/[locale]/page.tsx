@@ -2,11 +2,9 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Navbar from "@/components/Layouts/Navbar";
 import MainBanner from "@/components/home/MainBanner";
-import Preloader from "@/components/Common/Preloader";
 import ScrollToTop from "@/components/Common/ScrollToTop";
 import ScrollProgress from "@/components/Common/ScrollProgress";
 import SkipToMain from "@/components/Common/SkipToMain";
-import SkeletonLoader from "@/components/Common/SkeletonLoader";
 
 // Lazy load components below the fold
 const AnimatedBackground = dynamic(() => import("@/components/Common/AnimatedBackground"), { ssr: false });
@@ -25,9 +23,6 @@ const Footer = dynamic(() => import("@/components/Layouts/Footer"));
 export default function Home() {
   return (
     <>
-      {/* High-Performance Preloader */}
-      <Preloader />
-
       {/* Scroll Progress Indicator */}
       <ScrollProgress />
 
@@ -51,58 +46,57 @@ export default function Home() {
         <MainBanner />
 
         {/* Trust Signals */}
-        <Suspense fallback={<div style={{ padding: '40px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
+        <Suspense fallback={<div />}>
           <TrustBadges />
         </Suspense>
 
         {/* About Section */}
         <div id="about">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
-          <AboutSectionClean />
+          <Suspense fallback={<div />}>
+            <AboutSectionClean />
+          </Suspense>
+        </div>
+
+        {/* Vision 2030 Section */}
+        <div id="vision">
+          <Suspense fallback={<div />}>
+            <Vision2030Content />
+          </Suspense>
+        </div>
+
+        {/* Services Section */}
+        <div id="services">
+          <Suspense fallback={<div />}>
+            <ServicesSection />
+          </Suspense>
+        </div>
+
+        {/* Industries Section */}
+        <div id="industries">
+          <Suspense fallback={<div />}>
+            <IndustriesGrid />
+          </Suspense>
+        </div>
+
+        {/* Why Choose Us Section */}
+        <Suspense fallback={<div />}>
+          <WhyChooseUsAbout />
         </Suspense>
-      </div>
 
-      {/* Vision 2030 Section */}
-      <div id="vision">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
-          <Vision2030Content />
-        </Suspense>
-      </div>
-
-      {/* Services Section */}
-      <div id="services">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="service-card" count={3} /></div>}>
-          <ServicesSection />
-        </Suspense>
-      </div>
-
-      {/* Industries Section */}
-      <div id="industries">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={6} /></div>}>
-          <IndustriesGrid />
-        </Suspense>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
-        <WhyChooseUsAbout />
-      </Suspense>
-
-      {/* Contact Section */}
-      <div id="contact">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={1} /></div>}>
-          <ContactSection />
-        </Suspense>
-      </div>
-
+        {/* Contact Section */}
+        <div id="contact">
+          <Suspense fallback={<div />}>
+            <ContactSection />
+          </Suspense>
+        </div>
 
         {/* Latest News from Blog (آخر الأخبار من المدونة) */}
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={3} /></div>}>
+        <Suspense fallback={<div />}>
           <LatesNews />
         </Suspense>
       </main>
 
-      <Suspense fallback={<div style={{ padding: '40px 0', background: '#1a1a1a', minHeight: '300px' }}></div>}>
+      <Suspense fallback={<div />}>
         <Footer />
       </Suspense>
     </>

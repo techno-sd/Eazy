@@ -63,7 +63,7 @@ const VisionMission: React.FC = () => {
               <div className="vision-image-wrapper">
                 <div className="main-image">
                   <Image
-                    src="/img/approach-img.jpg"
+                    src="/img/transform-img.jpg"
                     alt="About Eazy Cyber Agent"
                     width={660}
                     height={700}
@@ -155,7 +155,7 @@ const VisionMission: React.FC = () => {
         }
 
         .vision-mission-area.bg-f4f6fc {
-          background-color: #f4f6fc;
+          background: #f9fafb;
         }
 
         .vision-mission-area .section-header {
@@ -168,13 +168,13 @@ const VisionMission: React.FC = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 24px;
-          background: linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%);
+          background: linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%);
           border-radius: 30px;
           color: #0C4BA2;
           font-weight: 600;
           font-size: 14px;
           margin-bottom: 20px;
-          border: 2px solid rgba(216, 6, 80, 0.2);
+          border: 2px solid rgba(12, 75, 162, 0.2);
         }
 
         .vision-mission-area .section-badge i {
@@ -204,7 +204,7 @@ const VisionMission: React.FC = () => {
 
         .vision-mission-area .section-description {
           font-size: 16px;
-          color: #666;
+          color: #64748b;
           max-width: 700px;
           margin: 0 auto;
           line-height: 1.7;
@@ -293,10 +293,11 @@ const VisionMission: React.FC = () => {
 
         .vm-card {
           background: white;
-          padding: 35px 30px;
-          border-radius: 20px;
+          padding: 40px 35px;
+          border-radius: 25px;
           margin-bottom: 25px;
-          border: 2px solid #e8e8e8;
+          border: 2px solid transparent;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
           transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
           overflow: hidden;
@@ -306,21 +307,22 @@ const VisionMission: React.FC = () => {
           content: '';
           position: absolute;
           top: 0;
-          left: -100%;
+          left: 0;
           width: 100%;
-          height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(216, 6, 80, 0.05), transparent);
-          transition: left 0.6s ease;
+          height: 5px;
+          background: linear-gradient(90deg, transparent 0%, #0C4BA2 50%, transparent 100%);
+          transform: translateX(-100%);
+          transition: transform 0.6s ease;
         }
 
         .vm-card:hover::before {
-          left: 100%;
+          transform: translateX(100%);
         }
 
         .vm-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 50px rgba(216, 6, 80, 0.15);
-          border-color: #0C4BA2;
+          transform: translateY(-12px);
+          box-shadow: 0 25px 60px rgba(12, 75, 162, 0.15);
+          border-color: rgba(12, 75, 162, 0.2);
         }
 
         .vm-card-header {
@@ -331,35 +333,38 @@ const VisionMission: React.FC = () => {
         }
 
         .vm-icon {
-          width: 70px;
-          height: 70px;
-          background: linear-gradient(135deg, rgba(216, 6, 80, 0.1) 0%, rgba(255, 8, 102, 0.1) 100%);
-          border-radius: 18px;
+          width: 90px;
+          height: 90px;
+          background: linear-gradient(135deg, rgba(12, 75, 162, 0.1) 0%, rgba(31, 182, 232, 0.1) 100%);
+          border-radius: 22px;
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: all 0.4s ease;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           position: relative;
         }
 
         .vm-icon i {
-          font-size: 32px;
+          font-size: 48px;
           color: #0C4BA2;
-          transition: all 0.3s ease;
+          transition: all 0.4s ease;
         }
 
         .vm-card:hover .vm-icon {
           background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
-          transform: scale(1.1) rotate(-5deg);
+          transform: scale(1.15) rotate(-5deg);
+          box-shadow: 0 12px 30px rgba(12, 75, 162, 0.25);
         }
 
         .vm-card:hover .vm-icon i {
           color: white;
+          transform: scale(1.1) rotate(5deg);
         }
 
         .vm-badge {
-          width: 45px;
-          height: 45px;
+          width: 42px;
+          height: 42px;
           background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
           border-radius: 12px;
           display: flex;
@@ -367,23 +372,31 @@ const VisionMission: React.FC = () => {
           justify-content: center;
           color: white;
           font-size: 20px;
-          box-shadow: 0 5px 20px rgba(216, 6, 80, 0.3);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
           transition: all 0.3s ease;
         }
 
         .vm-card:hover .vm-badge {
-          transform: scale(1.1) rotate(5deg);
+          transform: rotate(15deg) scale(1.1);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
         .vm-content h3 {
-          font-size: 24px;
-          font-weight: 700;
+          font-size: 26px;
+          font-weight: 800;
           color: #1a1a1a;
-          margin-bottom: 15px;
+          margin-bottom: 18px;
+          line-height: 1.3;
+          transition: all 0.3s ease;
+        }
+
+        .vm-card:hover .vm-content h3 {
+          color: #0C4BA2;
+          transform: translateX(5px);
         }
 
         .vm-content p {
-          font-size: 15px;
+          font-size: 15.5px;
           color: #666;
           line-height: 1.8;
           margin: 0;
@@ -420,9 +433,9 @@ const VisionMission: React.FC = () => {
           flex-direction: column;
           gap: 15px;
           padding: 30px;
-          background: linear-gradient(135deg, rgba(216, 6, 80, 0.05) 0%, rgba(255, 8, 102, 0.05) 100%);
+          background: linear-gradient(135deg, rgba(12, 75, 162, 0.05) 0%, rgba(31, 182, 232, 0.05) 100%);
           border-radius: 18px;
-          border: 2px dashed rgba(216, 6, 80, 0.2);
+          border: 2px dashed rgba(12, 75, 162, 0.2);
         }
 
         .highlight-item {
@@ -453,7 +466,7 @@ const VisionMission: React.FC = () => {
         .shape-circle {
           position: absolute;
           border-radius: 50%;
-          background: radial-gradient(circle, rgba(216, 6, 80, 0.08) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(12, 75, 162, 0.05) 0%, transparent 70%);
         }
 
         .shape-1 {
