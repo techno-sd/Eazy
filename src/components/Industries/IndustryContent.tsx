@@ -60,40 +60,19 @@ const IndustryContent: React.FC<IndustryContentProps> = ({
       <section className="industry-content-area ptb-100">
         <div className="container">
           {/* Hero Section */}
-          <motion.div
-            className="industry-hero"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="industry-hero">
             <div className="row align-items-center g-5">
               <div className="col-lg-6">
-                <motion.div
-                  className="hero-content"
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <motion.div
-                    className="icon-badge"
-                    style={{ background: gradient }}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                  >
+                <div className="hero-content">
+                  <div className="icon-badge" style={{ background: gradient }}>
                     <i className={icon}></i>
-                  </motion.div>
+                  </div>
                   <h1 className="hero-title">{title}</h1>
                   <p className="hero-description">{description}</p>
-                </motion.div>
+                </div>
               </div>
               <div className="col-lg-6">
-                <motion.div
-                  className="hero-image-wrapper"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
+                <div className="hero-image-wrapper">
                   <div className="image-container">
                     <Image
                       src={image}
@@ -104,10 +83,10 @@ const IndustryContent: React.FC<IndustryContentProps> = ({
                     />
                     <div className="image-overlay" style={{ background: gradient }}></div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Stats Section (if provided) */}
           {stats && stats.length > 0 && (

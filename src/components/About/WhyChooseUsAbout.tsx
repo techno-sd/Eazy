@@ -85,8 +85,7 @@ const WhyChooseUsAbout: React.FC = () => {
               marginBottom: '15px',
               lineHeight: 1.2
             }}>
-              {t('title') || 'Why Choose Us'}
-              <span style={{ color: '#0C4BA2', fontSize: '52px' }}>?</span>
+              {t('title') || 'Why Choose Us?'}
             </h2>
             <div className="title-underline" style={{
               width: '80px',

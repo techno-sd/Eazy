@@ -60,35 +60,19 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
           <div className="row">
             <div className="col-lg-12">
               {/* Hero Section */}
-              <motion.div
-                className="service-hero"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div className="service-hero">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="service-hero-content">
                       {badge && (
-                        <motion.div
-                          className="service-badge"
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.2 }}
-                        >
+                        <div className="service-badge">
                           <i className="bx bx-star"></i>
                           <span>{badge}</span>
-                        </motion.div>
+                        </div>
                       )}
-                      <motion.div
-                        className="icon-wrapper"
-                        style={{ background: gradient }}
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.3, type: "spring" }}
-                      >
+                      <div className="icon-wrapper" style={{ background: gradient }}>
                         <i className={icon}></i>
-                      </motion.div>
+                      </div>
                       <h1 className="service-main-title">{title}</h1>
                       {description && (
                         <p className="service-description">{description}</p>
@@ -96,12 +80,7 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <motion.div
-                      className="service-hero-image"
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.4 }}
-                    >
+                    <div className="service-hero-image">
                       <Image
                         src={image}
                         alt={title}
@@ -110,10 +89,10 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
                         className="service-image"
                       />
                       <div className="image-decoration" style={{ background: gradient }}></div>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Services List Section */}
               <motion.div

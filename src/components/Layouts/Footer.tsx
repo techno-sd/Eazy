@@ -14,13 +14,13 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className="footer-area">
-        <div className="footer-top pt-100 pb-70">
+  <footer className="footer-area enhanced-footer">
+  <div className="footer-top pt-100 pb-70 enhanced-footer-top">
           <div className="container">
             <div className="row">
               {/* Company Info */}
               <div className="col-lg-4 col-md-6">
-                <div className="footer-widget">
+                <div className="footer-widget glass-widget">
                   <div className="footer-logo">
                     <Link href={`/${locale}/`}>
                       <Image
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
 
               {/* Quick Links */}
               <div className="col-lg-2 col-md-6">
-                <div className="footer-widget">
+                <div className="footer-widget glass-widget">
                   <h3 className="footer-title quick-links-title">Quick Links</h3>
                   <ul className="footer-links quick-links-list">
                     <li>
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
 
               {/* Services */}
               <div className="col-lg-3 col-md-6">
-                <div className="footer-widget">
+                <div className="footer-widget glass-widget">
                   <h3 className="footer-title services-title">{tNav('services')}</h3>
                   <ul className="footer-links services-list">
                     <li>
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
 
               {/* Contact Info */}
               <div className="col-lg-3 col-md-6">
-                <div className="footer-widget">
+                <div className="footer-widget glass-widget">
                   <h3 className="footer-title">{t('contactUs')}</h3>
                   <ul className="footer-contact">
                     <li>
@@ -204,6 +204,42 @@ const Footer: React.FC = () => {
       </footer>
 
       <style jsx>{`
+        .enhanced-footer {
+          box-shadow: 0 -8px 40px 0 rgba(12,75,162,0.18);
+          border-top: 4px solid #1FB6E8;
+        }
+        .enhanced-footer::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: linear-gradient(120deg, rgba(31,182,232,0.08) 0%, rgba(12,75,162,0.08) 100%);
+          background-size: 200% 200%;
+          animation: footerGradientMove 8s ease-in-out infinite;
+          z-index: 0;
+          pointer-events: none;
+        }
+        @keyframes footerGradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .enhanced-footer-top {
+          position: relative;
+          z-index: 1;
+        }
+        .glass-widget {
+          background: rgba(255,255,255,0.08);
+          border-radius: 18px;
+          box-shadow: 0 4px 32px 0 rgba(31,182,232,0.08);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(31,182,232,0.10);
+          padding: 32px 24px 24px 24px;
+          margin-bottom: 32px;
+          transition: box-shadow 0.3s;
+        }
+        .glass-widget:hover {
+          box-shadow: 0 8px 40px 0 rgba(31,182,232,0.18);
+        }
         .footer-area {
           background: linear-gradient(180deg, #0a1e3d 0%, #0C4BA2 100%);
           position: relative;
@@ -279,14 +315,15 @@ const Footer: React.FC = () => {
         }
 
         .footer-title {
-          color: white;
-          font-size: 20px;
-          font-weight: 700;
+          color: #1FB6E8;
+          font-size: 22px;
+          font-weight: 800;
           margin-bottom: 25px;
           position: relative;
           padding-bottom: 15px;
+          letter-spacing: 0.5px;
+          text-shadow: 0 2px 12px rgba(31,182,232,0.10);
         }
-
         .footer-title::after {
           content: '';
           position: absolute;
@@ -294,7 +331,7 @@ const Footer: React.FC = () => {
           left: 0;
           width: 50px;
           height: 3px;
-          background: linear-gradient(90deg, #1FB6E8 0%, transparent 100%);
+          background: linear-gradient(90deg, #1FB6E8 0%, #0C4BA2 100%);
           border-radius: 2px;
         }
 
@@ -309,12 +346,14 @@ const Footer: React.FC = () => {
         }
 
         .footer-links li a {
-          color: white;
-          font-size: 15px;
+          color: #e3f6ff;
+          font-size: 16px;
           display: flex;
           align-items: center;
           gap: 8px;
-          transition: all 0.3s ease;
+          border-radius: 8px;
+          padding: 6px 10px;
+          transition: all 0.3s cubic-bezier(.4,0,.2,1);
         }
 
         .footer-links li a i {
@@ -324,8 +363,10 @@ const Footer: React.FC = () => {
         }
 
         .footer-links li a:hover {
-          color: #1FB6E8;
-          padding-left: 5px;
+          color: #fff;
+          background: linear-gradient(90deg, #1FB6E8 0%, #0C4BA2 100%);
+          box-shadow: 0 2px 12px rgba(31,182,232,0.10);
+          padding-left: 10px;
         }
 
         .footer-links li a:hover i {
@@ -345,20 +386,19 @@ const Footer: React.FC = () => {
         }
 
         .contact-icon {
-          width: 45px;
-          height: 45px;
-          background: rgba(255, 255, 255, 0.1);
-          border-radius: 12px;
+          width: 48px;
+          height: 48px;
+          background: linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%);
+          border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          backdrop-filter: blur(10px);
+          box-shadow: 0 2px 12px rgba(31,182,232,0.10);
         }
-
         .contact-icon i {
           font-size: 22px;
-          color: #1FB6E8;
+          color: #fff;
         }
 
         .contact-content {
@@ -388,11 +428,12 @@ const Footer: React.FC = () => {
         }
 
         .footer-bottom {
-          background: rgba(0, 0, 0, 0.2);
-          padding: 25px 0;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          background: rgba(12,75,162,0.18);
+          padding: 28px 0 18px 0;
+          border-top: 1.5px solid #1FB6E8;
           position: relative;
-          z-index: 1;
+          z-index: 2;
+          box-shadow: 0 -2px 24px 0 rgba(31,182,232,0.10);
         }
 
         .copyright-text {
@@ -411,13 +452,15 @@ const Footer: React.FC = () => {
         }
 
         .footer-bottom-links li a {
-          color: white;
-          font-size: 14px;
-          transition: color 0.3s ease;
+          color: #e3f6ff;
+          font-size: 15px;
+          border-radius: 6px;
+          padding: 4px 10px;
+          transition: background 0.3s, color 0.3s;
         }
-
         .footer-bottom-links li a:hover {
-          color: #1FB6E8;
+          color: #fff;
+          background: linear-gradient(90deg, #1FB6E8 0%, #0C4BA2 100%);
         }
 
         /* Quick Links Special Styling */

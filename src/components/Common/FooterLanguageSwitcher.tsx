@@ -29,8 +29,7 @@ const FooterLanguageSwitcher: React.FC = () => {
           className={`lang-btn ${locale === 'en' ? 'active' : ''}`}
           aria-label="Switch to English"
         >
-          <span className="lang-icon">EN</span>
-          <span className="lang-text">English</span>
+          <span className="lang-flag" role="img" aria-label="English">🇬🇧</span>
         </button>
         <div className="lang-divider"></div>
         <button
@@ -38,8 +37,7 @@ const FooterLanguageSwitcher: React.FC = () => {
           className={`lang-btn ${locale === 'ar' ? 'active' : ''}`}
           aria-label="Switch to Arabic"
         >
-          <span className="lang-icon">AR</span>
-          <span className="lang-text">العربية</span>
+          <span className="lang-flag" role="img" aria-label="Arabic">🇸🇦</span>
         </button>
       </div>
 
@@ -58,47 +56,25 @@ const FooterLanguageSwitcher: React.FC = () => {
         .lang-btn {
           display: flex;
           align-items: center;
-          gap: 8px;
-          padding: 10px 20px;
+          justify-content: center;
+          padding: 10px 18px;
           background: transparent;
           border: none;
           border-radius: 50px;
           cursor: pointer;
           transition: all 0.3s ease;
           color: white;
-          font-size: 14px;
-          font-weight: 500;
+          font-size: 18px;
         }
-
         .lang-btn:hover {
           background: rgba(255, 255, 255, 0.15);
         }
-
         .lang-btn.active {
           background: linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%);
           box-shadow: 0 5px 15px rgba(31, 182, 232, 0.4);
         }
-
-        .lang-icon {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 28px;
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 50%;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.5px;
-        }
-
-        .lang-btn.active .lang-icon {
-          background: rgba(255, 255, 255, 0.3);
-        }
-
-        .lang-text {
-          font-size: 14px;
-          font-weight: 600;
+        .lang-flag {
+          font-size: 22px;
         }
 
         .lang-divider {
@@ -112,13 +88,8 @@ const FooterLanguageSwitcher: React.FC = () => {
             width: 100%;
             justify-content: center;
           }
-
-          .lang-text {
-            display: none;
-          }
-
           .lang-btn {
-            padding: 10px 15px;
+            padding: 10px 12px;
           }
         }
       `}</style>

@@ -14,20 +14,12 @@ const MainBanner: React.FC = () => {
   const locale = useLocale();
   const bannerRef = useRef<HTMLDivElement>(null);
 
-  // Parallax scroll effects
-  const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 150]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -100]);
-  const scale = useTransform(scrollY, [0, 300], [1, 0.95]);
-
-  // Button-specific animations
-  const buttonY = useTransform(scrollY, [0, 400], [0, -80]);
-  const buttonOpacity = useTransform(scrollY, [0, 300], [1, 0]);
-
-  // Smooth spring animations
-  const springY1 = useSpring(y1, { stiffness: 100, damping: 30 });
-  const springY2 = useSpring(y2, { stiffness: 100, damping: 30 });
-  const springButtonY = useSpring(buttonY, { stiffness: 100, damping: 30 });
+  // Remove scroll-based parallax and button animations
+  const springY1 = 0;
+  const springY2 = 0;
+  const springButtonY = 0;
+  const scale = 1;
+  const buttonOpacity = 1;
 
   // Mouse move parallax effect
   useEffect(() => {
@@ -128,14 +120,12 @@ const MainBanner: React.FC = () => {
                 </motion.span>
                 <motion.h1
                   variants={fadeInLeft}
-                  style={{ y: springY2 }}
                 >
                   {t('title')}
                 </motion.h1>
 
                 <motion.p
                   variants={fadeInRight}
-                  style={{ y: springY1 }}
                 >
                   {t('description')}
                 </motion.p>
@@ -143,10 +133,7 @@ const MainBanner: React.FC = () => {
                 <motion.div
                   className="banner-btn"
                   variants={fadeInUp}
-                  style={{
-                    y: springButtonY,
-                    opacity: buttonOpacity
-                  }}
+                  style={{}}
                 >
                   <Link href={`/${locale}/contact`} className="default-btn magnetic-btn">
                     <span className="btn-text">{t('bookingNow')}</span>
@@ -166,14 +153,14 @@ const MainBanner: React.FC = () => {
         </div>
 
         {/* Features */}
-        <motion.div style={{ y: springY1 }}>
+        <div>
           <Features />
-        </motion.div>
+        </div>
 
         <div className="lines">
-          <motion.div className="line" style={{ y: springY1 }} />
-          <motion.div className="line" style={{ y: springY2 }} />
-          <motion.div className="line" style={{ y: springY1 }} />
+          <motion.div className="line" />
+          <motion.div className="line" />
+          <motion.div className="line" />
         </div>
       </motion.div>
 
