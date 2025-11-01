@@ -132,6 +132,7 @@ const MainBanner: React.FC = () => {
                 >
                   {t('title')}
                 </motion.h1>
+
                 <motion.p
                   variants={fadeInRight}
                   style={{ y: springY1 }}
