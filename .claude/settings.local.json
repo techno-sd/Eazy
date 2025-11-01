@@ -7,7 +7,8 @@
       "Bash(node fix-imports.js:*)",
       "Bash(npm run dev)",
       "Bash(pnpm dev)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(taskkill:*)"
     ],
     "deny": [],
     "ask": []

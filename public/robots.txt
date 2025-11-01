@@ -1,0 +1,16 @@
+# Eazy Cyber Agent - Robots.txt
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.eazycyber.sa/sitemap.xml
+Sitemap: https://www.eazycyber.sa/ar/sitemap.xml
+Sitemap: https://www.eazycyber.sa/en/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

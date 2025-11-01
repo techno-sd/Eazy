@@ -1,0 +1,28 @@
+{
+  "name": "Eazy Cyber Agent",
+  "short_name": "Eazy Cyber",
+  "description": "Leading Cyber Security and Digital Solutions Provider in Saudi Arabia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0C4BA2",
+  "theme_color": "#0C4BA2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "cybersecurity", "technology"],
+  "screenshots": []
+}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import TopHeader from "./TopHeader";
 import Image from "next/image";
 import MenuItem from "./MenuItem";
-import { menus } from "../../../libs/menus";
+import { menus } from "@/lib/menus";
 import { useTranslations, useLocale } from 'next-intl';
 
 const Navbar: React.FC = () => {
@@ -335,6 +335,20 @@ const Navbar: React.FC = () => {
           transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
         }
 
+        /* Menu Direction - Handled in global stylesheets */
+        /* English (LTR): Home → About → Services → Industries → Blog → Contact (left to right) */
+        /* Arabic (RTL): Contact → Blog → Industries → Services → About → Home (right to left) */
+        /* Default flex-direction: row for LTR, row-reverse for RTL (styles/rtl.css) */
+
+        /* Text alignment within menu items */
+        [dir="ltr"] :global(.navbar-nav .nav-item .nav-link) {
+          text-align: left;
+        }
+
+        [dir="rtl"] :global(.navbar-nav .nav-item .nav-link) {
+          text-align: right;
+        }
+
         /* RTL Support */
         [dir="rtl"] :global(.btn-enhanced:hover .btn-icon) {
           transform: translateX(-3px);
@@ -345,6 +359,17 @@ const Navbar: React.FC = () => {
           border-right: 3px solid #0C4BA2;
           padding-left: 25px;
           padding-right: 30px;
+        }
+
+        /* Dropdown menu direction */
+        [dir="rtl"] :global(.navbar-nav .dropdown-menu) {
+          right: 0;
+          left: auto;
+        }
+
+        [dir="ltr"] :global(.navbar-nav .dropdown-menu) {
+          left: 0;
+          right: auto;
         }
       `}</style>
     </>

@@ -19,7 +19,7 @@ const ServicesSection: React.FC = () => {
         t('aiSolutions.service2'),
         t('aiSolutions.service3'),
       ],
-      image: "/img/home-six/services/chatbot.png",
+      image: "/img/solution/solution-img2.jpg",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
       delay: 0.1
     },
@@ -32,7 +32,7 @@ const ServicesSection: React.FC = () => {
         t('cybersecurity.service3'),
         t('cybersecurity.service4'),
       ],
-      image: "/img/home-six/services/services-2.png",
+      image: "/img/solution/solution-img3.jpg",
       gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
       delay: 0.2
     },
@@ -45,7 +45,7 @@ const ServicesSection: React.FC = () => {
         t('bigData.service3'),
         t('bigData.service4'),
       ],
-      image: "/img/home-six/services/big-data.jpg",
+      image: "/img/solution/solution-img4.jpg",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
       delay: 0.3
     },
@@ -58,7 +58,7 @@ const ServicesSection: React.FC = () => {
         t('cloudComputing.service3'),
         t('cloudComputing.service4'),
       ],
-      image: "/img/home-six/services/cloud-computing.jpg",
+      image: "/img/solution/solution-img5.jpg",
       gradient: "linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%)",
       delay: 0.4
     },
@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
         t('smeEazy.service3'),
         t('smeEazy.service4'),
       ],
-      image: "/img/home-six/services/software.png",
+      image: "/img/solution/solution-img6.jpg",
       gradient: "linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%)",
       delay: 0.5,
       badge: t('smeEazy.badge') || 'Premium Program'

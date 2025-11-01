@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import Navbar from "@/components/Layouts/Navbar";
-import MainBanner from "@/components/HomeOne/MainBanner";
+import MainBanner from "@/components/home/MainBanner";
 import Preloader from "@/components/Common/Preloader";
 import ScrollToTop from "@/components/Common/ScrollToTop";
 import SkeletonLoader from "@/components/Common/SkeletonLoader";
@@ -10,12 +10,12 @@ import SkeletonLoader from "@/components/Common/SkeletonLoader";
 const AnimatedBackground = dynamic(() => import("@/components/Common/AnimatedBackground"), { ssr: false });
 const FloatingCTA = dynamic(() => import("@/components/Common/FloatingCTA"), { ssr: false });
 const TrustBadges = dynamic(() => import("@/components/Common/TrustBadges"));
-const AboutSectionClean = dynamic(() => import("@/components/HomeOne/AboutSectionClean"));
+const AboutSectionClean = dynamic(() => import("@/components/home/AboutSectionClean"));
 const Vision2030Content = dynamic(() => import("@/components/Vision2030/Vision2030Content"));
-const ServicesSection = dynamic(() => import("@/components/HomeOne/ServicesSection"));
+const ServicesSection = dynamic(() => import("@/components/home/ServicesSection"));
 const IndustriesGrid = dynamic(() => import("@/components/Industries/IndustriesGrid"));
 const WhyChooseUsAbout = dynamic(() => import("@/components/About/WhyChooseUsAbout"));
-const ContactSection = dynamic(() => import("@/components/HomeOne/ContactSection"));
+const ContactSection = dynamic(() => import("@/components/home/ContactSection"));
 const Testimonials = dynamic(() => import("@/components/Common/Testimonials"));
 const LatesNews = dynamic(() => import("@/components/Common/LatesNews"));
 const Footer = dynamic(() => import("@/components/Layouts/Footer"));
@@ -85,12 +85,6 @@ export default function Home() {
         </Suspense>
       </div>
 
-      {/* Testimonials - What Our Clients Say (ماذا يقول عملاؤنا عنا) */}
-      <div id="testimonials">
-        <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={3} /></div>}>
-          <Testimonials />
-        </Suspense>
-      </div>
 
       {/* Latest News from Blog (آخر الأخبار من المدونة) */}
       <Suspense fallback={<div style={{ padding: '80px 0' }}><SkeletonLoader type="card" count={3} /></div>}>

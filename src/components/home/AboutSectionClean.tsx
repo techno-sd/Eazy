@@ -19,7 +19,7 @@ const AboutSectionClean: React.FC = () => {
               <div className="about-image-wrapper" data-aos="fade-right" data-aos-duration="1000">
                 <div className="main-image-container">
                   <Image
-                    src="/img/home-7-8-9/safer-world/safer-world.png"
+                    src="/img/solution/solution-img1.jpg"
                     alt={t('imageAlt') || 'Cybersecurity Solutions'}
                     width={645}
                     height={595}

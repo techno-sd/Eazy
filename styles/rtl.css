@@ -20,6 +20,55 @@ html {
 .navbar-brand {
     margin-right: 0;
 }
+
+/* ========== LTR Menu Direction (English) ========== */
+/* Explicit LTR rules to ensure left-to-right flow */
+html[dir="ltr"] .navbar-expand-md .navbar-nav,
+html[dir="ltr"] .main-nav nav .navbar-nav,
+html[dir="ltr"] .navbar-nav,
+[dir="ltr"] .navbar-expand-md .navbar-nav,
+[dir="ltr"] .main-nav nav .navbar-nav,
+[dir="ltr"] .navbar-nav {
+    flex-direction: row !important;
+    direction: ltr !important;
+}
+
+/* LTR Container Direction */
+html[dir="ltr"] .main-nav,
+html[dir="ltr"] .navbar-area,
+[dir="ltr"] .main-nav,
+[dir="ltr"] .navbar-area {
+    direction: ltr !important;
+}
+
+/* ========== RTL Menu Direction (Arabic) ========== */
+/* Arabic menu: Same order as English (Home first), but right-aligned */
+/* من اليمين (جهة الشعار): الرئيسية → من نحن → الخدمات → القطاعات → المدونة → اتصل بنا */
+html[dir="rtl"] .navbar-expand-md .navbar-nav,
+html[dir="rtl"] .main-nav nav .navbar-nav,
+html[dir="rtl"] .navbar-nav,
+[dir="rtl"] .navbar-expand-md .navbar-nav,
+[dir="rtl"] .main-nav nav .navbar-nav,
+[dir="rtl"] .navbar-nav {
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    direction: rtl !important;
+}
+
+/* RTL Container Direction */
+html[dir="rtl"] .main-nav,
+html[dir="rtl"] .navbar-area,
+[dir="rtl"] .main-nav,
+[dir="rtl"] .navbar-area {
+    direction: rtl !important;
+}
+
+/* Ensure menu items can be reordered */
+html[dir="rtl"] .navbar-nav .nav-item,
+[dir="rtl"] .navbar-nav .nav-item {
+    order: initial !important;
+}
+
 .nav-area .navbar-area .main-nav nav .navbar-nav .nav-item .dropdown-menu {
     left: unset;
     right: 0;
