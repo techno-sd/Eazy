@@ -19,25 +19,14 @@ const AboutSectionClean: React.FC = () => {
               <div className="about-image-wrapper" data-aos="fade-right" data-aos-duration="1000">
                 <div className="main-image-container">
                   <Image
-                    src="/img/solution/solution-img1.jpg"
-                    alt={t('imageAlt') || 'Cybersecurity Solutions'}
+                    src="/img/company.jpeg"
+                    alt={t('imageAlt') || 'Company'}
                     width={645}
                     height={595}
                     className="main-image"
                     priority
                   />
                   <div className="image-overlay"></div>
-                </div>
-                
-                {/* Decorative Elements */}
-                <div className="floating-element element-1">
-                  <i className="bx bx-shield-quarter"></i>
-                </div>
-                <div className="floating-element element-2">
-                  <i className="bx bx-lock-alt"></i>
-                </div>
-                <div className="floating-element element-3">
-                  <i className="bx bx-code-alt"></i>
                 </div>
               </div>
             </div>

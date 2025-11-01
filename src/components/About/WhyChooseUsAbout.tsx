@@ -156,11 +156,8 @@ const WhyChooseUsAbout: React.FC = () => {
                   </div>
                   <h3>{t('ctaTitle') || 'Ready to Get Started?'}</h3>
                   <p>{t('ctaDescription') || "Let's discuss how we can secure your digital infrastructure"}</p>
-                  <Link href={`/${locale}/contact`} className="cta-button">
-                    <span>{t('contactUs') || 'Contact Us Now'}</span>
-                    <div className="button-icon">
-                      <i className="bx bx-right-arrow-alt"></i>
-                    </div>
+                  <Link href={`/${locale}/contact`} className="default-btn">
+                    {t('contactUs') || 'Contact Us Now'}
                   </Link>
                 </div>
                 <div className="cta-pattern"></div>

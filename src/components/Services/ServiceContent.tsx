@@ -282,24 +282,28 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
         }
 
         .service-item-card {
-          background: white;
-          border-radius: 20px;
-          padding: 35px;
-          box-shadow: 0 10px 40px rgba(12, 75, 162, 0.08);
-          transition: all 0.4s ease;
+          background: rgba(255,255,255,0.7);
+          border-radius: 24px;
+          padding: 40px 32px;
+          box-shadow: 0 8px 32px 0 rgba(12,75,162,0.18), 0 1.5px 8px 0 rgba(31,182,232,0.08);
+          transition: box-shadow 0.4s, border 0.4s, transform 0.4s, background 0.4s;
           position: relative;
           overflow: hidden;
-          border: 2px solid transparent;
+          border: 2.5px solid rgba(12,75,162,0.10);
           display: flex;
-          gap: 20px;
+          gap: 24px;
           align-items: flex-start;
-          min-height: 150px;
+          min-height: 170px;
+          backdrop-filter: blur(8px) saturate(160%);
+        }
         }
 
         .service-item-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 20px 60px rgba(12, 75, 162, 0.15);
-          border-color: rgba(12, 75, 162, 0.2);
+          transform: translateY(-10px) scale(1.03);
+          box-shadow: 0 24px 64px 0 rgba(12,75,162,0.22), 0 2px 12px 0 rgba(31,182,232,0.12);
+          border-image: linear-gradient(90deg, #0C4BA2, #1FB6E8, #0C4BA2) 1;
+          border-width: 2.5px;
+          background: rgba(255,255,255,0.85);
         }
 
         .item-number {
@@ -313,24 +317,28 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
         }
 
         .item-icon {
-          width: 50px;
-          height: 50px;
-          border-radius: 12px;
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
-          box-shadow: 0 8px 20px rgba(12, 75, 162, 0.3);
-          transition: transform 0.4s ease;
+          box-shadow: 0 8px 24px rgba(12, 75, 162, 0.22);
+          background: linear-gradient(135deg, #0C4BA2 0%, #1FB6E8 100%);
+          transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
         }
 
         .service-item-card:hover .item-icon {
-          transform: scale(1.1) rotate(10deg);
+          transform: scale(1.13) rotate(8deg);
+          box-shadow: 0 12px 32px rgba(31,182,232,0.22);
+          background: linear-gradient(135deg, #1FB6E8 0%, #0C4BA2 100%);
         }
 
         .item-icon i {
-          font-size: 26px;
-          color: white;
+          font-size: 30px;
+          color: #fff;
+          filter: drop-shadow(0 2px 8px rgba(12,75,162,0.18));
         }
 
         .item-content {
@@ -340,11 +348,13 @@ const ServiceContent: React.FC<ServiceContentProps> = ({
         }
 
         .item-content p {
-          font-size: 16px;
-          color: #64748b;
+          font-size: 17px;
+          color: #3b4252;
           line-height: 1.8;
           margin: 0;
           font-weight: 500;
+          letter-spacing: 0.01em;
+          text-shadow: 0 1px 4px rgba(12,75,162,0.04);
         }
 
         .service-item-card:hover .item-content p {

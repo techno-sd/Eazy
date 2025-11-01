@@ -117,13 +117,16 @@ const NavbarFour: React.FC = () => {
 
             <div className="search-overlay-form">
               <form>
-                <input
-                  type="text"
-                  className="input-search"
-                  placeholder="Enter your keywords..."
-                />
-                <button type="submit">
+                <div className="input-with-icon">
+                  <input
+                    type="text"
+                    className="input-search"
+                    placeholder="Enter your keywords..."
+                  />
                   <i className="bx bx-search"></i>
+                </div>
+                <button type="submit" className="default-btn" style={{marginTop: '16px'}}>
+                  Search
                 </button>
               </form>
             </div>

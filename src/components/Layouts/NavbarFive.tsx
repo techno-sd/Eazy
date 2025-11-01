@@ -117,13 +117,27 @@ const NavbarFive: React.FC = () => {
 
             <div className="search-overlay-form">
               <form>
-                <input
-                  type="text"
-                  className="input-search"
-                  placeholder="Enter your keywords..."
-                />
-                <button type="submit">
-                  <i className="ri-search-line"></i>
+                <div className="input-with-icon">
+                  <input
+                    type="text"
+                    className="input-search"
+                    placeholder="Enter your keywords..."
+                    style={{
+                      border: '2px solid #0C4BA2',
+                      background: 'linear-gradient(135deg, #f8fafc 80%, #e6f2fb 100%)',
+                      color: '#0C4BA2',
+                      fontWeight: 600
+                    }}
+                  />
+                  <i className="ri-search-line" style={{ color: '#0C4BA2' }}></i>
+                </div>
+                <button type="submit" className="default-btn" style={{marginTop: '16px'}}>
+                  <span style={{
+                    background: 'linear-gradient(90deg, #0C4BA2, #1FB6E8)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    fontWeight: 700
+                  }}>Search</span>
                 </button>
               </form>
             </div>

@@ -176,8 +176,7 @@ const IndustryContent: React.FC<IndustryContentProps> = ({
                 <h3>Ready to Secure Your Industry?</h3>
                 <p>Let's discuss how we can protect your organization with industry-specific solutions</p>
                 <Link href={`/${locale}/contact`} className="cta-button">
-                  <span>Get in Touch</span>
-                  <i className="bx bx-right-arrow-alt"></i>
+                  Get in Touch <i className="bx bx-right-arrow-alt"></i>
                 </Link>
               </div>
               <div className="cta-pattern"></div>

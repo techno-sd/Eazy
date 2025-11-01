@@ -135,16 +135,11 @@ const MainBanner: React.FC = () => {
                   variants={fadeInUp}
                   style={{}}
                 >
-                  <Link href={`/${locale}/contact`} className="default-btn magnetic-btn">
-                    <span className="btn-text">{t('bookingNow')}</span>
-                    <span className="btn-bg"></span>
-                    <span className="btn-ripple"></span>
+                  <Link href={`/${locale}/contact`} className="default-btn">
+                    {t('bookingNow')}
                   </Link>
-
-                  <Link href={`/${locale}/about`} className="default-btn active magnetic-btn">
-                    <span className="btn-text">{t('aboutUs')}</span>
-                    <span className="btn-bg"></span>
-                    <span className="btn-ripple"></span>
+                  <Link href={`/${locale}/about`} className="default-btn active">
+                    {t('aboutUs')}
                   </Link>
                 </motion.div>
               </motion.div>
@@ -196,56 +191,17 @@ const MainBanner: React.FC = () => {
           }
         }
 
-        /* Magnetic Button Effect */
-        .magnetic-btn {
-          position: relative;
-          overflow: hidden;
+        /* Enhanced Hero Button Hover */
+        .default-btn,
+        .default-btn.active {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        .magnetic-btn .btn-text {
-          position: relative;
-          z-index: 2;
-        }
-
-        .magnetic-btn .btn-bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-          transform: scale(0);
-          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          border-radius: inherit;
-          z-index: 1;
-        }
-
-        .magnetic-btn:hover .btn-bg {
-          transform: scale(1);
-        }
-
-        .magnetic-btn .btn-ripple {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border-radius: 50%;
-          background: rgba(255, 255, 255, 0.3);
-          transform: translate(-50%, -50%);
-          transition: width 0.6s, height 0.6s;
-        }
-
-        .magnetic-btn:hover .btn-ripple {
-          width: 300px;
-          height: 300px;
-          opacity: 0;
-        }
-
-        .magnetic-btn:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 15px 40px rgba(12, 75, 162, 0.4);
+        .default-btn:hover,
+        .default-btn.active:hover {
+          background: linear-gradient(90deg, #0C4BA2 0%, #1FB6E8 100%);
+          color: #fff !important;
+          box-shadow: 0 8px 32px rgba(31,182,232,0.18), 0 2px 12px rgba(12,75,162,0.12);
+          transform: translateY(-3px) scale(1.04);
         }
 
         /* Enhanced Banner Text */

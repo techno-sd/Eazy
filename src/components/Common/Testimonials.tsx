@@ -354,35 +354,43 @@ const Testimonials: React.FC = () => {
         }
 
         .testimonial-card {
-          background: white;
-          padding: 40px 35px;
-          border-radius: 25px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.85) 60%, rgba(102,126,234,0.08) 100%);
+          padding: 54px 38px 38px 38px;
+          border-radius: 32px;
           height: 100%;
           position: relative;
-          overflow: hidden;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          overflow: visible;
+          transition: box-shadow 0.4s, border 0.4s, transform 0.4s, background 0.4s;
+          box-shadow: 0 12px 40px 0 rgba(102,126,234,0.16), 0 2px 12px 0 rgba(118,75,162,0.10);
+          border: 2.5px solid rgba(102,126,234,0.13);
+          backdrop-filter: blur(12px) saturate(180%);
+          z-index: 1;
         }
 
         .testimonial-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+          transform: translateY(-16px) scale(1.04);
+          box-shadow: 0 32px 80px 0 rgba(102,126,234,0.22), 0 4px 16px 0 rgba(118,75,162,0.16);
+          border-image: linear-gradient(90deg, #667eea, #764ba2, #1FB6E8, #667eea) 1;
+          border-width: 2.5px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.97) 70%, rgba(102,126,234,0.13) 100%);
         }
 
         .quote-icon {
-          width: 60px;
-          height: 60px;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          border-radius: 15px;
+          width: 64px;
+          height: 64px;
+          background: linear-gradient(135deg, #667eea 0%, #1FB6E8 100%);
+          border-radius: 18px;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 25px;
-          transition: transform 0.3s ease;
+          margin-bottom: 28px;
+          box-shadow: 0 4px 18px rgba(102,126,234,0.18);
+          transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .testimonial-card:hover .quote-icon {
-          transform: scale(1.1) rotate(5deg);
+          transform: scale(1.13) rotate(6deg);
+          box-shadow: 0 8px 32px rgba(31,182,232,0.18);
         }
 
         .quote-icon i {
